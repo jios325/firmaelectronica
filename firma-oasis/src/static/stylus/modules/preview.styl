@@ -1,0 +1,38 @@
+.preview
+  background: #fff 
+  max-width 630px
+  margin: 0 auto
+  &.disabled
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+  &__inner
+    position relative
+    &:after,&:before
+      content:''
+      height 100%
+      width:100%
+      position absolute
+      top:0
+      left:0
+      // z-index -1
+    &:after
+      // box-shadow: -2px -20px 25px rgba(#000,20%)
+      box-shadow: 0 25px 85px -45px rgba(#000,10%)
+    &:before
+      // box-shadow: -2px 20px 25px rgba(#000,20%)
+      box-shadow: 0 -45px 85px -45px rgba(#000,10%)
+  &__title
+    color: #3B4852
+    font-family: Raleway
+    font-size: 20px
+    font-weight: 400
+    line-height: 24px
+    text-align: center
+    margin:5px 0px
+    margin-bottom: 20px
+    display block
+    

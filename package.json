@@ -1,0 +1,28 @@
+{
+  "name": "firma",
+  "version": "1.0.0",
+  "description": "Firma para clientes de correo",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MaxiTec",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "browser-sync": "^2.23.3",
+    "concurrently": "^3.6.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-nunjucks-render": "^2.2.2",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-static-i18n-html": "^0.3.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-watch": "^5.0.0",
+    "rimraf": "^2.6.1"
+  }
+}

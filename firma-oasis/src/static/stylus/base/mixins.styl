@@ -1,0 +1,22 @@
+
+btn(color, bg, border,isGradient, bordersize, shadow)
+	color: color
+	if shadow
+		box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6)
+	background-color: bg
+	// if isGradient
+	// 	background: bg linear-gradient(270deg, rgba(255,255,255,0.5) 0%, rgba(255,161,15,0.5) 100%);
+		// background: isGradient linear-gradient(-270deg, rgba(bg,0.5) 0%, rgba(255,161,15,0.5) 100%);
+	if border
+		if bordersize
+			border: bordersize solid border
+		else
+			border: 1px solid border
+	else
+		border: none
+	&:focus
+		outline: 0px
+	&:hover
+		background-color: darken(bg, 30%)
+	&:active
+		box-shadow: inset 3px 3px 0px rgba(0,0,0,0.1)

@@ -1,0 +1,1 @@
+export const assetUrl='https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/'

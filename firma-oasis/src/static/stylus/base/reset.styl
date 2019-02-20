@@ -1,0 +1,62 @@
+html
+	box-sizing: border-box
+	margin-right: 0px!important
+*,
+*:after,
+*:before
+	padding: 0
+	margin: 0
+	box-sizing: inherit
+img
+	max-width : 100%
+a 
+	text-decoration : none
+	&:focus
+		outline: none
+a:hover
+	text-decoration : underline
+body::-webkit-scrollbar
+	display none
+ol, ul 
+	list-style: none;
+blockquote, q
+	quotes: none
+blockquote:before, blockquote:after,
+q:before, q:after
+	content: '';
+	content: none;
+table
+	border-collapse: collapse
+	border-spacing: 0
+button
+	background: none
+	outline: none
+	border 0px
+	&:focus
+		outline: none
+input[type="text"],input[type="password"],input[type="number"],input[type="email"],input[type="submit"],select,textarea
+	outline none
+	&:focus
+		outline none
+select:disabled,input[type=text]:disabled,input[type=number]:disabled,input[type=password]:disabled,input[type=date]:disabled
+	background $grayColor
+	border-color:$grayColor
+	cursor: not-allowed
+	color:$grayColor
+	// opacity 0.9
+	&::placeholder
+		color:$grayColor
+input[type=submit]
+	&:disabled
+		cursor: not-allowed!important
+		background rgba(#ccc,50%)
+		border-color:rgba(#ccc,50%)
+		&:hover
+			background rgba(#ccc,50%)
+			border-color:rgba(#ccc,50%)
+select:focus
+	outline: none
+h1
+	margin 0
+li
+	list-style none

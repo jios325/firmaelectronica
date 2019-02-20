@@ -1,0 +1,146 @@
+for num in 1..20
+	.mb-{num * 5}
+		margin-bottom: num * 5px!important
+		&-md
+			@media screen and (min-width: 1024px)
+				margin-bottom: num * 5px!important
+	.mt-{num * 5}
+		margin-top: num * 5px!important
+		&-md
+			@media screen and (min-width: 1024px)
+				margin-top: num * 5px!important
+for num in 1..20
+	.ml-{num * 5}
+		margin-left: num * 5px
+	.mr-{num * 5}
+		margin-right: num * 5px
+		&-md
+			@media screen and (min-width: 1024px)
+				margin-right: num * 5px!important
+.margin-auto
+	margin 0  auto !important
+.border
+	border: 0px
+	border-bottom:1px solid #c0c0c0
+.no-border
+	border:0px!important
+	height: 150px!important
+.border--dashed
+	height 1px
+	background-image: linear-gradient(to right, #979797 33%, rgba(255,255,255,0) 0%);
+	background-position: bottom
+	background-size: 35px 1px
+	background-repeat: repeat-x
+	max-width: 860px
+	margin-top:40px
+	margin-left:auto
+	margin-right:auto
+
+//paddigs ----------------------------------------------
+.pl-0
+	padding-left: 0px!important
+	&-md
+		@media screen and (min-width: 1024px)
+			padding-left: 0px!important
+for num in 1..10
+	.pr-{num * 10}
+		padding-right: num * 10px!important
+		&-md
+			@media screen and (min-width: 1024px)
+				padding-right: num * 10px!important
+	.pt-{num * 10}
+		padding-top: num * 10px!important
+	.pl-{num * 10}
+		padding-left: num * 10px!important
+		&-md
+			@media screen and (min-width: 1024px)
+				padding-left: num * 10px!important
+.no-padding
+	padding:0!important
+.clearfix
+	&:after,&:before
+		content ''
+		display block
+		clear both
+.center-block
+	display:block
+	margin:0 auto
+.visible
+	&-xs,&-sm,&-md,&-lg
+		display:none!important
+	&-inline-xs,&-inline-sm,&-inline-md,&-inline-lg
+		display:none!important
+	&-flex-xs,&-flex-sm,&-flex-md,&-flex-lg
+		display:none!important
+	//@media only screen and (max-width: 767px)
+  @media screen and (min-width: 767px)
+		.visible-xs
+			display:block!important
+		.visible-inline-xs
+			display:inline-block!important
+		.visible-flex-xs
+			display:flex!important
+	//Tablets @media only screen and (min-width: 768px) and (max-width: 1023px)
+	@media screen and (min-width: 768px)
+		.visible-sm
+			display:block!important
+		.visible-inline-sm
+			display:inline-block!important
+		.visible-flex-sm
+			display:flex!important
+	//Small Desktops @media only screen and (min-width: 1024px)
+	@media screen and (min-width: 1024px)
+		.visible-md
+			display:block!important
+		.visible-inline-md
+			display:inline-block!important
+		.visible-flex-md
+			display:flex!important
+	//Desktops @media only screen and (min-width: 1201px)
+	@media screen and (min-width: 1200px)
+		.visible-lg
+			display:block!important
+		.visible-inline-lg
+			display:inline-block!important
+		.visible-flex-lg
+			display:flex!important
+.hidden
+	display none!important
+	@media screen and (min-width: 767px)
+		.hidden-xs
+			display:none!important
+	//Tablets ()
+	@media screen and (min-width: 768px) and (max-width: 1023px)
+		.hidden-sm
+			display:none!important
+	//small Desktops
+	@media screen and (min-width: 1024px)
+		.hidden-md
+			display:none!important
+	// Desktops
+	@media screen and (min-width: 1200px)
+		.hidden-lg
+			display:none!important
+//positions ----------------------------------------------
+.block-center
+	margin:0 auto
+.pull-right
+	float: right!important
+.pull-left
+	float: left!important
+.uppercase
+	text-transform uppercase
+.lowercase
+	text-transform capitalize!important
+.text-center
+	text-align:center !important
+.text-left
+	text-align:left!important
+.text-right
+	text-align:right
+.capitalize
+	text-transform capitalize
+.separator
+	height 40px
+	line-height: 40px
+	border:0

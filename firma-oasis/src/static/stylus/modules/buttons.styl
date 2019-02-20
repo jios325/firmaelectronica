@@ -1,0 +1,32 @@
+.btn
+	height: 45px
+	position: relative
+	line-height: 45px
+	padding: 0px 15px
+	cursor pointer
+	font-weight: 300
+	font-size: 30px
+	text-align: center
+	font-size: 16px
+	display: inline-block
+	letter-spacing: 1px
+	transition: 0.2s all ease
+	border-radius: 45px
+	text-transform: uppercase
+	min-width:180px
+	// -webkit-appearance: none
+	// -webkit-border-radius: 0
+	&.btn-block
+		display block
+		width: 100%
+	&-primary
+		btn(#fff, $secondaryColor, false ,$secondaryColor, false, false)
+	&-reset
+		btn(#fff, #959595, false ,$secondaryColor, false, false)
+	&-disabled
+		cursor: auto
+		background rgba(#ccc,50%)
+		border-color:rgba(#ccc,50%)
+		&:hover
+			background rgba(#ccc,50%)
+			border-color:rgba(#ccc,50%)

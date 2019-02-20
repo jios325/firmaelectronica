@@ -1,0 +1,122 @@
+.form-group
+	margin-bottom: 20px
+	position relative
+	padding: 0 .5rem
+	@media screen and (min-width: 1024px)
+		padding: 0 1.5rem
+	.form__label
+		text-align: center
+		display block
+		text-align: left
+		color: #3B4852
+		text-transform: uppercase
+		font-family: Raleway
+		font-size: 16px
+		font-weight: 600
+		line-height: 24px
+		text-align: left
+		&--small
+			color:#323941!important
+			font-size: 13px!important
+			&.required
+				&:before
+					color:#E42E2E!important
+		&--nowrap
+			white-space nowrap
+.form-control
+	height 40px
+	line-height: 40px
+	width 100%
+	background-color transparent
+	padding-left: 15px
+	padding-right: 20px
+	font-family $primaryFont
+	font-weight 300
+	letter-spacing 0.73px
+	text-align left
+	border-radius: 40px
+	border:0px
+	color: #727070;
+	font-size: 13px
+	border: 1px solid rgba(#323941,80%)
+	-webkit-appearance: none;
+	-webkit-border-radius: 40px;
+	&::placeholder
+		color: #C0C0C0;
+	&:focus
+		border-color: $primaryColor
+		// & + select:after
+		// 	transform: rotate(-180deg)
+.input-group	
+	display table
+	width 100%
+	border-collapse separate
+	&__add
+		display: table-cell
+		vertical-align: top
+		box-sizing border-box
+		border-right 0px
+		border-left: 0px
+		width: 50px
+		text-align: center
+		span
+			line-height 45px
+			color:$fontColor
+.select
+	position relative
+	&:after
+		content:''
+		display block
+		background url('./flecha-down.png')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position:center center
+		height 8px
+		width 12px
+		position absolute
+		right 20px
+		top:50%
+		transform: translateY(-50%)
+		// font-family: $oasis-font
+		// position absolute
+		// top:50%
+		// right 5px
+		// transform: translateY(-50%) rotate(0)
+		// pointer-events: none
+		// user-select none
+		// color: $fontColor
+		// font-size: 16px
+		// transition: .35s all ease
+	&.open
+		&:after
+			transform: translateY(-50%) rotate(180deg)
+		// font-size: 24px
+.checkbox-custom
+	margin-right: 3px
+	display inline-block
+	input[type="checkbox"]
+		display none
+		&:checked + label:after
+			content: "\e024"
+			font-family: $oasis-font
+			font-size: 13px
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, .2)
+	label
+		position: relative
+		padding-right:17px
+		text-align right 
+		line-height 20px
+		color inherit
+		font-size 12px
+		font-weight 300
+		cursor pointer
+		color: #727070
+		&:after
+			content: "\e025"
+			font-family: $oasis-font
+			font-size: 13px
+			width: 20px
+			height: 20px
+			position: absolute
+			right: 0
+			top:-3px
