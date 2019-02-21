@@ -229,7 +229,7 @@ const Preview = (props) =>  {
                             <tr style="box-sizing: border-box;">
                               <td valign="center" style="vertical-align:center;width:18px;"><img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tel.png" alt="" style="margin-right:5px"></td>
                               <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: #756857;font-size: 10px;letter-spacing: 0.48px;">
-                                <span style="line-height: 18px;mso-line-height-rule:exactly;">${(telefono!=null)?formatPhoneNumber(telefono):'Teléfono'} EXT. ${(extension!=null)?extension:'Extensión'}</span>
+                                <span style="line-height: 18px;mso-line-height-rule:exactly;">${(telefono!=null)?formatPhoneNumber(telefono):'Teléfono'} ${(extension!=null)?`EXT. ${extension}`:''}</span>
                               </td>
                             </tr>
                             ${(celular!=null) ?`

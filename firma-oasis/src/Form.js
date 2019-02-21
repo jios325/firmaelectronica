@@ -12,7 +12,6 @@ class MyForm extends React.Component {
     };
     this.onSubmit = this.onSubmit.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
-    // this.test = this.test.bind(this);
     this.onChange = this.onChange.bind(this);
     this.setRef = this.setRef.bind(this);
   }
@@ -92,10 +91,7 @@ onSubmit(values){
         if (!values.hotel) {
           errors.hotel = "Required";
         }
-        if (!values.extension) {
-          errors.extension = "Required";
-        }
-        else if (isNaN(values.extension)) {
+        if (values.extension && isNaN(values.extension)) {
           errors.extension = "Must be a number";
         } 
         return errors;
@@ -139,7 +135,6 @@ onSubmit(values){
                   </Field>
                 </div>
                 <div className="form-group col-xs-12 col-sm-4">
-                  {/* <Field name="nombre" component="input" placeholder="Nombre" /> */}
                   <Field name="nombre">
                     {({ input, meta }) => (
                       <div>
