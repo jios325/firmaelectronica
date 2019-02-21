@@ -15,6 +15,15 @@
 		font-weight: 600
 		line-height: 24px
 		text-align: left
+		position relative
+		&.required:before
+			content:'*'
+			display inline-block
+			color:$secondaryColor
+			font-size: 21px
+			position absolute
+			top:0
+			left:-8px
 		&--small
 			color:#323941!important
 			font-size: 13px!important

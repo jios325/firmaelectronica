@@ -1166,6 +1166,16 @@ body.noscroll {
   font-weight: 600;
   line-height: 24px;
   text-align: left;
+  position: relative;
+}
+.form-group .form__label.required:before {
+  content: '*';
+  display: inline-block;
+  color: #006384;
+  font-size: 21px;
+  position: absolute;
+  top: 0;
+  left: -8px;
 }
 .form-group .form__label--small {
   color: #323941 !important;

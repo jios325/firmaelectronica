@@ -85,6 +85,9 @@ onSubmit(values){
         else if (values.telefono.length < 10) {
           errors.telefono = "Telefono a 10 Digitos";
         } 
+        if (values.celular && values.celular.length < 10) {
+          errors.celular = "Telefono a 10 Digitos";
+        } 
         if (!values.hotel) {
           errors.hotel = "Required";
         }
@@ -113,7 +116,7 @@ onSubmit(values){
                       const newInput = { ...input, onChange: mergedOnChange }
                       return (
                         <div>
-                          <label className="form__label">Hotel:</label>
+                          <label className="form__label required">Hotel:</label>
                           <div class="select">
                           <select {...newInput} className="form-control">
                             <option value="" disabled selected>Selecciona un Hotel</option>
@@ -139,7 +142,7 @@ onSubmit(values){
                   <Field name="nombre">
                     {({ input, meta }) => (
                       <div>
-                        <label className="form__label">Nombre:</label>
+                        <label className="form__label required">Nombre:</label>
                         <input {...input} type="text" placeholder="Nombre" className="form-control" onChange={(e) => {
                             input.onChange(e);
                             this.onChange()
@@ -153,7 +156,7 @@ onSubmit(values){
                   <Field name="apellido">
                     {({ input, meta }) => (
                       <div>
-                        <label className="form__label">Apellido:</label>
+                        <label className="form__label required">Apellido:</label>
                         <input {...input} type="text" placeholder="Apellido" className="form-control" onChange={(e) => {
                             input.onChange(e);
                             this.onChange()
@@ -167,7 +170,7 @@ onSubmit(values){
                   <Field name="puesto">
                     {({ input, meta }) => (
                       <div>
-                        <label className="form__label">Puesto:</label>
+                        <label className="form__label required">Puesto:</label>
                         <input {...input} type="text" placeholder="Puesto" className="form-control" onChange={(e) => {
                             input.onChange(e);
                             this.onChange()
@@ -181,7 +184,7 @@ onSubmit(values){
                   <Field name="telefono">
                     {({ input, meta }) => (
                       <div>
-                        <label className="form__label">Teléfono:</label>
+                        <label className="form__label required">Teléfono:</label>
                         <input {...input} type="text" placeholder="Telefono" className="form-control" maxLength="10" onChange={(e) => {
                             input.onChange(e);
                             this.onChange()
@@ -209,7 +212,7 @@ onSubmit(values){
                   <Field name="extension">
                     {({ input, meta }) => (
                       <div>
-                        <label className="form__label">Extensión:</label>
+                        <label className="form__label required">Extensión:</label>
                         <input {...input} type="text" placeholder="Extensión" className="form-control" onChange={(e) => {
                             input.onChange(e);
                             this.onChange()
