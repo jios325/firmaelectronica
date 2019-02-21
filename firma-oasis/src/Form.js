@@ -47,6 +47,7 @@ onSubmit(values){
       range.selectNodeContents(this.childRef);
       selection.removeAllRanges();
       selection.addRange(range);
+      console.log(range,range.startContainer.innerHTML,selection)
       document.execCommand('copy');
       alert('Copiado al Portapapeles');
       this.clearSelection()
@@ -117,10 +118,10 @@ onSubmit(values){
                       return (
                         <div>
                           <label className="form__label required">Hotel:</label>
-                          <div class="select">
+                          <div className="select">
                           <select {...newInput} className="form-control">
                             <option value="" disabled selected>Selecciona un Hotel</option>
-                            <option value="ohr">OHR</option>
+                            <option value="ohr">Corporativo</option>
                             <option value="pyr">The Pyramid at Grand Oasis</option>
                             <option value="goc">Grand Oasis Cancun</option>
                             <option value="gop">Grand Oasis Palm</option>
@@ -181,11 +182,11 @@ onSubmit(values){
                   </Field>
                 </div>
                 <div className="form-group col-xs-12 col-sm-3">
-                  <Field name="telefono">
+                  <Field name="celular">
                     {({ input, meta }) => (
                       <div>
-                        <label className="form__label required">Teléfono:</label>
-                        <input {...input} type="text" placeholder="Telefono" className="form-control" maxLength="10" onChange={(e) => {
+                        <label className="form__label">Celular:</label>
+                        <input {...input} type="text" placeholder="Celular" className="form-control" onChange={(e) => {
                             input.onChange(e);
                             this.onChange()
                         }}/>
@@ -195,11 +196,11 @@ onSubmit(values){
                   </Field>
                 </div>
                 <div className="form-group col-xs-12 col-sm-3">
-                  <Field name="celular">
+                  <Field name="telefono">
                     {({ input, meta }) => (
                       <div>
-                        <label className="form__label">Celular:</label>
-                        <input {...input} type="text" placeholder="Celular" className="form-control" onChange={(e) => {
+                        <label className="form__label required">Teléfono:</label>
+                        <input {...input} type="text" placeholder="Telefono" className="form-control" maxLength="10" onChange={(e) => {
                             input.onChange(e);
                             this.onChange()
                         }}/>
@@ -238,16 +239,16 @@ onSubmit(values){
             >Reset</button>
           </div>
         </form>
-        <div class="border--dashed"></div>
+        <div className="border--dashed"></div>
         <div>
-          <div class={`preview mt-20 mt-30-md ${this.state.showCopy?'':'disabled'}`}>
+          <div className={`preview mt-20 mt-30-md ${this.state.showCopy?'':'disabled'}`}>
               <span className="preview__title">VISTA PREVIA</span>
-              <div class="preview__inner">
+              <div className="preview__inner">
                 <Preview data={values} setRef={this.setRef}/>
               </div>
           </div>
           {this.state.showCopy &&
-            <div class="text-center">
+            <div className="text-center">
               <button className=" text-center btn btn-primary mt-20 mt-30-md mb-20" onClick={this.copyToClipboard}>Copiar al portapapeles</button> 
             </div>
           }

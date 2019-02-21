@@ -1,0 +1,25 @@
+.modal
+  position fixed
+  top:0
+  left:0
+  height 100%
+  width 100%
+  background: rgba($primaryColor,30%)
+  display flex
+  justify-content: center
+  align-items: center
+  z-index: 900
+  &__header h4
+    line-height: 28px
+  &__inner
+    background: rgba(#fff,95%)
+    padding: 2rem
+    max-width 600px
+    position relative
+  &__close
+    float:right
+    position absolute
+    font-size:20px
+    right:15px
+    top:15px
+    cursor pointer

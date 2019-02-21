@@ -180,6 +180,7 @@ const Preview = (props) =>  {
   let {nombre,apellido,puesto,telefono,extension,hotel,celular} = props.data
   let redes = (hotel!=null)?hoteles[hotel].redes:[]
   let template =`
+  <div>
   <style>
   .gmail-fix {
     display: none;
@@ -274,7 +275,8 @@ const Preview = (props) =>  {
   </tr>
 </table>
 <div style="white-space: nowrap;font-size:0px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
-  `
+</div>  
+`
   return (
     <div dangerouslySetInnerHTML={{__html:template}} ref={props.setRef}/>
   )
