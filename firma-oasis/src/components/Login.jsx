@@ -44,10 +44,10 @@ class Login extends Component {
               <option value="" disabled="">Selecciona un Complejo</option>
               <option value="ohr">Corporativo</option>
               <option value="goc">Complejos Cancun</option>
-              <option value="gos">Complejos Sens</option>
+              {/* <option value="gos">Complejos Sens</option> */}
               <option value="gop">Complejos Palm</option>
               <option value="urban">Complejos Smart</option>
-              <option value="got">Complejos Tulum</option>
+              {/* <option value="got">Complejos Tulum</option> */}
             </select>
             </div>
           </div>
