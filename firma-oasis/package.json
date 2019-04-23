@@ -19,6 +19,7 @@
   },
   "scripts": {
     "dev": "react-scripts start",
+    "copy":"cp ./src/.htaccess ./build/",
     "start": "serve --single ./build",
     "watch": "concurrently --names \"webpack, stylus\" --prefix name \"yarn dev\" \"yarn styles:watch\"",
     "build": "react-scripts build",
