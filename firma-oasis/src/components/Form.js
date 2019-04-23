@@ -2,31 +2,36 @@ import React from 'react';
 import { Form, Field } from 'react-final-form'
 import Preview from './Preview'
 import { checkCookie } from '../utils/cookies';
-// const $hoteles = [{ code: "ohr", nombre: "Corporativo" },
-// { code: "pyr", nombre: "The Pyramid at Grand Oasis" },
-// { code: "goc", nombre: "Grand Oasis Cancun" },
-// { code: "gop", nombre: "Grand Oasis Palm" },
-// { code: "op", nombre: "Oasis Palm" },
-// { code: "gos", nombre: "Grand Oasis Sens" },
-// { code: "oh", nombre: "Oh! The Urban Oasis" },
-// { code: "smart", nombre: "Smart Cancun by Oasis" },
-// { code: "got", nombre: "Grand Oasis Tulum" },
-// ]
 let complejos = [
+  {
+    "nombre": "ohr",
+    "pass": '26837434',
+    'hoteles': [{ "code": "ohr", "hotel": "Corporativo" }]
+  },
   {
     "nombre": "gos",
     "pass": 'sensXPFiOR',
-    'hoteles': [{"code":"gos","nombre": "Grand Oasis Sens"}]
+    'hoteles': [{ "code": "gos", "hotel": "Grand Oasis Sens" }]
   },
   {
     "nombre": "goc",
-    "pass": 'gocKtEkRe',
-    'hoteles': [{"code":'goc',"nombre": "Grand Oasis Cancun"},{"code":'pyr',"nombre": "The Pyramid"}]
+    "pass": 'gocCBZbbd',
+    'hoteles': [{ "code": 'goc', "hotel": "Grand Oasis Cancun" }, { "code": 'pyr', "hotel": "The Pyramid" }]
+  },
+  {
+    "nombre": "gop",
+    "pass": 'gopKtEkRe',
+    'hoteles': [{ "code": 'gop', "hotel": "Grand Oasis Palm" }, { "code": 'op', "hotel": "Oasis Palm" }]
   },
   {
     "nombre": "urban",
-    "pass": 'gocKtEkRe',
-    'hoteles': [{"code":'smart',"nombre": "Smart Cancun by Oasis"},{"code":'oh',"nombre": "Oh! The Urban Oasis"}]
+    "pass": 'urbanKth7wj',
+    'hoteles': [{ "code": 'smart', "hotel": "Smart Cancun by Oasis" }, { "code": 'oh', "hotel": "Oh! The Urban Oasis" }]
+  },
+  {
+    "nombre": "got",
+    "pass": 'tulum7RUloeu',
+    'hoteles': [{ "code": 'got', "hotel": "Grand Oasis Tulum" }]
   },
 ]
 class MyForm extends React.Component {
@@ -91,12 +96,13 @@ class MyForm extends React.Component {
     let filterHotels = [];
     let isLogin = checkCookie()
     if (isLogin != undefined) {
-      filterHotels = complejos.find(ele=>{
-        return ele.nombre==isLogin
+      filterHotels = complejos.find(ele => {
+        return ele.nombre == isLogin
       })
     } else {
       filterHotels = complejos
     }
+    console.log(filterHotels)
     return (
       <Form
         onSubmit={this.onSubmit}
@@ -156,7 +162,7 @@ class MyForm extends React.Component {
                                   <option value="" disabled selected>Selecciona un Hotel</option>
                                   {filterHotels.hoteles.map(ele => {
                                     return (
-                                      <option value={ele.code}>{ele.nombre}</option>
+                                      <option value={ele.code}>{ele.hotel}</option>
                                     )
                                   })}
                                 </select>

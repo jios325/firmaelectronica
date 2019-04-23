@@ -38,19 +38,16 @@ class Login extends Component {
         {!isSuccess ? <div>{message}</div> : <Redirect to='dashboard' />}
         <form onSubmit={this.onHandleLogin}>
           <div className="form-group">
-          <label className="form__label required">Hotel:</label>
+          <label className="form__label required">Complejo:</label>
           <div className="select">
             <select name="hotel" className="form-control" required>
-              <option value="" disabled="">Selecciona un Hotel</option>
+              <option value="" disabled="">Selecciona un Complejo</option>
               <option value="ohr">Corporativo</option>
-              <option value="pyr">The Pyramid at Grand Oasis</option>
-              <option value="goc">Grand Oasis Cancun</option>
-              <option value="gop">Grand Oasis Palm</option>
-              <option value="op">Oasis Palm</option>
-              <option value="gos">Grand Oasis Sens</option>
-              <option value="urban">Oh! The Urban Oasis</option>
-              <option value="smart">Smart Cancun by Oasis</option>
-              <option value="got">Grand Oasis Tulum</option>
+              <option value="goc">Complejos Cancun</option>
+              <option value="gos">Complejos Sens</option>
+              <option value="gop">Complejos Palm</option>
+              <option value="urban">Complejos Smart</option>
+              <option value="got">Complejos Tulum</option>
             </select>
             </div>
           </div>

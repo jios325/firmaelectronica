@@ -3,68 +3,36 @@ export const loginUserService = (request) => {
   console.log(user)
   let complejos = [
     {
+      "nombre": "ohr",
+      "pass": '26837434',
+      'hoteles': [{ "code": "ohr", "hotel": "Corporativo" }]
+    },
+    {
       "nombre": "gos",
       "pass": 'sensXPFiOR',
-      'hoteles': [{"code":"gos","hotel": "Grand Oasis Sens"}]
+      'hoteles': [{ "code": "gos", "hotel": "Grand Oasis Sens" }]
     },
     {
       "nombre": "goc",
-      "pass": 'gocKtEkRe',
-      'hoteles': [{"code":'goc',"hotel": "Grand Oasis Cancun"},{"code":'pyr',"hotel": "The Pyramid"}]
+      "pass": 'gocCBZbbd',
+      'hoteles': [{ "code": 'goc', "hotel": "Grand Oasis Cancun" }, { "code": 'pyr', "hotel": "The Pyramid" }]
+    },
+    {
+      "nombre": "gop",
+      "pass": 'gopKtEkRe',
+      'hoteles': [{ "code": 'gop', "hotel": "Grand Oasis Palm" }, { "code": 'op', "hotel": "Oasis Palm" }]
     },
     {
       "nombre": "urban",
-      "pass": 'urbanKtEkRe',
-      'hoteles': [{"code":'smart',"hotel": "Smart Cancun by Oasis"},{"code":'oh',"hotel": "Oh! The Urban Oasis"}]
+      "pass": 'urbanKth7wj',
+      'hoteles': [{ "code": 'smart', "hotel": "Smart Cancun by Oasis" }, { "code": 'oh', "hotel": "Oh! The Urban Oasis" }]
+    },
+    {
+      "nombre": "got",
+      "pass": 'tulum7RUloeu',
+      'hoteles': [{ "code": 'got', "hotel": "Grand Oasis Tulum" }]
     },
   ]
-  // const hoteles = [
-  //   {
-  //     "usuario": "goc",
-  //     "hotel": "Grand Oasis Cancun",
-  //     "pass": 'gocKtEkRe'
-  //   },
-  //   {
-  //     "usuario": "pyr",
-  //     "hotel": "The Pyramid",
-  //     "pass": 'pyrCBZbbd'
-  //   },
-  //   {
-  //     "usuario": "got",
-  //     "hotel": "Grand Oasis Tulum",
-  //     "pass": 'tulum7RULfb'
-  //   },
-  //   {
-  //     "usuario": "oh",
-  //     "hotel": "Oh! The Urban Oasis",
-  //     "pass": 'oh7RULfb'
-  //   },
-  //   {
-  //     "usuario": "smart",
-  //     "hotel": "Smart Cancun by Oasis",
-  //     "pass": 'smart7RULfb'
-  //   },
-  //   {
-  //     "usuario": "gop",
-  //     "hotel": "Grand Oasis Palm",
-  //     "pass": 'palm7RULfb'
-  //   },
-  //   {
-  //     "usuario": "op",
-  //     "hotel": "Oasis Palm",
-  //     "pass": 'opalm7RULfb'
-  //   },
-  //   {
-    //   "usuario": "gos",
-    //   "hotel": "Grand Oasis Sens",
-    //   "pass": 'sensXPFiOR'
-    // },
-  //   {
-  //     "usuario": "ohr",
-  //     "hotel": "Corporativo",
-  //     "pass": 'corpo7RULfb'
-  //   },
-  // ];
   let search = complejos.find(ele => {
     return ele.nombre == user.usuario
   })

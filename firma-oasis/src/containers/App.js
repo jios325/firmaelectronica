@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import {
   BrowserRouter,
   Route,
-  Switch
+  Switch,
+  Redirect
 } from 'react-router-dom';
 import PrivateRoute from './privateRoute';
 import LoginPage from '../components/Login';
 import FirmaForm from '../components/FirmaForm';
 import 'flexboxgrid/dist/flexboxgrid.css'
+import { checkCookie } from '../utils/cookies';
 const AlertaSafari = (props) => {
   return (
     <div class="modal">
@@ -52,7 +54,10 @@ class App extends Component {
             <AlertaSafari closeModal={this.closeAlert} />
           }
           <Switch>
-            <Route path='/' exact={true} component={LoginPage} />
+            <Route path='/' exact={true} component={() => {
+              console.log(checkCookie())
+              return (checkCookie() != undefined) ? <Redirect to='dashboard' /> : <LoginPage />
+            }} />
             <Route path='/login' component={LoginPage} />
             <PrivateRoute path='/dashboard' component={FirmaForm} />
           </Switch>
