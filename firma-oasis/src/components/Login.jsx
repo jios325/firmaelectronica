@@ -22,9 +22,9 @@ class Login extends Component {
     console.log(this.props.response.login)
     let isSuccess, message;
     if (this.props.response.login.hasOwnProperty('response')) {
-      isSuccess = this.props.response.login.response.usuario;
+      isSuccess = this.props.response.login.response.nombre;
       if (isSuccess) {
-        setCookie('hotel', this.props.response.login.response.usuario, 1);
+        setCookie('hotel', this.props.response.login.response.nombre, 1);
       }
     }
 
@@ -48,7 +48,7 @@ class Login extends Component {
               <option value="gop">Grand Oasis Palm</option>
               <option value="op">Oasis Palm</option>
               <option value="gos">Grand Oasis Sens</option>
-              <option value="oh">Oh! The Urban Oasis</option>
+              <option value="urban">Oh! The Urban Oasis</option>
               <option value="smart">Smart Cancun by Oasis</option>
               <option value="got">Grand Oasis Tulum</option>
             </select>
