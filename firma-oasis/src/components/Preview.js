@@ -180,197 +180,182 @@ const Preview = (props) => {
   let { nombre, apellido, puesto, telefono, extension, hotel, celular } = props.data
   let redes = (hotel != null) ? hoteles[hotel].redes : []
   let template = `
-  <!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head>
-    <title>Firma Oasis</title>
-    <!--[if !mso]><!-- -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--<![endif]-->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <style type="text/css">
-        body {
-            margin: 0;
-            padding: 0;
-            -webkit-text-size-adjust: 100%;
-            -ms-text-size-adjust: 100%;
-        }
-        table,
-        td {
-            border-collapse: collapse;
-            mso-table-lspace: 0pt;
-            mso-table-rspace: 0pt;
-        }
-        img {
-            border: 0;
-            outline: none;
-            text-decoration: none;
-            -ms-interpolation-mode: bicubic;
-        }
-    </style>
-    <!--[if mso]>
-      <style> body,table tr,table td,a, span,table.MsoNormalTable {  font-family:Arial, Helvetica, sans-serif !important;  } td{padding:0px;}</style>
+  <div>
+  <style type="text/css">
+      body {
+          margin: 0;
+          padding: 0;
+          -webkit-text-size-adjust: 100%;
+          -ms-text-size-adjust: 100%;
+      }
+      
+      table,
+      td {
+          border-collapse: collapse;
+          mso-table-lspace: 0pt;
+          mso-table-rspace: 0pt;
+      }
+      
+      img {
+          border: 0;
+          line-height: 100%;
+          outline: none;
+          text-decoration: none;
+          -ms-interpolation-mode: bicubic;
+      }
+  </style>
+  <!--[if mso]>
+      <style> body,table tr,table td,a, span,table.MsoNormalTable {  font-family:Arial, Helvetica, sans-serif !important;  } td{padding:0;}</style>
     <![endif]-->
-    <style>
+  <style>
       .gmail-fix {
-        display: none;
-        display: none!important;
+          display: none;
+          display: none!important;
       }
-      span, td, table, div {
-        font-family: Arial, serif !important;
+      
+      span,
+      td,
+      table,
+      div {
+          font-family: Arial, serif !important;
       }
-    </style>
-    <!--[if !mso]><!-->
-    <style type="text/css">
-        @media only screen and (max-width:480px) {
-            @-ms-viewport {
-                width: 320px;
-            }
-            @viewport {
-                width: 320px;
-            }
-        }
-    </style>
-    <!--<![endif]-->
-
-    <!--[if mso]>
-        <xml>
-        <o:OfficeDocumentSettings>
-          <o:AllowPNG/>
-          <o:PixelsPerInch>96</o:PixelsPerInch>
-        </o:OfficeDocumentSettings>
-        </xml>
-    <![endif]-->
-    <!--[if !mso]><!-->
-    <!--<![endif]-->
-</head>
-
-<body>
-    <div>
-      <div style="white-space:nowrap; font-size:15px;">
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-      </div>
-        <tr class="gmail-fix">
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" align="center" width="600">
+  </style>
+  <!--[if !mso]><!-->
+  <style type="text/css">
+      @media only screen and (max-width:480px) {
+          @-ms-viewport {
+              width: 320px;
+          }
+          @viewport {
+              width: 320px;
+          }
+      }
+  </style>
+  <!--[if !mso]><!-->
+  <div style="white-space:nowrap; font-size:15px;">
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  </div>
+  <!--<![endif]-->
+  <tr class="gmail-fix">
+      <td>
+          <table cellpadding="0" cellspacing="0" border="0" align="center" width="600">
               <tr>
-                <td cellpadding="0" cellspacing="0" border="0" height="1"; style="line-height: 1px; min-width: 600px;">
-                  <img src="spacer.gif" width="600" height="1" style="display: block; max-height: 1px; min-height: 1px; min-width: 600px; width: 600px;"/>
+                  <td cellpadding="0" cellspacing="0" border="0" height="1" ; style="line-height: 1px; min-width: 600px;">
+                      <img src="spacer.gif" width="600" height="1" style="display: block; max-height: 1px; min-height: 1px; min-width: 600px; width: 600px;" />
                   </td>
-                </tr>
-            </table>
-          </td>
-        </tr>
-      <table class="content" style="width: 600px;max-width:600px;box-sizing: border-box;border-collapse: collapse;border-spacing: 0;">
-        <tr>
+              </tr>
+          </table>
+      </td>
+  </tr>
+  <table class="content" style="width: 600px;max-width:600px;box-sizing: border-box;border-collapse: collapse;border-spacing: 0;">
+      <tr>
           <td style="padding:25px;">
-              <table cellpadding="0" cellspacing="0"  border="0" style="font-family: Arial, sans-serif, 'Open Sans';border-collapse: collapse;width:100%;max-width:600px;">
+              <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, sans-serif, 'Open Sans';border-collapse: collapse;width:100%;max-width:600px;">
                   <tr style="box-sizing: border-box;">
-                    <td>
-                        <table cellpadding="0" cellspacing="0" border="0" style="border-bottom:2px solid #756857;border-collapse: collapse;">
-                            <tr style="box-sizing: border-box;">
-                              <td valign="center" style="vertical-align: center;width: 34%;max-width:180px;height:120px;text-align: center; border-right:2px solid #756857;">
-                                  <a href="https://www.oasishoteles.com" style="display:block;">
-                                    <img style="max-width: 100%;display: block;margin:0 auto;" src="${hotel != null ? hoteles[hotel].logo : assetUrl + 'oasis.png'}">
-                                  </a>
-                              </td>
-                              <td valign="top" style="vertical-align: top; padding-top: 10px; padding-bottom: 10px;overflow:hidden;padding-left:35px;">
-                                <table cellpadding="0" cellspacing="0" border="0" width="100%" style=" border-collapse: collapse;">
-                                  <tr style="box-sizing: border-box;text-align: left;"><td colspan="2" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;color: #756857;font-size: 15px;font-weight: bold;letter-spacing: 0.72px;line-height: 20px;mso-line-height-rule:exactly;text-transform: uppercase;">${(nombre != null) ? nombre : 'Nombre'} ${(apellido != null) ? apellido : 'Apellido'}</td></tr>
-                                  <tr style="box-sizing: border-box;text-align: left;"><td style="mso-line-height-rule:exactly;line-height: 11px;font-size: 10px;letter-spacing: 0.48px;font-family: Arial, sans-serif, 'Open Sans';color: #C4A77E;padding-bottom:20px;text-transform: uppercase;" colspan="2">${(puesto != null) ? puesto : 'Puesto'}</td></tr>
-                                  <tr style="box-sizing: border-box;">
-                                    <td valign="center" style="vertical-align:center;width:18px;"><img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tel.png" alt="" style="margin-right:5px"></td>
-                                    <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: #756857;font-size: 10px;letter-spacing: 0.48px;">
-                                      <span style="line-height: 18px;mso-line-height-rule:exactly;">${(telefono != null) ? formatPhoneNumber(telefono) : 'Teléfono'} ${(extension != null) ? `EXT. ${extension}` : ''}</span>
-                                    </td>
-                                  </tr>
-                                  ${(celular != null) ? `
-                                    <tr style="box-sizing: border-box;">
-                                      <td valign="center" style="vertical-align:center;width:18px;"><img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cel.png" alt="" style="margin-right:5px"></td>
-                                      <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: #756857;font-size: 10px;letter-spacing: 0.48px;">
-                                        <span style="line-height: 18px;mso-line-height-rule:exactly;">${celular}</span>
-                                      </td>
-                                    </tr>
-                                    `: ''
-    }
-                                  <tr style="box-sizing: border-box;text-align: left;">
-                                    <td valign="center" style="vertical-align:center;width:18px;"><img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/pin.png" alt="" style="margin-right:5px"></td>
-                                    <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';color: #756857;font-size: 10px;letter-spacing: 0.48px;">
-                                        <span style="mso-line-height-rule:exactly;line-height: 13px;">${(hotel != null) ? hoteles[hotel].direccion : 'Direccion del Hotel'}</span>
-                                      </td>
-                                  </tr>
-                                </table>
-                              </td>
-                            </tr>
-                        </table>
-                    </td>
+                      <td>
+                          <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-bottom:2px solid #756857;border-collapse: collapse;">
+                              <tr style="box-sizing: border-box;">
+                                  <td valign="center" style="vertical-align: center;width: 34%;max-width:180px;height:120px;text-align: center; border-right:2px solid #756857;">
+                                      <a href="https://www.oasishoteles.com" style="display:block;">
+                                          <img style="max-width: 100%;display: block;margin:0 auto;" src="${hotel != null ? hoteles[hotel].logo : assetUrl + 'oasis.png'}">
+                                      </a>
+                                  </td>
+                                  <td valign="top" style="vertical-align: top; padding-top: 10px; padding-bottom: 10px;overflow:hidden;padding-left:35px;">
+                                      <table cellpadding="0" cellspacing="0" border="0" width="100%" style=" border-collapse: collapse;">
+                                          <tr style="box-sizing: border-box;text-align: left;">
+                                              <td colspan="2" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;color: #756857;font-size: 15px;font-weight: bold;letter-spacing: 0.72px;line-height: 20px;mso-line-height-rule:exactly;text-transform: uppercase;">${(nombre != null) ? nombre : 'Nombre'} ${(apellido != null) ? apellido : 'Apellido'}</td>
+                                          </tr>
+                                          <tr style="box-sizing: border-box;text-align: left;">
+                                              <td style="mso-line-height-rule:exactly;line-height: 11px;font-size: 10px;letter-spacing: 0.48px;font-family: Arial, sans-serif, 'Open Sans';color: #C4A77E;padding-bottom:20px;text-transform: uppercase;" colspan="2">${(puesto != null) ? puesto : 'Puesto'}</td>
+                                          </tr>
+                                          <tr style="box-sizing: border-box;">
+                                              <td valign="center" style="vertical-align:center;width:18px;"><img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tel.png" alt="" style="margin-right:5px"></td>
+                                              <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: #756857;font-size: 10px;letter-spacing: 0.48px;">
+                                                  <span style="line-height: 18px;mso-line-height-rule:exactly;">${(telefono != null) ? formatPhoneNumber(telefono) : 'Teléfono'} ${(extension != null) ? `EXT. ${extension}` : ''}</span>
+                                              </td>
+                                          </tr>
+                                          ${(celular != null) ? `
+                                          <tr style="box-sizing: border-box;">
+                                              <td valign="center" style="vertical-align:center;width:18px;"><img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cel.png" alt="" style="margin-right:5px"></td>
+                                              <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: #756857;font-size: 10px;letter-spacing: 0.48px;">
+                                                  <span style="line-height: 18px;mso-line-height-rule:exactly;">${celular}</span>
+                                              </td>
+                                          </tr>
+                                          `: '' }
+                                          <tr style="box-sizing: border-box;text-align: left;">
+                                              <td valign="center" style="vertical-align:center;width:18px;"><img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/pin.png" alt="" style="margin-right:5px"></td>
+                                              <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';color: #756857;font-size: 10px;letter-spacing: 0.48px;">
+                                                  <span style="mso-line-height-rule:exactly;line-height: 13px;">${(hotel != null) ? hoteles[hotel].direccion : 'Direccion del Hotel'}</span>
+                                              </td>
+                                          </tr>
+                                      </table>
+                                  </td>
+                              </tr>
+                          </table>
+                      </td>
                   </tr>
                   <tr style="box-sizing: border-box;">
-                    <td style="padding-top:15px;">
-                      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse: collapse;">
-                        <tr style="box-sizing: border-box;">
-                          <td valign="bottom" style="vertical-align:bottom;color: #C4A77E;font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: left;mso-line-height-rule:exactly;line-height: 14px;">
-                            <span style="margin-right:5px;">¡Síguenos en nuestras redes sociales!</span>
-                              ${redes.map(el => {
-                                  var cadena = ''
-                                  cadena += `<a href=${el.url} style="margin-right:3px;"><img src=${el.icono} alt=""></a>`
-                                  return cadena
-                                }).join('')}
-                          </td>
-                          <td valign="bottom" style="vertical-align:bottom;text-align:right;"><a style="color: #C4A77E;font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: right;mso-line-height-rule:exactly;line-height: 14px;text-decoration: none;" href="https://www.oasishoteles.com">www.oasishoteles.com</a></td>
-                        </tr>
-                      </table>
-                    </td>
+                      <td style="padding-top:15px;">
+                          <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse: collapse;">
+                              <tr style="box-sizing: border-box;">
+                                  <td valign="bottom" style="vertical-align:bottom;color: #C4A77E;font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: left;mso-line-height-rule:exactly;line-height: 14px;">
+                                      <span style="margin-right:5px;">¡Síguenos en nuestras redes sociales!</span> 
+                                      ${redes.map(el => { var cadena = '' 
+                                      cadena += `<a href=${el.url} style="margin-right:3px;"><img src=${el.icono} alt=""></a>` 
+                                      return cadena 
+                                      }).join('')}
+                                  </td>
+                                  <td valign="bottom" style="vertical-align:bottom;text-align:right;"><a style="color: #C4A77E;font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: right;mso-line-height-rule:exactly;line-height: 14px;text-decoration: none;" href="https://www.oasishoteles.com">www.oasishoteles.com</a></td>
+                              </tr>
+                          </table>
+                      </td>
                   </tr>
               </table>
           </td>
-        </tr>
-        <tr style="background:black;margin:0;box-sizing:border-box;">
-        <td cellpadding="0" cellspacing="0" border="0" style="background:black;margin:0;box-sizing:border-box;padding-top:6px;padding-bottom: 6px;padding-left: 10px;padding-right: 10px;">
-          <table cellpadding="0" cellspacing="0" border="0" align="right" style="border-collapse: collapse;border-spacing:0;width:100%;max-width:580px;">
-            <tr style="margin:0;box-sizing:border-box;">
-              <td valign="center" style="padding-left:6px;">
-                <hr style="border:0px;border-bottom:1px dashed #fff;height:1px;width:229px;">
-              </td>
-              <td valign="center" style="padding-left:6px;">
-                <span style="font-family: Arial, sans-serif, 'Open Sans';color:white;font-size: 10px;font-weight: 500;letter-spacing: 0.36px;line-height: 11px;text-align: center;">¡Descarga nuestra App Oficial!</span>
-              </td>
-              <td valign="center" style="padding-left:6px;">
-                <table cellpadding="0" cellspacing="0" border="0" style="background:black;margin:0;box-sizing:border-box;border-collapse: collapse;border-spacing: 0;text-align: right;">
-                  <tr style="background:black;margin:0;box-sizing:border-box;text-align: right;">
-                    <td>
-                      <a href="http://onelink.to/v2uxnu">
-                        <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/appstore.png" alt="">
-                      </a>
-                    </td>
-                    <td>
-                      <a href="http://onelink.to/v2uxnu">
-                        <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/googleplay.png" alt="">
-                      </a>
-                    </td>
+      </tr>
+      <tr style="background:black;margin:0;box-sizing:border-box;width:600px;">
+          <td cellpadding="0" cellspacing="0" border="0" style="background:black;margin:0;box-sizing:border-box;padding-top:6px;padding-bottom: 6px;padding-left: 10px;padding-right: 10px;">
+              <table cellpadding="0" cellspacing="0" border="0" align="right" style="border-collapse: collapse;border-spacing: 0;">
+                  <tr style="margin:0;box-sizing:border-box;">
+                      <td style="padding-left:6px;">
+                          <hr style="border:0px;border-bottom:1px dashed #fff;height:1px;width:229px;">
+                      </td>
+                      <td style="padding-left:6px;">
+                          <span style="font-family: Arial, sans-serif, 'Open Sans';color:#fff;font-size: 10px;font-weight: 500;letter-spacing: 0.36px;line-height: 11px;text-align: center;">¡Descarga nuestra App Oficial!</span>
+                      </td>
+                      <td style="padding-left:6px;">
+                          <table cellpadding="0" cellspacing="0" border="0" style="background:black;margin:0;box-sizing:border-box;border-collapse: collapse;border-spacing: 0;text-align: right;">
+                              <tr style="background:black;margin:0;box-sizing:border-box;text-align: right;">
+                                  <td>
+                                      <a href="http://onelink.to/v2uxnu">
+                                          <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/appstore.png" alt="">
+                                      </a>
+                                  </td>
+                                  <td>
+                                      <a href="http://onelink.to/v2uxnu">
+                                          <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/googleplay.png" alt="">
+                                      </a>
+                                  </td>
+                              </tr>
+                          </table>
+                      </td>
                   </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
+              </table>
+          </td>
       </tr>
-      <tr style="margin:0;box-sizing:border-box;">
-        <td cellpadding="0" cellspacing="0" style="padding:0px;">
-          <a href="https://oasishoteles.com/es/restaurantes">
-            <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/cintillo.jpg" alt="">
-          </a>
-        </td>
+      <tr style="margin:0;box-sizing:border-box;width:600px;">
+          <td cellpadding="0" cellspacing="0" style="padding:0!important;">
+              <a href="https://oasishoteles.com/es">
+                  <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/cintillo.jpg" alt="">
+              </a>
+          </td>
       </tr>
-      </table>
-      <div style="white-space: nowrap;font-size:0px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
-      </div>  
-</body>
-</html>
-`
+  </table>
+  <!--[if !mso]><!-->
+  <div style="white-space: nowrap;font-size:0px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+  <!--<![endif]-->
+</div>
+  `
   return (
     <div id="contenedor" dangerouslySetInnerHTML={{ __html: template }} ref={props.setRef} />
   )
