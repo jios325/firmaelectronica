@@ -98,6 +98,7 @@ class MyForm extends React.Component {
     var elHtml = document.getElementById(elId).innerHTML;
     var link = document.createElement('a');
     mimeType = mimeType || 'text/plain';
+    link.setAttribute("type", "hidden"); // make it hidden if needed
     link.setAttribute('download', filename);
     link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
     document.body.appendChild(link);
@@ -297,7 +298,7 @@ class MyForm extends React.Component {
               {this.state.showCopy &&
                 <div className="text-center">
                   <button className="text-center btn btn-primary mt-20 mt-30-md mb-20" onClick={this.copyToClipboard}>Copiar al portapapeles</button>
-                  <button className="text-center btn btn-primary mt-20 mt-30-md mb-20 ml-10" onClick={() => { this.downloadInnerHtml(this.state.nombre, 'contenedor', 'text/html') }}>Descargar</button>
+                  <button className="text-center btn btn-primary mt-20 mt-30-md mb-20 ml-10" onClick={() => { this.downloadInnerHtml(`${this.state.nombre}.html`, 'contenedor', 'text/html') }}>Descargar</button>
                 </div>
               }
             </div>
