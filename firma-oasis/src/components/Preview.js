@@ -26,7 +26,7 @@ const hoteles = {
         "icono": assetUrl + 'blog.png'
       },
       {
-        "url": 'https://www.instagram.com',
+        "url": 'https://www.instagram.com/oasishotels/',
         "icono": assetUrl + 'inst.png'
       }
     ]
@@ -275,7 +275,7 @@ const Preview = (props) => {
               <table cellpadding="0" cellspacing="0"  border="0" style="font-family: Arial, sans-serif, 'Open Sans';border-collapse: collapse;width:100%;max-width:600px;">
                   <tr style="box-sizing: border-box;">
                     <td>
-                        <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-bottom:2px solid #756857;border-collapse: collapse;">
+                        <table cellpadding="0" cellspacing="0" border="0" style="border-bottom:2px solid #756857;border-collapse: collapse;">
                             <tr style="box-sizing: border-box;">
                               <td valign="center" style="vertical-align: center;width: 34%;max-width:180px;height:120px;text-align: center; border-right:2px solid #756857;">
                                   <a href="https://www.oasishoteles.com" style="display:block;">
@@ -333,17 +333,17 @@ const Preview = (props) => {
               </table>
           </td>
         </tr>
-        <tr style="background:black;margin:0;box-sizing:border-box;width:600px;">
+        <tr style="background:black;margin:0;box-sizing:border-box;">
         <td cellpadding="0" cellspacing="0" border="0" style="background:black;margin:0;box-sizing:border-box;padding-top:6px;padding-bottom: 6px;padding-left: 10px;padding-right: 10px;">
           <table cellpadding="0" cellspacing="0" border="0" align="right" style="border-collapse: collapse;border-spacing: 0;">
             <tr style="margin:0;box-sizing:border-box;">
-              <td style="padding-left:6px;">
+              <td valign="center" style="padding-left:6px;">
                 <hr style="border:0px;border-bottom:1px dashed #fff;height:1px;width:229px;">
               </td>
-              <td style="padding-left:6px;">
-                <span style="font-family: Arial, sans-serif, 'Open Sans';color:#fff;font-size: 10px;font-weight: 500;letter-spacing: 0.36px;line-height: 11px;text-align: center;">¡Descarga nuestra App Oficial!</span>
+              <td valign="center" style="padding-left:6px;">
+                <span style="font-family: Arial, sans-serif, 'Open Sans';color:#FFFFFF;font-size: 10px;font-weight: 500;letter-spacing: 0.36px;line-height: 11px;text-align: center;">¡Descarga nuestra App Oficial!</span>
               </td>
-              <td style="padding-left:6px;">
+              <td valign="center" style="padding-left:6px;">
                 <table cellpadding="0" cellspacing="0" border="0" style="background:black;margin:0;box-sizing:border-box;border-collapse: collapse;border-spacing: 0;text-align: right;">
                   <tr style="background:black;margin:0;box-sizing:border-box;text-align: right;">
                     <td>
@@ -365,7 +365,7 @@ const Preview = (props) => {
       </tr>
       <tr style="margin:0;box-sizing:border-box;width:600px;">
         <td cellpadding="0" cellspacing="0" style="padding:0px;">
-          <a href="https://oasishoteles.com/es">
+          <a href="https://oasishoteles.com/es/restaurantes">
             <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/cintillo.jpg" alt="">
           </a>
         </td>
