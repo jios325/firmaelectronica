@@ -309,19 +309,19 @@ const Preview = (props) => {
               </table>
           </td>
       </tr>
-      <tr style="background:black;margin:0;box-sizing:border-box;width:600px;">
-          <td style="background:black;margin:0;box-sizing:border-box;padding-top:6px;padding-bottom: 6px;padding-left: 10px;padding-right: 10px;">
+      <tr style="background:black;margin:0;box-sizing:border-box;">
+          <td style="margin:0;box-sizing:border-box;padding-top:6px;padding-bottom: 6px;padding-left: 10px;padding-right: 10px;">
               <table cellpadding="0" cellspacing="0" border="0" align="right" style="border-collapse: collapse;border-spacing: 0;">
                   <tr style="margin:0;box-sizing:border-box;">
                       <td style="padding-left:6px;">
-                          <hr style="border:0px;border-bottom:1px dashed #FFFFFF;height:1px;width:229px;">
+                          <div style="border:0px;border-bottom:1px dashed #FFFFFF;height:1px;width:229px;"></div>
                       </td>
                       <td style="padding-left:6px;">
                           <span style="font-family: Arial, sans-serif, 'Open Sans';color:#FFFFFF;font-size: 10px;font-weight: 500;letter-spacing: 0.36px;line-height: 11px;text-align: center;">¡Descarga nuestra App Oficial!</span>
                       </td>
                       <td style="padding-left:6px;">
-                          <table cellpadding="0" cellspacing="0" border="0" style="background:black;margin:0;box-sizing:border-box;border-collapse: collapse;border-spacing: 0;text-align: right;">
-                              <tr style="background:black;margin:0;box-sizing:border-box;text-align: right;">
+                          <table cellpadding="0" cellspacing="0" border="0" style="margin:0;box-sizing:border-box;border-collapse: collapse;border-spacing: 0;text-align: right;">
+                              <tr style="margin:0;box-sizing:border-box;text-align: right;">
                                   <td>
                                       <a href="http://onelink.to/v2uxnu">
                                           <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/appstore.png" alt="">
