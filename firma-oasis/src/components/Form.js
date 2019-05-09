@@ -100,7 +100,9 @@ class MyForm extends React.Component {
     mimeType = mimeType || 'text/plain';
     link.setAttribute('download', filename);
     link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
+    document.body.appendChild(link);
     link.click();
+    link.remove();
   }
   render() {
     let filterHotels = [];
