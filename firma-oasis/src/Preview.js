@@ -202,7 +202,7 @@ const Preview = (props) =>  {
     <td>
       <table cellpadding="0" cellspacing="0" border="0" align="center" width="600">
         <tr>
-          <td cellpadding="0" cellspacing="0" border="0" height="1"; style="line-height: 1px; min-width: 600px;">
+          <td height="1" style="line-height: 1px; min-width: 600px;">
             <img src="spacer.gif" width="600" height="1" style="display: block; max-height: 1px; min-height: 1px; min-width: 600px; width: 600px;"/>
             </td>
           </tr>
@@ -273,6 +273,41 @@ const Preview = (props) =>  {
         </table>
     </td>
   </tr>
+  <tr style="background:black;margin:0;box-sizing:border-box;">
+  <td cellpadding="0" cellspacing="0" style="background:black;margin:0;box-sizing:border-box;padding-top:6px;padding-bottom: 6px;padding-left: 10px;padding-right: 10px;">
+    <table cellpadding="0" cellspacing="0" border="0" align="right" style="border-collapse: collapse;border-spacing: 0;">
+      <tr style="margin:0;box-sizing:border-box;">
+        <td style="padding-left:6px;">
+          <hr style="border:0px;border-bottom:1px dashed #fff;height:1px;width:229px;">
+        </td>
+        <td style="padding-left:6px;">
+          <span style="color:#fff;font-size: 10px;font-weight: 500;letter-spacing: 0.36px;line-height: 11px;text-align: center;">¡Descarga nuestra App Oficial!</span>
+        </td>
+        <td style="padding-left:6px;">
+          <table cellpadding="0" cellspacing="0" border="0" style="background:black;margin:0;box-sizing:border-box;border-collapse: collapse;border-spacing: 0;text-align: right;">
+            <tr style="background:black;margin:0;box-sizing:border-box;text-align: right;">
+              <td>
+                <a href="http://onelink.to/v2uxnu">
+                  <img src="http://localhost:3000/dist/img/appstore.png" alt="">
+                </a>
+              </td>
+              <td>
+                <a href="http://onelink.to/v2uxnu">
+                  <img src="http://localhost:3000/dist/img/googleplay.png" alt="">
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr style="margin:0;box-sizing:border-box;">
+  <td cellpadding="0" cellspacing="0" style="padding:0;">
+    <img src="http://localhost:3000/dist/img/cintillo.jpg" alt="">
+  </td>
+</tr>
 </table>
 <div style="white-space: nowrap;font-size:0px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
 </div>  

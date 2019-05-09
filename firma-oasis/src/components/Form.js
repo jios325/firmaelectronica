@@ -41,7 +41,8 @@ class MyForm extends React.Component {
     this.state = {
       loader: false,
       hotel: '',
-      showCopy: false
+      showCopy: false,
+      name: ''
     };
     this.onSubmit = this.onSubmit.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
@@ -57,13 +58,15 @@ class MyForm extends React.Component {
     this.childRef = input;
   }
   onSubmit(values) {
+    console.log(values)
     this.setState({
       loader: true,
-      showCopy: true
+      showCopy: true,
+      nombre: `${values.nombre}-${values.apellido}`
     })
     setTimeout(() => {
       this.setState({
-        loader: false
+        loader: false,
       })
     }, 1000);
   }
@@ -78,7 +81,6 @@ class MyForm extends React.Component {
       range.selectNodeContents(this.childRef);
       selection.removeAllRanges();
       selection.addRange(range);
-      console.log(range, range.startContainer.innerHTML, selection)
       document.execCommand('copy');
       alert('Copiado al Portapapeles');
       this.clearSelection()
@@ -91,6 +93,14 @@ class MyForm extends React.Component {
     this.setState({
       showCopy: false
     })
+  }
+  downloadInnerHtml(filename, elId, mimeType) {
+    var elHtml = document.getElementById(elId).innerHTML;
+    var link = document.createElement('a');
+    mimeType = mimeType || 'text/plain';
+    link.setAttribute('download', filename);
+    link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
+    link.click();
   }
   render() {
     let filterHotels = [];
@@ -110,31 +120,31 @@ class MyForm extends React.Component {
         validate={values => {
           const errors = {};
           if (!values.nombre) {
-            errors.nombre = "Required";
+            errors.nombre = "Campo Obligatorio";
           }
           if (!values.apellido) {
-            errors.apellido = "Required";
+            errors.apellido = "Campo Obligatorio";
           }
           if (!values.puesto) {
-            errors.puesto = "Required";
+            errors.puesto = "Campo Obligatorio";
           }
           if (!values.telefono) {
-            errors.telefono = "Required";
+            errors.telefono = "Campo Obligatorio";
           }
           else if (isNaN(values.telefono)) {
-            errors.telefono = "Must be a number";
+            errors.telefono = "Número Invalido";
           }
           else if (values.telefono.length < 10) {
-            errors.telefono = "Telefono a 10 Digitos";
+            errors.telefono = "Telefono a 10 Dígitos";
           }
           if (values.celular && values.celular.length < 10) {
-            errors.celular = "Telefono a 10 Digitos";
+            errors.celular = "Telefono a 10 Dígitos";
           }
           if (!values.hotel) {
-            errors.hotel = "Required";
+            errors.hotel = "Campo Obligatorio";
           }
           if (values.extension && isNaN(values.extension)) {
-            errors.extension = "Must be a number";
+            errors.extension = "Número Invalido";
           }
           return errors;
         }}
@@ -281,9 +291,11 @@ class MyForm extends React.Component {
                   <Preview data={values} setRef={this.setRef} />
                 </div>
               </div>
+              {/* <a href={`data:text/html,  `} download={`nombre.html`}>Descargar</a> */}
               {this.state.showCopy &&
                 <div className="text-center">
-                  <button className=" text-center btn btn-primary mt-20 mt-30-md mb-20" onClick={this.copyToClipboard}>Copiar al portapapeles</button>
+                  <button className="text-center btn btn-primary mt-20 mt-30-md mb-20" onClick={this.copyToClipboard}>Copiar al portapapeles</button>
+                  <button className="text-center btn btn-primary mt-20 mt-30-md mb-20 ml-10" onClick={() => { this.downloadInnerHtml(this.state.nombre, 'contenedor', 'text/html') }}>Descargar</button>
                 </div>
               }
             </div>

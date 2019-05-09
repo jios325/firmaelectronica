@@ -191,7 +191,7 @@ const Preview = (props) => {
   }
 </style>
 <!--[if mso]>
-<style> body,table tr,table td,a, span,table.MsoNormalTable {  font-family:Arial, Helvetica, sans-serif !important;  }</style>
+<style> body,table tr,table td,a, span,table.MsoNormalTable {  font-family:Arial, Helvetica, sans-serif !important;  } td{padding:0;}</style>
 <![endif]-->
 <div style="white-space:nowrap; font-size:15px;">
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
@@ -209,7 +209,7 @@ const Preview = (props) => {
       </table>
     </td>
   </tr>
-<table class="content" style="width: 600px;max-width:600px;box-sizing: border-box;">
+<table class="content" style="width: 600px;max-width:600px;box-sizing: border-box;border-collapse: collapse;border-spacing: 0;">
   <tr>
     <td style="padding:25px;">
         <table cellpadding="0" cellspacing="0"  border="0" style="font-family: Arial, sans-serif, 'Open Sans';border-collapse: collapse;width:100%;max-width:600px;">
@@ -273,12 +273,49 @@ const Preview = (props) => {
         </table>
     </td>
   </tr>
+  <tr style="background:black;margin:0;box-sizing:border-box;width:600px;">
+  <td cellpadding="0" cellspacing="0" border="0" style="background:black;margin:0;box-sizing:border-box;padding-top:6px;padding-bottom: 6px;padding-left: 10px;padding-right: 10px;">
+    <table cellpadding="0" cellspacing="0" border="0" align="right" style="border-collapse: collapse;border-spacing: 0;">
+      <tr style="margin:0;box-sizing:border-box;">
+        <td style="padding-left:6px;">
+          <hr style="border:0px;border-bottom:1px dashed #fff;height:1px;width:229px;">
+        </td>
+        <td style="padding-left:6px;">
+          <span style="color:#fff;font-size: 10px;font-weight: 500;letter-spacing: 0.36px;line-height: 11px;text-align: center;">¡Descarga nuestra App Oficial!</span>
+        </td>
+        <td style="padding-left:6px;">
+          <table cellpadding="0" cellspacing="0" border="0" style="background:black;margin:0;box-sizing:border-box;border-collapse: collapse;border-spacing: 0;text-align: right;">
+            <tr style="background:black;margin:0;box-sizing:border-box;text-align: right;">
+              <td>
+                <a href="http://onelink.to/v2uxnu">
+                  <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/appstore.png" alt="">
+                </a>
+              </td>
+              <td>
+                <a href="http://onelink.to/v2uxnu">
+                  <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/googleplay.png" alt="">
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr style="margin:0;box-sizing:border-box;width:600px;">
+  <td cellpadding="0" cellspacing="0" style="padding:0!important;">
+    <a href="https://oasishoteles.com/es">
+      <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/cintillo.jpg" alt="">
+    </a>
+  </td>
+</tr>
 </table>
 <div style="white-space: nowrap;font-size:0px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
 </div>  
 `
   return (
-    <div dangerouslySetInnerHTML={{ __html: template }} ref={props.setRef} />
+    <div id="contenedor" dangerouslySetInnerHTML={{ __html: template }} ref={props.setRef} />
   )
 }
 export default Preview

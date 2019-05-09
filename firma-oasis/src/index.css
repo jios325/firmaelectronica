@@ -1372,7 +1372,7 @@ body.noscroll {
 }
 .preview {
   background: #fff;
-  max-width: 630px;
+  max-width: 600px;
   margin: 0 auto;
 }
 .preview.disabled {
