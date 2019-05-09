@@ -185,8 +185,6 @@ const Preview = (props) => {
       body {
           margin: 0;
           padding: 0;
-          -webkit-text-size-adjust: 100%;
-          -ms-text-size-adjust: 100%;
       }
       
       table,
@@ -201,7 +199,6 @@ const Preview = (props) => {
           line-height: 100%;
           outline: none;
           text-decoration: none;
-          -ms-interpolation-mode: bicubic;
       }
   </style>
   <!--[if mso]>
