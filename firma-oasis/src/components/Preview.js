@@ -310,7 +310,7 @@ const Preview = (props) => {
           </td>
       </tr>
       <tr style="background:black;margin:0;box-sizing:border-box;width:600px;">
-          <td border="0" style="background:black;margin:0;box-sizing:border-box;padding-top:6px;padding-bottom: 6px;padding-left: 10px;padding-right: 10px;">
+          <td style="background:black;margin:0;box-sizing:border-box;padding-top:6px;padding-bottom: 6px;padding-left: 10px;padding-right: 10px;">
               <table cellpadding="0" cellspacing="0" border="0" align="right" style="border-collapse: collapse;border-spacing: 0;">
                   <tr style="margin:0;box-sizing:border-box;">
                       <td style="padding-left:6px;">
