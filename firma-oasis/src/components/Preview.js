@@ -241,12 +241,7 @@ const Preview = (props) => {
           <o:PixelsPerInch>96</o:PixelsPerInch>
         </o:OfficeDocumentSettings>
         </xml>
-        <![endif]-->
-    <!--[if lte mso 11]>
-        <style type="text/css">
-          .outlook-group-fix { width:100% !important; }
-        </style>
-        <![endif]-->
+    <![endif]-->
     <!--[if !mso]><!-->
     <!--<![endif]-->
 </head>
