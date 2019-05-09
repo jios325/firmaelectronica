@@ -335,13 +335,13 @@ const Preview = (props) => {
         </tr>
         <tr style="background:black;margin:0;box-sizing:border-box;">
         <td cellpadding="0" cellspacing="0" border="0" style="background:black;margin:0;box-sizing:border-box;padding-top:6px;padding-bottom: 6px;padding-left: 10px;padding-right: 10px;">
-          <table cellpadding="0" cellspacing="0" border="0" align="right" style="border-collapse: collapse;border-spacing: 0;">
+          <table cellpadding="0" cellspacing="0" border="0" align="right" style="border-collapse: collapse;border-spacing:0;width:100%;max-width:580px;">
             <tr style="margin:0;box-sizing:border-box;">
               <td valign="center" style="padding-left:6px;">
                 <hr style="border:0px;border-bottom:1px dashed #fff;height:1px;width:229px;">
               </td>
               <td valign="center" style="padding-left:6px;">
-                <span style="font-family: Arial, sans-serif, 'Open Sans';color:#FFFFFF;font-size: 10px;font-weight: 500;letter-spacing: 0.36px;line-height: 11px;text-align: center;">¡Descarga nuestra App Oficial!</span>
+                <span style="font-family: Arial, sans-serif, 'Open Sans';color:white;font-size: 10px;font-weight: 500;letter-spacing: 0.36px;line-height: 11px;text-align: center;">¡Descarga nuestra App Oficial!</span>
               </td>
               <td valign="center" style="padding-left:6px;">
                 <table cellpadding="0" cellspacing="0" border="0" style="background:black;margin:0;box-sizing:border-box;border-collapse: collapse;border-spacing: 0;text-align: right;">
@@ -363,7 +363,7 @@ const Preview = (props) => {
           </table>
         </td>
       </tr>
-      <tr style="margin:0;box-sizing:border-box;width:600px;">
+      <tr style="margin:0;box-sizing:border-box;">
         <td cellpadding="0" cellspacing="0" style="padding:0px;">
           <a href="https://oasishoteles.com/es/restaurantes">
             <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/cintillo.jpg" alt="">
