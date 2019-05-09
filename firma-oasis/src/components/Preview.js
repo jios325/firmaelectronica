@@ -317,7 +317,7 @@ const Preview = (props) => {
                           <hr style="border:0px;border-bottom:1px dashed #FFFFFF;height:1px;width:229px;">
                       </td>
                       <td style="padding-left:6px;">
-                          <span style="font-family: Arial, sans-serif, 'Open Sans';color:#fff;font-size: 10px;font-weight: 500;letter-spacing: 0.36px;line-height: 11px;text-align: center;">¡Descarga nuestra App Oficial!</span>
+                          <span style="font-family: Arial, sans-serif, 'Open Sans';color:#FFFFFF;font-size: 10px;font-weight: 500;letter-spacing: 0.36px;line-height: 11px;text-align: center;">¡Descarga nuestra App Oficial!</span>
                       </td>
                       <td style="padding-left:6px;">
                           <table cellpadding="0" cellspacing="0" border="0" style="background:black;margin:0;box-sizing:border-box;border-collapse: collapse;border-spacing: 0;text-align: right;">
