@@ -210,7 +210,7 @@ const Preview = (props) => {
         }
     </style>
     <!--[if mso]>
-      <style> body,table tr,table td,a, span,table.MsoNormalTable {  font-family:Arial, Helvetica, sans-serif !important;  } td{padding:0;}</style>
+      <style> body,table tr,table td,a, span,table.MsoNormalTable {  font-family:Arial, Helvetica, sans-serif !important;  } td{padding:0px;}</style>
     <![endif]-->
     <style>
       .gmail-fix {
@@ -320,10 +320,10 @@ const Preview = (props) => {
                           <td valign="bottom" style="vertical-align:bottom;color: #C4A77E;font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: left;mso-line-height-rule:exactly;line-height: 14px;">
                             <span style="margin-right:5px;">¡Síguenos en nuestras redes sociales!</span>
                               ${redes.map(el => {
-      var cadena = ''
-      cadena += `<a href=${el.url} style="margin-right:3px;"><img src=${el.icono} alt=""></a>`
-      return cadena
-    }).join('')}
+                                  var cadena = ''
+                                  cadena += `<a href=${el.url} style="margin-right:3px;"><img src=${el.icono} alt=""></a>`
+                                  return cadena
+                                }).join('')}
                           </td>
                           <td valign="bottom" style="vertical-align:bottom;text-align:right;"><a style="color: #C4A77E;font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: right;mso-line-height-rule:exactly;line-height: 14px;text-decoration: none;" href="https://www.oasishoteles.com">www.oasishoteles.com</a></td>
                         </tr>
@@ -364,7 +364,7 @@ const Preview = (props) => {
         </td>
       </tr>
       <tr style="margin:0;box-sizing:border-box;width:600px;">
-        <td cellpadding="0" cellspacing="0" style="padding:0!important;">
+        <td cellpadding="0" cellspacing="0" style="padding:0px;">
           <a href="https://oasishoteles.com/es">
             <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/cintillo.jpg" alt="">
           </a>
