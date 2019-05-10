@@ -195,7 +195,7 @@ const Preview = (props) => {
   </style>
   <!--[if mso]>
       <style> body,table tr,table td,a, span,table.MsoNormalTable {  font-family:Arial, Helvetica, sans-serif !important;  } td{padding:0;}</style>
-    <![endif]-->
+  <![endif]-->
   <style>
       .gmail-fix {
           display: none;
@@ -306,7 +306,7 @@ const Preview = (props) => {
               <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;border-spacing: 0;table-layout:fixed;width:580px;">
                   <tr style="margin:0;box-sizing:border-box;">
                       <td style="padding-left:6px;color:#FFFFFF;word-wrap:break-word;width:250px;" align="right">
-                          <div style="border:0px;border-bottom:1px dashed #fff;height:1px;width:220px;max-width:220px;">&nbsp;</div>
+                          <div style="border-top:1px dotted #FFFFFF;height:1px;width:220px;max-width:220px;">&nbsp;</div>
                       </td>
                       <td style="padding-left:6px;" align="right">
                           <span style="font-family: Arial, sans-serif, 'Open Sans';color:#FFFFFF;font-size: 10px;font-weight: 500;letter-spacing: 0.36px;line-height: 11px;text-align: center;">¡Descarga nuestra App Oficial!</span>
@@ -332,7 +332,7 @@ const Preview = (props) => {
           </td>
       </tr>
       <tr style="margin:0;box-sizing:border-box;">
-          <td style="padding:0!important;width:600px;">
+          <td style="padding:0;width:600px;">
               <a href="https://oasishoteles.com/es">
                   <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/cintillo.jpg" alt="">
               </a>
