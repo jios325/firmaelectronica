@@ -24,7 +24,7 @@ class Login extends Component {
     if (this.props.response.login.hasOwnProperty('response')) {
       isSuccess = this.props.response.login.response.nombre;
       if (isSuccess) {
-        setCookie('hotel', this.props.response.login.response.nombre, 1);
+        setCookie('hotel', this.props.response.login.response.nombre, 12);
       }
     }
 

@@ -225,7 +225,7 @@ const Preview = (props) => {
   </div>
   <tr class="gmail-fix">
     <td>
-        <table cellpadding="0" cellspacing="0" border="0" align="center" width="600">
+        <table cellpadding="0" cellspacing="0" border="0" align="center" width="600" style="table-layout:fixed;width::600px;">
             <tr>
                 <td cellpadding="0" cellspacing="0" border="0" height="1" ; style="line-height: 1px; min-width: 600px;">
                     <img src="spacer.gif" width="600" height="1" style="display: block; max-height: 1px; min-height: 1px; min-width: 600px; width: 600px;" />
@@ -235,7 +235,7 @@ const Preview = (props) => {
     </td>
   </tr>
   <!--<![endif]-->
-  <table class="content" style="width: 600px;max-width:600px;box-sizing: border-box;border-collapse: collapse;border-spacing: 0;">
+  <table class="content" style="width: 600px;max-width:600px;box-sizing: border-box;border-collapse: collapse;border-spacing: 0;table-layout:fixed;">
       <tr>
           <td style="padding:25px;">
               <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, sans-serif, 'Open Sans';border-collapse: collapse;width:100%;max-width:600px;">
@@ -303,25 +303,25 @@ const Preview = (props) => {
       </tr>
       <tr style="margin:0;box-sizing:border-box;">
           <td style="background:black;margin:0;box-sizing:border-box;padding-top:6px;padding-bottom: 6px;padding-left: 10px;padding-right: 10px;">
-              <table cellpadding="0" cellspacing="0" border="0" align="right" style="border-collapse: collapse;border-spacing: 0;">
+              <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;border-spacing: 0;table-layout:fixed;width:580px;">
                   <tr style="margin:0;box-sizing:border-box;">
-                      <td style="padding-left:6px;">
-                          <hr style="border:0px;border-bottom:1px dashed #FFFFFF;height:1px;width:229px;" />
+                      <td style="padding-left:6px;color:#FFFFFF;word-wrap:break-word;width:250px;" align="right">
+                          <div style="border:0px;border-bottom:1px dashed #fff;height:1px;width:220px;max-width:220px;">&nbsp;</div>
                       </td>
-                      <td style="padding-left:6px;">
+                      <td style="padding-left:6px;" align="right">
                           <span style="font-family: Arial, sans-serif, 'Open Sans';color:#FFFFFF;font-size: 10px;font-weight: 500;letter-spacing: 0.36px;line-height: 11px;text-align: center;">¡Descarga nuestra App Oficial!</span>
                       </td>
-                      <td style="padding-left:6px;">
-                          <table cellpadding="0" cellspacing="0" border="0" style="margin:0;box-sizing:border-box;border-collapse: collapse;border-spacing: 0;text-align: right;">
+                      <td style="padding-left:6px;" align="right">
+                          <table cellpadding="0" cellspacing="0" border="0" style="margin:0;box-sizing:border-box;border-collapse: collapse;border-spacing: 0;">
                               <tr style="margin:0;box-sizing:border-box;text-align: right;">
                                   <td>
                                       <a href="http://onelink.to/v2uxnu">
-                                          <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/appstore.png" alt="">
+                                          <img style="display:block;"  src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/appstore.png" alt="">
                                       </a>
                                   </td>
-                                  <td>
+                                  <td style="padding-left:5px;">
                                       <a href="http://onelink.to/v2uxnu">
-                                          <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/googleplay.png" alt="">
+                                          <img style="display:block;" src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/googleplay.png" alt="">
                                       </a>
                                   </td>
                               </tr>
@@ -331,8 +331,8 @@ const Preview = (props) => {
               </table>
           </td>
       </tr>
-      <tr style="margin:0;box-sizing:border-box;width:600px;">
-          <td style="padding:0!important;">
+      <tr style="margin:0;box-sizing:border-box;">
+          <td style="padding:0!important;width:600px;">
               <a href="https://oasishoteles.com/es">
                   <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/cintillo.jpg" alt="">
               </a>
