@@ -32,6 +32,11 @@ export const loginUserService = (request) => {
       "pass": 'tulum7RUloeu',
       'hoteles': [{ "code": 'got', "hotel": "Grand Oasis Tulum" }]
     },
+    {
+      "nombre": "vcm",
+      "pass": 'vcm7RUloeu',
+      'hoteles': [{ "code": 'vcm', "hotel": "Caribe Maya" }]
+    },
   ]
   let search = complejos.find(ele => {
     return ele.nombre == user.usuario

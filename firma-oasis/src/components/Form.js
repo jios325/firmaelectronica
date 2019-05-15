@@ -33,6 +33,10 @@ let complejos = [
     "pass": 'tulum7RUloeu',
     'hoteles': [{ "code": 'got', "hotel": "Grand Oasis Tulum" }]
   },
+  {
+    "nombre": "vcm",
+    'hoteles': [{ "code": 'vcm', "hotel": "Caribe Maya" }]
+  },
 ]
 class MyForm extends React.Component {
   constructor(props) {
@@ -108,6 +112,7 @@ class MyForm extends React.Component {
   render() {
     let filterHotels = [];
     let isLogin = checkCookie()
+    console.log(isLogin)
     if (isLogin != undefined) {
       filterHotels = complejos.find(ele => {
         return ele.nombre == isLogin
@@ -291,7 +296,7 @@ class MyForm extends React.Component {
               <div className={`preview mt-20 mt-30-md ${this.state.showCopy ? '' : 'disabled'}`}>
                 <span className="preview__title">VISTA PREVIA</span>
                 <div className="preview__inner">
-                  <Preview data={values} setRef={this.setRef} />
+                  <Preview data={values} setRef={this.setRef} color={isLogin == 'vcm' ? '#175176' : '#756857'} secondaryColor={isLogin == 'vcm' ? '#175176' : '#C4A77E'} />
                 </div>
               </div>
               {/* <a href={`data:text/html,  `} download={`nombre.html`}>Descargar</a> */}

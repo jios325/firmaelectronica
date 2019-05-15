@@ -43,6 +43,7 @@ class Login extends Component {
             <select name="hotel" className="form-control" required>
               <option value="" disabled="">Selecciona un Complejo</option>
               <option value="ohr">Corporativo</option>
+              <option value="vcm">Caribe Maya</option>
               <option value="goc">Complejos Cancun</option>
               {/* <option value="gos">Complejos Sens</option> */}
               <option value="gop">Complejos Palm</option>
