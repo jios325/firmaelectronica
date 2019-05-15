@@ -37,19 +37,15 @@ const hoteles = {
     "direccion": 'KM. 6.5, BLVD. KUKULCÁN CANCÚN, MÉXICO  C.P 77500',
     "redes": [
       {
-        "url": 'https://www.facebook.com/OasisHoteles',
+        "url": 'https://www.facebook.com/ViajeCaribeMaya',
         "icono": assetUrl + 'iconos-vcm/facebook.png'
       },
       {
-        "url": 'https://twitter.com/OasisHotels',
+        "url": 'https://twitter.com/ViajeCaribeMaya',
         "icono": assetUrl + 'iconos-vcm/twitter.png'
       },
       {
-        "url": 'https://blog.oasishoteles.com',
-        "icono": assetUrl + 'iconos-vcm/blog.png'
-      },
-      {
-        "url": 'https://www.instagram.com/oasishotels/',
+        "url": 'https://www.instagram.com/viajecaribemaya/',
         "icono": assetUrl + 'iconos-vcm/instagram.png'
       }
     ]
@@ -201,7 +197,7 @@ const hoteles = {
 }
 const Preview = (props) => {
   console.log(props)
-  const { color, secondaryColor } = props
+  const { color, secondaryColor, cintillo, isVCM } = props
   let { nombre, apellido, puesto, telefono, extension, hotel, celular } = props.data
   let redes = (hotel != null) ? hoteles[hotel].redes : []
   let template = `
@@ -319,7 +315,12 @@ const Preview = (props) => {
     return cadena
   }).join('')}
                                   </td>
+                                  ${isVCM ? `
+                                  <td valign="bottom" style="vertical-align:bottom;text-align:right;"><a style="color: ${secondaryColor};font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: right;mso-line-height-rule:exactly;line-height: 14px;text-decoration: none;" href="https://caribemaya.com.mx/">www.caribemaya.com.mx</a></td>
+
+                                  `: `
                                   <td valign="bottom" style="vertical-align:bottom;text-align:right;"><a style="color: ${secondaryColor};font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: right;mso-line-height-rule:exactly;line-height: 14px;text-decoration: none;" href="https://www.oasishoteles.com">www.oasishoteles.com</a></td>
+                                  `}
                               </tr>
                           </table>
                       </td>
@@ -327,43 +328,45 @@ const Preview = (props) => {
               </table>
           </td>
       </tr>
+      ${cintillo ? `
       <tr style="margin:0;box-sizing:border-box;">
-          <td style="background:black;margin:0;box-sizing:border-box;padding-top:6px;padding-bottom: 6px;padding-left: 10px;padding-right: 10px;">
-              <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;border-spacing: 0;table-layout:fixed;width:580px;">
-                  <tr style="margin:0;box-sizing:border-box;">
-                      <td style="padding-left:6px;color:#FFFFFF;word-wrap:break-word;width:250px;" align="right">
-                          <div style="border-top:1px dotted #FFFFFF;height:1px;width:220px;max-width:220px;">&nbsp;</div>
-                      </td>
-                      <td style="padding-left:6px;" align="right">
-                          <span style="font-family: Arial, sans-serif, 'Open Sans';color:#FFFFFF;font-size: 10px;font-weight: 500;letter-spacing: 0.36px;line-height: 11px;text-align: center;">¡Descarga nuestra App Oficial!</span>
-                      </td>
-                      <td style="padding-left:6px;" align="right">
-                          <table cellpadding="0" cellspacing="0" border="0" style="margin:0;box-sizing:border-box;border-collapse: collapse;border-spacing: 0;">
-                              <tr style="margin:0;box-sizing:border-box;text-align: right;">
-                                  <td>
-                                      <a href="http://onelink.to/v2uxnu">
-                                          <img style="display:block;"  src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/appstore.png" alt="">
-                                      </a>
-                                  </td>
-                                  <td style="padding-left:5px;">
-                                      <a href="http://onelink.to/v2uxnu">
-                                          <img style="display:block;" src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/googleplay.png" alt="">
-                                      </a>
-                                  </td>
-                              </tr>
-                          </table>
-                      </td>
-                  </tr>
-              </table>
-          </td>
-      </tr>
-      <tr style="margin:0;box-sizing:border-box;">
-          <td style="padding:0px!important;width:600px;">
-              <a href="https://oasishoteles.com/es">
-                  <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/cintillo.jpg" alt="">
-              </a>
-          </td>
-      </tr>
+      <td style="background:black;margin:0;box-sizing:border-box;padding-top:6px;padding-bottom: 6px;padding-left: 10px;padding-right: 10px;">
+          <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;border-spacing: 0;table-layout:fixed;width:580px;">
+              <tr style="margin:0;box-sizing:border-box;">
+                  <td style="padding-left:6px;color:#FFFFFF;word-wrap:break-word;width:250px;" align="right">
+                      <div style="border-top:1px dotted #FFFFFF;height:1px;width:220px;max-width:220px;">&nbsp;</div>
+                  </td>
+                  <td style="padding-left:6px;" align="right">
+                      <span style="font-family: Arial, sans-serif, 'Open Sans';color:#FFFFFF;font-size: 10px;font-weight: 500;letter-spacing: 0.36px;line-height: 11px;text-align: center;">¡Descarga nuestra App Oficial!</span>
+                  </td>
+                  <td style="padding-left:6px;" align="right">
+                      <table cellpadding="0" cellspacing="0" border="0" style="margin:0;box-sizing:border-box;border-collapse: collapse;border-spacing: 0;">
+                          <tr style="margin:0;box-sizing:border-box;text-align: right;">
+                              <td>
+                                  <a href="http://onelink.to/v2uxnu">
+                                      <img style="display:block;"  src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/appstore.png" alt="">
+                                  </a>
+                              </td>
+                              <td style="padding-left:5px;">
+                                  <a href="http://onelink.to/v2uxnu">
+                                      <img style="display:block;" src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/googleplay.png" alt="">
+                                  </a>
+                              </td>
+                          </tr>
+                      </table>
+                  </td>
+              </tr>
+          </table>
+      </td>
+  </tr>
+  <tr style="margin:0;box-sizing:border-box;">
+      <td style="padding:0px!important;width:600px;">
+          <a href="https://oasishoteles.com/es">
+              <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/cintillo.jpg" alt="">
+          </a>
+      </td>
+  </tr>
+      `: ''}
   </table>
   <!--[if !mso]><!-->
   <div style="white-space: nowrap;font-size:0px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>

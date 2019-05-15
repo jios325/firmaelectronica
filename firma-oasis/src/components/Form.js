@@ -296,7 +296,7 @@ class MyForm extends React.Component {
               <div className={`preview mt-20 mt-30-md ${this.state.showCopy ? '' : 'disabled'}`}>
                 <span className="preview__title">VISTA PREVIA</span>
                 <div className="preview__inner">
-                  <Preview data={values} setRef={this.setRef} color={isLogin == 'vcm' ? '#175176' : '#756857'} secondaryColor={isLogin == 'vcm' ? '#175176' : '#C4A77E'} />
+                  <Preview data={values} setRef={this.setRef} color={isLogin == 'vcm' ? '#175176' : '#756857'} secondaryColor={isLogin == 'vcm' ? '#175176' : '#C4A77E'} cintillo={isLogin == 'vcm' ? false : true} isVCM={isLogin == 'vcm' ? true : false} />
                 </div>
               </div>
               {/* <a href={`data:text/html,  `} download={`nombre.html`}>Descargar</a> */}
