@@ -1,205 +1,265 @@
-import React from 'react';
-import { assetUrl } from '../config/config'
-const formatPhoneNumber = (phoneNumberString) => {
-  var cleaned = ('' + phoneNumberString).replace(/\D/g, '')
-  var match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/)
+import React from "react";
+import { assetUrl } from "../config/config";
+const formatPhoneNumber = phoneNumberString => {
+  var cleaned = ("" + phoneNumberString).replace(/\D/g, "");
+  var match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
   if (match) {
-    return '(' + match[1] + ') ' + match[2] + '-' + match[3]
+    return "(" + match[1] + ") " + match[2] + "-" + match[3];
   }
-  return phoneNumberString
-}
+  return phoneNumberString;
+};
 const hoteles = {
-  "ohr": {
-    "logo": assetUrl + 'oasis.png',
-    "direccion": 'KM. 6.5, BLVD. KUKULCÁN CANCÚN, MÉXICO  C.P 77500',
-    "redes": [
+  ohr: {
+    logo: assetUrl + "oasis.png",
+    direccion: "KM. 6.5, BLVD. KUKULCÁN CANCÚN, MÉXICO  C.P 77500",
+    redes: [
       {
-        "url": 'https://www.facebook.com/OasisHoteles',
-        "icono": assetUrl + 'fb.png'
+        url: "https://www.facebook.com/OasisHoteles",
+        icono: assetUrl + "fb.png"
       },
       {
-        "url": 'https://twitter.com/OasisHotels',
-        "icono": assetUrl + 'tw.png'
+        url: "https://twitter.com/OasisHotels",
+        icono: assetUrl + "tw.png"
       },
       {
-        "url": 'https://blog.oasishoteles.com',
-        "icono": assetUrl + 'blog.png'
+        url: "https://blog.oasishoteles.com",
+        icono: assetUrl + "blog.png"
       },
       {
-        "url": 'https://www.instagram.com/oasishotels/',
-        "icono": assetUrl + 'inst.png'
+        url: "https://www.instagram.com/oasishotels/",
+        icono: assetUrl + "inst.png"
       }
     ]
   },
-  "vcm": {
-    "vcm": true,
-    "logo": assetUrl + 'logos/vcm.png',
-    "direccion": 'KM. 6.5, BLVD. KUKULCÁN CANCÚN, MÉXICO  C.P 77500',
-    "redes": [
+  ohrcentral: {
+    logo: assetUrl + "oasis.png",
+    direccion:
+      "CARRETERA CANCÚN AEROPUERTO KM 17 BLVD. LUIS DONALDO COLOSIO MZ. 04 LOTE 05 CENTRAL DE ABASTOS SM 301 UNIDAD 510",
+    redes: [
       {
-        "url": 'https://www.facebook.com/ViajeCaribeMaya',
-        "icono": assetUrl + 'iconos-vcm/facebook.png'
+        url: "https://www.facebook.com/OasisHoteles",
+        icono: assetUrl + "fb.png"
       },
       {
-        "url": 'https://twitter.com/ViajeCaribeMaya',
-        "icono": assetUrl + 'iconos-vcm/twitter.png'
+        url: "https://twitter.com/OasisHotels",
+        icono: assetUrl + "tw.png"
       },
       {
-        "url": 'https://www.instagram.com/viajecaribemaya/',
-        "icono": assetUrl + 'iconos-vcm/instagram.png'
+        url: "https://blog.oasishoteles.com",
+        icono: assetUrl + "blog.png"
+      },
+      {
+        url: "https://www.instagram.com/oasishotels/",
+        icono: assetUrl + "inst.png"
       }
     ]
   },
-  "pyr": {
-    "logo": assetUrl + 'logos/pyr.png',
-    "direccion": 'Blvd. Kukulkán Km 16.5 Lote 45, 46 y 47 Zona Hotelera, Cancún Q. Roo 77500 México',
-    "redes": [
+  vcm: {
+    vcm: true,
+    logo: assetUrl + "logos/vcm.png",
+    direccion: "KM. 6.5, BLVD. KUKULCÁN CANCÚN, MÉXICO  C.P 77500",
+    redes: [
       {
-        "url": 'https://www.facebook.com/GrandOasisCancun',
-        "icono": assetUrl + 'fb.png'
+        url: "https://www.facebook.com/ViajeCaribeMaya",
+        icono: assetUrl + "iconos-vcm/facebook.png"
       },
       {
-        "url": 'https://twitter.com/GranOasisCancun',
-        "icono": assetUrl + 'tw.png'
+        url: "https://twitter.com/ViajeCaribeMaya",
+        icono: assetUrl + "iconos-vcm/twitter.png"
       },
       {
-        "url": 'https://www.instagram.com/grandoasiscancun',
-        "icono": assetUrl + 'inst.png'
+        url: "https://www.instagram.com/viajecaribemaya/",
+        icono: assetUrl + "iconos-vcm/instagram.png"
       }
     ]
   },
-  "goc": {
-    "logo": assetUrl + 'logos/goc.png',
-    "direccion": 'Blvd. Kukulkán Km 16.5 Lote 45, 46 y 47 Zona Hotelera, Cancún Q. Roo 77500 México',
-    "redes": [
+  pyr: {
+    logo: assetUrl + "logos/pyr.png",
+    direccion:
+      "Blvd. Kukulkán Km 16.5 Lote 45, 46 y 47 Zona Hotelera, Cancún Q. Roo 77500 México",
+    redes: [
       {
-        "url": 'https://www.facebook.com/GrandOasisCancun',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png'
+        url: "https://www.facebook.com/GrandOasisCancun",
+        icono: assetUrl + "fb.png"
       },
       {
-        "url": 'https://twitter.com/GranOasisCancun',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png'
+        url: "https://twitter.com/GranOasisCancun",
+        icono: assetUrl + "tw.png"
       },
       {
-        "url": 'https://www.instagram.com/grandoasiscancun',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png'
+        url: "https://www.instagram.com/grandoasiscancun",
+        icono: assetUrl + "inst.png"
       }
     ]
   },
-  "gop": {
-    "logo": assetUrl + 'logos/gop.png',
-    "direccion": 'Blvd. Kukulkán Km 4.5 Sección C Lote 1, Zona Hotelera, Cancún Q. Roo 77500 México',
-    "redes": [
+  goc: {
+    logo: assetUrl + "logos/goc.png",
+    direccion:
+      "Blvd. Kukulkán Km 16.5 Lote 45, 46 y 47 Zona Hotelera, Cancún Q. Roo 77500 México",
+    redes: [
       {
-        "url": 'https://www.facebook.com/GrandOasisPalm',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png'
+        url: "https://www.facebook.com/GrandOasisCancun",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
       },
       {
-        "url": 'https://twitter.com/GrandOasisPalm',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png'
+        url: "https://twitter.com/GranOasisCancun",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
       },
       {
-        "url": 'https://www.instagram.com/grandoasispalm',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png'
+        url: "https://www.instagram.com/grandoasiscancun",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
       }
     ]
   },
-  "op": {
-    "logo": assetUrl + 'logos/op.png',
-    "direccion": 'Blvd. Kukulkán Km 4.5 Sección C Lote 1, Zona Hotelera, Cancún Q. Roo 77500 México',
-    "redes": [
+  gop: {
+    logo: assetUrl + "logos/gop.png",
+    direccion:
+      "Blvd. Kukulkán Km 4.5 Sección C Lote 1, Zona Hotelera, Cancún Q. Roo 77500 México",
+    redes: [
       {
-        "url": 'https://www.facebook.com/GrandOasisPalm',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png'
+        url: "https://www.facebook.com/GrandOasisPalm",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
       },
       {
-        "url": 'https://twitter.com/GrandOasisPalm',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png'
+        url: "https://twitter.com/GrandOasisPalm",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
       },
       {
-        "url": 'https://www.instagram.com/grandoasispalm',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png'
+        url: "https://www.instagram.com/grandoasispalm",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
       }
     ]
   },
-  "gos": {
-    "logo": assetUrl + 'logos/gos.png',
-    "direccion": 'Blvd. Kukulkán Km 19.5 Lote 50 Zona Hotelera, Cancún Q. Roo 77500 México',
-    "redes": [
+  op: {
+    logo: assetUrl + "logos/op.png",
+    direccion:
+      "Blvd. Kukulkán Km 4.5 Sección C Lote 1, Zona Hotelera, Cancún Q. Roo 77500 México",
+    redes: [
       {
-        "url": 'https://www.facebook.com/GrandOasisSens',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png'
+        url: "https://www.facebook.com/GrandOasisPalm",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
       },
       {
-        "url": 'https://twitter.com/GrandOasisSens',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png'
+        url: "https://twitter.com/GrandOasisPalm",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
       },
       {
-        "url": 'https://www.instagram.com/grandoasissens',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png'
+        url: "https://www.instagram.com/grandoasispalm",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
       }
     ]
   },
-  "smart": {
-    "logo": assetUrl + 'logos/smart.png',
-    "direccion": 'Av. Tulum, esq. Brisa s/n Col. Centro, Cancún Q. Roo 77500 México',
-    "redes": [
+  gos: {
+    logo: assetUrl + "logos/gos.png",
+    direccion:
+      "Blvd. Kukulkán Km 19.5 Lote 50 Zona Hotelera, Cancún Q. Roo 77500 México",
+    redes: [
       {
-        "url": 'https://www.facebook.com/TheUrbanOasisCancun',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png'
+        url: "https://www.facebook.com/GrandOasisSens",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
       },
       {
-        "url": 'https://twitter.com/UrbanOasisCUN',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png'
+        url: "https://twitter.com/GrandOasisSens",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
       },
       {
-        "url": 'https://www.instagram.com/TheUrbanOasisCancun',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png'
+        url: "https://www.instagram.com/grandoasissens",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
       }
     ]
   },
-  "oh": {
-    "logo": assetUrl + 'logos/oh.png',
-    "direccion": 'Av. Tulum, esq. Brisa s/n Col. Centro, Cancún Q. Roo 77500 México',
-    "redes": [
+  smart: {
+    logo: assetUrl + "logos/smart.png",
+    direccion:
+      "Av. Tulum, esq. Brisa s/n Col. Centro, Cancún Q. Roo 77500 México",
+    redes: [
       {
-        "url": 'https://www.facebook.com/TheUrbanOasisCancun',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png'
+        url: "https://www.facebook.com/TheUrbanOasisCancun",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
       },
       {
-        "url": 'https://twitter.com/UrbanOasisCUN',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png'
+        url: "https://twitter.com/UrbanOasisCUN",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
       },
       {
-        "url": 'https://www.instagram.com/TheUrbanOasisCancun',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png'
+        url: "https://www.instagram.com/TheUrbanOasisCancun",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
       }
     ]
   },
-  "got": {
-    "logo": assetUrl + 'logos/got.png',
-    "direccion": 'Km 252 Carret. Chetumal - Pto Juárez 77780 Akumal, Q. Roo México',
-    "redes": [
+  oh: {
+    logo: assetUrl + "logos/oh.png",
+    direccion:
+      "Av. Tulum, esq. Brisa s/n Col. Centro, Cancún Q. Roo 77500 México",
+    redes: [
       {
-        "url": 'https://www.facebook.com/GrandOasisTulum',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png'
+        url: "https://www.facebook.com/TheUrbanOasisCancun",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
       },
       {
-        "url": 'https://twitter.com/GrandOasisTulum',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png'
+        url: "https://twitter.com/UrbanOasisCUN",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
       },
       {
-        "url": 'https://www.instagram.com/grandoasistulum',
-        "icono": 'https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png'
+        url: "https://www.instagram.com/TheUrbanOasisCancun",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
+      }
+    ]
+  },
+  got: {
+    logo: assetUrl + "logos/got.png",
+    direccion:
+      "Km 252 Carret. Chetumal - Pto Juárez 77780 Akumal, Q. Roo México",
+    redes: [
+      {
+        url: "https://www.facebook.com/GrandOasisTulum",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
+      },
+      {
+        url: "https://twitter.com/GrandOasisTulum",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
+      },
+      {
+        url: "https://www.instagram.com/grandoasistulum",
+        icono:
+          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
       }
     ]
   }
-}
-const Preview = (props) => {
-  console.log(props)
-  const { color, secondaryColor, cintillo, isVCM } = props
-  let { nombre, apellido, puesto, telefono, extension, hotel, celular } = props.data
-  let redes = (hotel != null) ? hoteles[hotel].redes : []
+};
+const Preview = props => {
+  console.log(props);
+  const { color, secondaryColor, cintillo, isVCM } = props;
+  let {
+    nombre,
+    apellido,
+    puesto,
+    telefono,
+    extension,
+    hotel,
+    celular
+  } = props.data;
+  let redes = hotel != null ? hoteles[hotel].redes : [];
   let template = `
   <div>
   <style type="text/css">
@@ -266,35 +326,67 @@ const Preview = (props) => {
                               <tr style="box-sizing: border-box;">
                                   <td valign="center" style="vertical-align: center;width: 34%;max-width:180px;height:120px;text-align: center; border-right:2px solid ${color};">
                                       <a href="https://www.oasishoteles.com" style="display:block;">
-                                          <img style="max-width: 100%;display: block;margin:0 auto;" src="${hotel != null ? hoteles[hotel].logo : assetUrl + 'oasis.png'}">
+                                          <img style="max-width: 100%;display: block;margin:0 auto;" src="${
+                                            hotel != null
+                                              ? hoteles[hotel].logo
+                                              : assetUrl + "oasis.png"
+                                          }">
                                       </a>
                                   </td>
                                   <td valign="top" style="vertical-align: top; padding-top: 10px; padding-bottom: 10px;overflow:hidden;padding-left:35px;">
                                       <table cellpadding="0" cellspacing="0" border="0" width="100%" style=" border-collapse: collapse;">
                                           <tr style="box-sizing: border-box;text-align: left;">
-                                              <td colspan="2" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;color: ${color};font-size: 15px;font-weight: bold;letter-spacing: 0.72px;line-height: 20px;mso-line-height-rule:exactly;text-transform: uppercase;">${(nombre != null) ? nombre : 'Nombre'} ${(apellido != null) ? apellido : 'Apellido'}</td>
+                                              <td colspan="2" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;color: ${color};font-size: 15px;font-weight: bold;letter-spacing: 0.72px;line-height: 20px;mso-line-height-rule:exactly;text-transform: uppercase;">${
+    nombre != null ? nombre : "Nombre"
+  } ${apellido != null ? apellido : "Apellido"}</td>
                                           </tr>
                                           <tr style="box-sizing: border-box;text-align: left;">
-                                              <td style="mso-line-height-rule:exactly;line-height: 11px;font-size: 10px;letter-spacing: 0.48px;font-family: Arial, sans-serif, 'Open Sans';color: ${secondaryColor};padding-bottom:20px;text-transform: uppercase;" colspan="2">${(puesto != null) ? puesto : 'Puesto'}</td>
+                                              <td style="mso-line-height-rule:exactly;line-height: 11px;font-size: 10px;letter-spacing: 0.48px;font-family: Arial, sans-serif, 'Open Sans';color: ${secondaryColor};padding-bottom:20px;text-transform: uppercase;" colspan="2">${
+    puesto != null ? puesto : "Puesto"
+  }</td>
                                           </tr>
                                           <tr style="box-sizing: border-box;">
-                                              <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${hoteles[hotel].vcm ? 'iconos-vcm/phone.png' : 'tel.png'}" alt="" style="margin-right:5px"></td>
+                                              <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${
+    hoteles[hotel].vcm ? "iconos-vcm/phone.png" : "tel.png"
+  }" alt="" style="margin-right:5px"></td>
                                               <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${color};font-size: 10px;letter-spacing: 0.48px;">
-                                                  <span style="line-height: 18px;mso-line-height-rule:exactly;">${(telefono != null) ? formatPhoneNumber(telefono) : 'Teléfono'} ${(extension != null) ? `EXT. ${extension}` : ''}</span>
+                                                  <span style="line-height: 18px;mso-line-height-rule:exactly;">${
+                                                    telefono != null
+                                                      ? formatPhoneNumber(
+                                                          telefono
+                                                        )
+                                                      : "Teléfono"
+                                                  } ${
+    extension != null ? `EXT. ${extension}` : ""
+  }</span>
                                               </td>
                                           </tr>
-                                          ${(celular != null) ? `
+                                          ${
+                                            celular != null
+                                              ? `
                                           <tr style="box-sizing: border-box;">
-                                              <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${hoteles[hotel].vcm ? 'iconos-vcm/cel.png' : 'cel.png'}" alt="" style="margin-right:5px"></td>
+                                              <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${
+                                                  hoteles[hotel].vcm
+                                                    ? "iconos-vcm/cel.png"
+                                                    : "cel.png"
+                                                }" alt="" style="margin-right:5px"></td>
                                               <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${color};font-size: 10px;letter-spacing: 0.48px;">
                                                   <span style="line-height: 18px;mso-line-height-rule:exactly;">${celular}</span>
                                               </td>
                                           </tr>
-                                          `: ''}
+                                          `
+                                              : ""
+                                          }
                                           <tr style="box-sizing: border-box;text-align: left;">
-                                              <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${hoteles[hotel].vcm ? 'iconos-vcm/pin.png' : 'pin.png'}" alt="" style="margin-right:5px"></td>
+                                              <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${
+    hoteles[hotel].vcm ? "iconos-vcm/pin.png" : "pin.png"
+  }" alt="" style="margin-right:5px"></td>
                                               <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';color: ${color};font-size: 10px;letter-spacing: 0.48px;">
-                                                  <span style="mso-line-height-rule:exactly;line-height: 13px;">${(hotel != null) ? hoteles[hotel].direccion : 'Direccion del Hotel'}</span>
+                                                  <span style="mso-line-height-rule:exactly;line-height: 13px;">${
+                                                    hotel != null
+                                                      ? hoteles[hotel].direccion
+                                                      : "Direccion del Hotel"
+                                                  }</span>
                                               </td>
                                           </tr>
                                       </table>
@@ -309,18 +401,28 @@ const Preview = (props) => {
                               <tr style="box-sizing: border-box;">
                                   <td valign="bottom" style="vertical-align:bottom;color: ${secondaryColor};font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: left;mso-line-height-rule:exactly;line-height: 14px;">
                                       <span style="margin-right:5px;">¡Síguenos en nuestras redes sociales!</span> 
-                                      ${redes.map(el => {
-    var cadena = ''
-    cadena += `<a href=${el.url} style="margin-right:3px;"><img src=${el.icono} alt=""></a>`
-    return cadena
-  }).join('')}
+                                      ${redes
+                                        .map(el => {
+                                          var cadena = "";
+                                          cadena += `<a href=${
+                                            el.url
+                                          } style="margin-right:3px;"><img src=${
+                                            el.icono
+                                          } alt=""></a>`;
+                                          return cadena;
+                                        })
+                                        .join("")}
                                   </td>
-                                  ${isVCM ? `
+                                  ${
+                                    isVCM
+                                      ? `
                                   <td valign="bottom" style="vertical-align:bottom;text-align:right;"><a style="color: ${secondaryColor};font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: right;mso-line-height-rule:exactly;line-height: 14px;text-decoration: none;" href="https://caribemaya.com.mx/">www.caribemaya.com.mx</a></td>
 
-                                  `: `
+                                  `
+                                      : `
                                   <td valign="bottom" style="vertical-align:bottom;text-align:right;"><a style="color: ${secondaryColor};font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: right;mso-line-height-rule:exactly;line-height: 14px;text-decoration: none;" href="https://www.oasishoteles.com">www.oasishoteles.com</a></td>
-                                  `}
+                                  `
+                                  }
                               </tr>
                           </table>
                       </td>
@@ -328,7 +430,9 @@ const Preview = (props) => {
               </table>
           </td>
       </tr>
-      ${cintillo ? `
+      ${
+        cintillo
+          ? `
       <tr style="margin:0;box-sizing:border-box;">
       <td style="background:black;margin:0;box-sizing:border-box;padding-top:6px;padding-bottom: 6px;padding-left: 10px;padding-right: 10px;">
           <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;border-spacing: 0;table-layout:fixed;width:580px;">
@@ -366,15 +470,21 @@ const Preview = (props) => {
           </a>
       </td>
   </tr>
-      `: ''}
+      `
+          : ""
+      }
   </table>
   <!--[if !mso]><!-->
   <div style="white-space: nowrap;font-size:0px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
   <!--<![endif]-->
 </div>
-  `
+  `;
   return (
-    <div id="contenedor" dangerouslySetInnerHTML={{ __html: template }} ref={props.setRef} />
-  )
-}
-export default Preview
+    <div
+      id="contenedor"
+      dangerouslySetInnerHTML={{ __html: template }}
+      ref={props.setRef}
+    />
+  );
+};
+export default Preview;

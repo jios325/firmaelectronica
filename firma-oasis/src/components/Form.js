@@ -6,7 +6,7 @@ let complejos = [
   {
     "nombre": "ohr",
     "pass": '26837434',
-    'hoteles': [{ "code": "ohr", "hotel": "Corporativo" }]
+    'hoteles': [{ "code": "ohr", "hotel": "Corporativo ZH" },{ "code": "ohrcentral", "hotel": "Central" }]
   },
   {
     "nombre": "gos",
