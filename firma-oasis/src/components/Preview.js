@@ -11,7 +11,15 @@ const formatPhoneNumber = phoneNumberString => {
 const hoteles = {
   ohr: {
     logo: assetUrl + "oasis.png",
+    color: "#756857",
+    secondaryColor: "#C4A77E",
+    cintillo: true,
     direccion: "KM. 6.5, BLVD. KUKULCÁN CANCÚN, MÉXICO  C.P 77500",
+    icono_cel: "cel.png",
+    icono_phone: "tel.png",
+    icono_pin: "pin.png",
+    web: "www.oasishoteles.com",
+    web_link: "https://www.oasishoteles.com",
     redes: [
       {
         url: "https://www.facebook.com/OasisHoteles",
@@ -31,8 +39,46 @@ const hoteles = {
       }
     ]
   },
+  otlc: {
+    logo: assetUrl + "logos/otlc-logo.jpg",
+    color: "#283566",
+    secondaryColor: "#283566",
+    cintillo: true,
+    icono_cel: "iconos-otlc/cel.png",
+    icono_phone: "iconos-otlc/tel.png",
+    icono_pin: "iconos-otlc/pin.png",
+    direccion: "KM. 6.5, BLVD. KUKULCÁN CANCÚN, MÉXICO  C.P 77500",
+    web: "www.oasis-tlc.com",
+    web_link: "https://oasis-tlc.com/",
+    redes: [
+      {
+        url: "https://www.facebook.com/OasisHoteles",
+        icono: assetUrl + "iconos-otlc/fb.png"
+      },
+      {
+        url: "https://twitter.com/OasisHotels",
+        icono: assetUrl + "iconos-otlc/tw.png"
+      },
+      {
+        url: "https://blog.oasishoteles.com",
+        icono: assetUrl + "iconos-otlc/blog.png"
+      },
+      {
+        url: "https://www.instagram.com/oasishotels/",
+        icono: assetUrl + "iconos-otlc/insta.png"
+      }
+    ]
+  },
   ohrcentral: {
     logo: assetUrl + "oasis.png",
+    color: "#756857",
+    secondaryColor: "#C4A77E",
+    cintillo: true,
+    icono_cel: "cel.png",
+    icono_phone: "tel.png",
+    icono_pin: "pin.png",
+    web: "www.oasishoteles.com",
+    web_link: "https://www.oasishoteles.com",
     direccion:
       "CARRETERA CANCÚN AEROPUERTO KM 17 BLVD. LUIS DONALDO COLOSIO MZ. 04 LOTE 05 CENTRAL DE ABASTOS SM 301 UNIDAD 510",
     redes: [
@@ -56,7 +102,15 @@ const hoteles = {
   },
   vcm: {
     vcm: true,
+    color: "#175176",
+    secondaryColor: "#175176",
+    cintillo: false,
     logo: assetUrl + "logos/vcm.png",
+    icono_cel: "iconos-vcm/cel.png",
+    icono_phone: "iconos-vcm/phone.png",
+    icono_pin: "iconos-vcm/pin.png",
+    web: "www.caribemaya.com.mx",
+    web_link: "https://caribemaya.com.mx/",
     direccion: "KM. 6.5, BLVD. KUKULCÁN CANCÚN, MÉXICO  C.P 77500",
     redes: [
       {
@@ -75,6 +129,14 @@ const hoteles = {
   },
   pyr: {
     logo: assetUrl + "logos/pyr.png",
+    color: "#756857",
+    secondaryColor: "#C4A77E",
+    cintillo: true,
+    icono_cel: "cel.png",
+    icono_phone: "tel.png",
+    icono_pin: "pin.png",
+    web: "www.oasishoteles.com",
+    web_link: "https://www.oasishoteles.com",
     direccion:
       "Blvd. Kukulkán Km 16.5 Lote 45, 46 y 47 Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
@@ -94,6 +156,14 @@ const hoteles = {
   },
   goc: {
     logo: assetUrl + "logos/goc.png",
+    color: "#756857",
+    secondaryColor: "#C4A77E",
+    cintillo: true,
+    icono_cel: "cel.png",
+    icono_phone: "tel.png",
+    icono_pin: "pin.png",
+    web: "www.oasishoteles.com",
+    web_link: "https://www.oasishoteles.com",
     direccion:
       "Blvd. Kukulkán Km 16.5 Lote 45, 46 y 47 Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
@@ -116,6 +186,14 @@ const hoteles = {
   },
   gop: {
     logo: assetUrl + "logos/gop.png",
+    color: "#756857",
+    secondaryColor: "#C4A77E",
+    cintillo: true,
+    icono_cel: "cel.png",
+    icono_phone: "tel.png",
+    icono_pin: "pin.png",
+    web: "www.oasishoteles.com",
+    web_link: "https://www.oasishoteles.com",
     direccion:
       "Blvd. Kukulkán Km 4.5 Sección C Lote 1, Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
@@ -138,6 +216,14 @@ const hoteles = {
   },
   op: {
     logo: assetUrl + "logos/op.png",
+    color: "#756857",
+    secondaryColor: "#C4A77E",
+    cintillo: true,
+    icono_cel: "cel.png",
+    icono_phone: "tel.png",
+    icono_pin: "pin.png",
+    web: "www.oasishoteles.com",
+    web_link: "https://www.oasishoteles.com",
     direccion:
       "Blvd. Kukulkán Km 4.5 Sección C Lote 1, Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
@@ -160,6 +246,14 @@ const hoteles = {
   },
   gos: {
     logo: assetUrl + "logos/gos.png",
+    color: "#756857",
+    secondaryColor: "#C4A77E",
+    cintillo: true,
+    icono_cel: "cel.png",
+    icono_phone: "tel.png",
+    icono_pin: "pin.png",
+    web: "www.oasishoteles.com",
+    web_link: "https://www.oasishoteles.com",
     direccion:
       "Blvd. Kukulkán Km 19.5 Lote 50 Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
@@ -182,6 +276,14 @@ const hoteles = {
   },
   smart: {
     logo: assetUrl + "logos/smart.png",
+    color: "#756857",
+    secondaryColor: "#C4A77E",
+    cintillo: true,
+    icono_cel: "cel.png",
+    icono_phone: "tel.png",
+    icono_pin: "pin.png",
+    web: "www.oasishoteles.com",
+    web_link: "https://www.oasishoteles.com",
     direccion:
       "Av. Tulum, esq. Brisa s/n Col. Centro, Cancún Q. Roo 77500 México",
     redes: [
@@ -204,6 +306,14 @@ const hoteles = {
   },
   oh: {
     logo: assetUrl + "logos/oh.png",
+    color: "#756857",
+    secondaryColor: "#C4A77E",
+    cintillo: true,
+    icono_cel: "cel.png",
+    icono_phone: "tel.png",
+    icono_pin: "pin.png",
+    web: "www.oasishoteles.com",
+    web_link: "https://www.oasishoteles.com",
     direccion:
       "Av. Tulum, esq. Brisa s/n Col. Centro, Cancún Q. Roo 77500 México",
     redes: [
@@ -226,6 +336,14 @@ const hoteles = {
   },
   got: {
     logo: assetUrl + "logos/got.png",
+    color: "#756857",
+    secondaryColor: "#C4A77E",
+    cintillo: true,
+    icono_cel: "cel.png",
+    icono_phone: "tel.png",
+    icono_pin: "pin.png",
+    web: "www.oasishoteles.com",
+    web_link: "https://www.oasishoteles.com",
     direccion:
       "Km 252 Carret. Chetumal - Pto Juárez 77780 Akumal, Q. Roo México",
     redes: [
@@ -249,7 +367,7 @@ const hoteles = {
 };
 const Preview = props => {
   console.log(props);
-  const { color, secondaryColor, cintillo, isVCM } = props;
+  const { color, cintillo, isVCM } = props;
   let {
     nombre,
     apellido,
@@ -322,9 +440,13 @@ const Preview = props => {
               <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, sans-serif, 'Open Sans';border-collapse: collapse;width:100%;max-width:600px;">
                   <tr style="box-sizing: border-box;">
                       <td>
-                          <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-bottom:2px solid ${color};border-collapse: collapse;">
+                          <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-bottom:2px solid ${
+                            hoteles[hotel].color
+                          };border-collapse: collapse;">
                               <tr style="box-sizing: border-box;">
-                                  <td valign="center" style="vertical-align: center;width: 34%;max-width:180px;height:120px;text-align: center; border-right:2px solid ${color};">
+                                  <td valign="center" style="vertical-align: center;width: 34%;max-width:180px;height:120px;text-align: center; border-right:2px solid ${
+                                    hoteles[hotel].color
+                                  };">
                                       <a href="https://www.oasishoteles.com" style="display:block;">
                                           <img style="max-width: 100%;display: block;margin:0 auto;" src="${
                                             hotel != null
@@ -336,20 +458,26 @@ const Preview = props => {
                                   <td valign="top" style="vertical-align: top; padding-top: 10px; padding-bottom: 10px;overflow:hidden;padding-left:35px;">
                                       <table cellpadding="0" cellspacing="0" border="0" width="100%" style=" border-collapse: collapse;">
                                           <tr style="box-sizing: border-box;text-align: left;">
-                                              <td colspan="2" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;color: ${color};font-size: 15px;font-weight: bold;letter-spacing: 0.72px;line-height: 20px;mso-line-height-rule:exactly;text-transform: uppercase;">${
+                                              <td colspan="2" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;color: ${
+                                                hoteles[hotel].color
+                                              };font-size: 15px;font-weight: bold;letter-spacing: 0.72px;line-height: 20px;mso-line-height-rule:exactly;text-transform: uppercase;">${
     nombre != null ? nombre : "Nombre"
   } ${apellido != null ? apellido : "Apellido"}</td>
                                           </tr>
                                           <tr style="box-sizing: border-box;text-align: left;">
-                                              <td style="mso-line-height-rule:exactly;line-height: 11px;font-size: 10px;letter-spacing: 0.48px;font-family: Arial, sans-serif, 'Open Sans';color: ${secondaryColor};padding-bottom:20px;text-transform: uppercase;" colspan="2">${
+                                              <td style="mso-line-height-rule:exactly;line-height: 11px;font-size: 10px;letter-spacing: 0.48px;font-family: Arial, sans-serif, 'Open Sans';color: ${
+                                                hoteles[hotel].secondaryColor
+                                              };padding-bottom:20px;text-transform: uppercase;" colspan="2">${
     puesto != null ? puesto : "Puesto"
   }</td>
                                           </tr>
                                           <tr style="box-sizing: border-box;">
                                               <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${
-    hoteles[hotel].vcm ? "iconos-vcm/phone.png" : "tel.png"
+    hoteles[hotel].icono_phone
   }" alt="" style="margin-right:5px"></td>
-                                              <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${color};font-size: 10px;letter-spacing: 0.48px;">
+                                              <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${
+                                                hoteles[hotel].color
+                                              };font-size: 10px;letter-spacing: 0.48px;">
                                                   <span style="line-height: 18px;mso-line-height-rule:exactly;">${
                                                     telefono != null
                                                       ? formatPhoneNumber(
@@ -366,11 +494,11 @@ const Preview = props => {
                                               ? `
                                           <tr style="box-sizing: border-box;">
                                               <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${
-                                                  hoteles[hotel].vcm
-                                                    ? "iconos-vcm/cel.png"
-                                                    : "cel.png"
+                                                  hoteles[hotel].icono_cel
                                                 }" alt="" style="margin-right:5px"></td>
-                                              <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${color};font-size: 10px;letter-spacing: 0.48px;">
+                                              <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${
+                                                hoteles[hotel].color
+                                              };font-size: 10px;letter-spacing: 0.48px;">
                                                   <span style="line-height: 18px;mso-line-height-rule:exactly;">${celular}</span>
                                               </td>
                                           </tr>
@@ -379,9 +507,11 @@ const Preview = props => {
                                           }
                                           <tr style="box-sizing: border-box;text-align: left;">
                                               <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${
-    hoteles[hotel].vcm ? "iconos-vcm/pin.png" : "pin.png"
+    hoteles[hotel].icono_pin
   }" alt="" style="margin-right:5px"></td>
-                                              <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';color: ${color};font-size: 10px;letter-spacing: 0.48px;">
+                                              <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';color: ${
+                                                hoteles[hotel].color
+                                              };font-size: 10px;letter-spacing: 0.48px;">
                                                   <span style="mso-line-height-rule:exactly;line-height: 13px;">${
                                                     hotel != null
                                                       ? hoteles[hotel].direccion
@@ -399,7 +529,9 @@ const Preview = props => {
                       <td style="padding-top:15px;">
                           <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse: collapse;">
                               <tr style="box-sizing: border-box;">
-                                  <td valign="bottom" style="vertical-align:bottom;color: ${secondaryColor};font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: left;mso-line-height-rule:exactly;line-height: 14px;">
+                                  <td valign="bottom" style="vertical-align:bottom;color: ${
+                                    hoteles[hotel].secondaryColor
+                                  };font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: left;mso-line-height-rule:exactly;line-height: 14px;">
                                       <span style="margin-right:5px;">¡Síguenos en nuestras redes sociales!</span> 
                                       ${redes
                                         .map(el => {
@@ -413,16 +545,11 @@ const Preview = props => {
                                         })
                                         .join("")}
                                   </td>
-                                  ${
-                                    isVCM
-                                      ? `
-                                  <td valign="bottom" style="vertical-align:bottom;text-align:right;"><a style="color: ${secondaryColor};font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: right;mso-line-height-rule:exactly;line-height: 14px;text-decoration: none;" href="https://caribemaya.com.mx/">www.caribemaya.com.mx</a></td>
-
-                                  `
-                                      : `
-                                  <td valign="bottom" style="vertical-align:bottom;text-align:right;"><a style="color: ${secondaryColor};font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: right;mso-line-height-rule:exactly;line-height: 14px;text-decoration: none;" href="https://www.oasishoteles.com">www.oasishoteles.com</a></td>
-                                  `
-                                  }
+                                  <td valign="bottom" style="vertical-align:bottom;text-align:right;"><a style="color: ${
+                                    hoteles[hotel].secondaryColor
+                                  };font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: right;mso-line-height-rule:exactly;line-height: 14px;text-decoration: none;" href="${
+    hoteles[hotel].web_link
+  }">${hoteles[hotel].web}</a></td>
                               </tr>
                           </table>
                       </td>
@@ -431,7 +558,7 @@ const Preview = props => {
           </td>
       </tr>
       ${
-        cintillo
+        hoteles[hotel].cintillo
           ? `
       <tr style="margin:0;box-sizing:border-box;">
       <td style="background:black;margin:0;box-sizing:border-box;padding-top:6px;padding-bottom: 6px;padding-left: 10px;padding-right: 10px;">

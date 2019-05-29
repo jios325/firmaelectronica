@@ -1,52 +1,66 @@
-import React from 'react';
-import { Form, Field } from 'react-final-form'
-import Preview from './Preview'
-import { checkCookie } from '../utils/cookies';
+import React from "react";
+import { Form, Field } from "react-final-form";
+import Preview from "./Preview";
+import { checkCookie } from "../utils/cookies";
+//contenido Duplicado. exportar el que esta en servicios.
 let complejos = [
   {
-    "nombre": "ohr",
-    "pass": '26837434',
-    'hoteles': [{ "code": "ohr", "hotel": "Corporativo ZH" },{ "code": "ohrcentral", "hotel": "Central" }]
+    nombre: "ohr",
+    pass: "26837434",
+    hoteles: [
+      { code: "ohr", hotel: "Corporativo ZH" },
+      { code: "ohrcentral", hotel: "Central" }
+    ]
   },
   {
-    "nombre": "gos",
-    "pass": 'sensXPFiOR',
-    'hoteles': [{ "code": "gos", "hotel": "Grand Oasis Sens" }]
+    nombre: "gos",
+    pass: "sensXPFiOR",
+    hoteles: [{ code: "gos", hotel: "Grand Oasis Sens" }]
   },
   {
-    "nombre": "goc",
-    "pass": 'gocCBZbbd',
-    'hoteles': [{ "code": 'goc', "hotel": "Grand Oasis Cancun" }, { "code": 'pyr', "hotel": "The Pyramid" }]
+    nombre: "goc",
+    pass: "gocCBZbbd",
+    hoteles: [
+      { code: "goc", hotel: "Grand Oasis Cancun" },
+      { code: "pyr", hotel: "The Pyramid" },
+      { code: "otlc", hotel: "OTLC" }
+    ]
   },
   {
-    "nombre": "gop",
-    "pass": 'gopKtEkRe',
-    'hoteles': [{ "code": 'gop', "hotel": "Grand Oasis Palm" }, { "code": 'op', "hotel": "Oasis Palm" }]
+    nombre: "gop",
+    pass: "gopKtEkRe",
+    hoteles: [
+      { code: "gop", hotel: "Grand Oasis Palm" },
+      { code: "op", hotel: "Oasis Palm" }
+    ]
   },
   {
-    "nombre": "urban",
-    "pass": 'urbanKth7wj',
-    'hoteles': [{ "code": 'smart', "hotel": "Smart Cancun by Oasis" }, { "code": 'oh', "hotel": "Oh! The Urban Oasis" }]
+    nombre: "urban",
+    pass: "urbanKth7wj",
+    hoteles: [
+      { code: "smart", hotel: "Smart Cancun by Oasis" },
+      { code: "oh", hotel: "Oh! The Urban Oasis" }
+    ]
   },
   {
-    "nombre": "got",
-    "pass": 'tulum7RUloeu',
-    'hoteles': [{ "code": 'got', "hotel": "Grand Oasis Tulum" }]
+    nombre: "got",
+    pass: "tulum7RUloeu",
+    hoteles: [{ code: "got", hotel: "Grand Oasis Tulum" }]
   },
   {
-    "nombre": "vcm",
-    'hoteles': [{ "code": 'vcm', "hotel": "Caribe Maya" }]
-  },
-]
+    nombre: "vcm",
+    hoteles: [{ code: "vcm", hotel: "Caribe Maya" }]
+  }
+];
 class MyForm extends React.Component {
   constructor(props) {
     super(props);
     this.myRef = React.createRef();
     this.state = {
       loader: false,
-      hotel: '',
+      hotel: "",
       showCopy: false,
-      name: ''
+      name: ""
     };
     this.onSubmit = this.onSubmit.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
@@ -54,73 +68,79 @@ class MyForm extends React.Component {
     this.setRef = this.setRef.bind(this);
   }
   handleSelect(event) {
+    console.log(event.target.value);
     this.setState({
       hotel: event.target.value
-    })
+    });
   }
   setRef(input) {
     this.childRef = input;
   }
   onSubmit(values) {
-    console.log(values)
+    console.log(values);
     this.setState({
       loader: true,
       showCopy: true,
       nombre: `${values.nombre}-${values.apellido}`
-    })
+    });
     setTimeout(() => {
       this.setState({
-        loader: false,
-      })
+        loader: false
+      });
     }, 1000);
   }
   clearSelection() {
-    if (window.getSelection) { window.getSelection().removeAllRanges(); }
-    else if (document.selection) { document.selection.empty(); }
+    if (window.getSelection) {
+      window.getSelection().removeAllRanges();
+    } else if (document.selection) {
+      document.selection.empty();
+    }
   }
-  copyToClipboard = (e) => {
+  copyToClipboard = e => {
     try {
       const range = document.createRange();
       const selection = window.getSelection();
       range.selectNodeContents(this.childRef);
       selection.removeAllRanges();
       selection.addRange(range);
-      document.execCommand('copy');
-      alert('Copiado al Portapapeles');
-      this.clearSelection()
+      document.execCommand("copy");
+      alert("Copiado al Portapapeles");
+      this.clearSelection();
     } catch (err) {
-      alert('Copy failed.');
+      alert("Copy failed.");
     }
-  }
+  };
   onChange() {
-    console.log('change')
     this.setState({
       showCopy: false
-    })
+    });
   }
   downloadInnerHtml(filename, elId, mimeType) {
     var elHtml = document.getElementById(elId).innerHTML;
-    var link = document.createElement('a');
-    mimeType = mimeType || 'text/plain';
+    var link = document.createElement("a");
+    mimeType = mimeType || "text/plain";
     link.setAttribute("type", "hidden"); // make it hidden if needed
-    link.setAttribute('download', filename);
-    link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
+    link.setAttribute("download", filename);
+    link.setAttribute(
+      "href",
+      "data:" + mimeType + ";charset=utf-8," + encodeURIComponent(elHtml)
+    );
     document.body.appendChild(link);
     link.click();
     link.remove();
   }
   render() {
     let filterHotels = [];
-    let isLogin = checkCookie()
-    console.log(isLogin)
+    let isLogin = checkCookie();
+    console.log(isLogin);
     if (isLogin != undefined) {
       filterHotels = complejos.find(ele => {
-        return ele.nombre == isLogin
-      })
+        return ele.nombre == isLogin;
+      });
     } else {
-      filterHotels = complejos
+      filterHotels = complejos;
     }
-    console.log(filterHotels)
+    console.log(this.state.hotel);
     return (
       <Form
         onSubmit={this.onSubmit}
@@ -138,11 +158,9 @@ class MyForm extends React.Component {
           }
           if (!values.telefono) {
             errors.telefono = "Campo Obligatorio";
-          }
-          else if (isNaN(values.telefono)) {
+          } else if (isNaN(values.telefono)) {
             errors.telefono = "Número Invalido";
-          }
-          else if (values.telefono.length < 10) {
+          } else if (values.telefono.length < 10) {
             errors.telefono = "Telefono a 10 Dígitos";
           }
           if (values.celular && values.celular.length < 10) {
@@ -156,7 +174,15 @@ class MyForm extends React.Component {
           }
           return errors;
         }}
-        render={({ handleSubmit, pristine, invalid, submitting, reset, form, values }) => (
+        render={({
+          handleSubmit,
+          pristine,
+          invalid,
+          submitting,
+          reset,
+          form,
+          values
+        }) => (
           <React.Fragment>
             <form onSubmit={handleSubmit} className="container-fluid container">
               <div className="row">
@@ -166,28 +192,41 @@ class MyForm extends React.Component {
                       {/* {currHotel != undefined && currHotel == 'ohr' ? */}
                       <Field name="hotel">
                         {({ input, meta }) => {
-                          const { onChange } = input
+                          const { onChange } = input;
                           const mergedOnChange = e => {
                             this.onChange(e);
                             onChange(e);
-                          }
-                          const newInput = { ...input, onChange: mergedOnChange }
+                          };
+                          const newInput = {
+                            ...input,
+                            onChange: mergedOnChange
+                          };
                           return (
                             <div>
-                              <label className="form__label required">Hotel:</label>
+                              <label className="form__label required">
+                                Hotel:
+                              </label>
                               <div className="select">
                                 <select {...newInput} className="form-control">
-                                  <option value="" disabled selected>Selecciona un Hotel</option>
+                                  <option value="" disabled selected>
+                                    Selecciona un Hotel
+                                  </option>
                                   {filterHotels.hoteles.map(ele => {
                                     return (
-                                      <option value={ele.code}>{ele.hotel}</option>
-                                    )
+                                      <option value={ele.code}>
+                                        {ele.hotel}
+                                      </option>
+                                    );
                                   })}
                                 </select>
                               </div>
-                              {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                              {meta.error && meta.touched && (
+                                <span className="alert alert-error">
+                                  {meta.error}
+                                </span>
+                              )}
                             </div>
-                          )
+                          );
                         }}
                       </Field>
                     </div>
@@ -195,12 +234,24 @@ class MyForm extends React.Component {
                       <Field name="nombre">
                         {({ input, meta }) => (
                           <div>
-                            <label className="form__label required">Nombre:</label>
-                            <input {...input} type="text" placeholder="Nombre" className="form-control" onChange={(e) => {
-                              input.onChange(e);
-                              this.onChange()
-                            }} />
-                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                            <label className="form__label required">
+                              Nombre:
+                            </label>
+                            <input
+                              {...input}
+                              type="text"
+                              placeholder="Nombre"
+                              className="form-control"
+                              onChange={e => {
+                                input.onChange(e);
+                                this.onChange();
+                              }}
+                            />
+                            {meta.error && meta.touched && (
+                              <span className="alert alert-error">
+                                {meta.error}
+                              </span>
+                            )}
                           </div>
                         )}
                       </Field>
@@ -209,12 +260,24 @@ class MyForm extends React.Component {
                       <Field name="apellido">
                         {({ input, meta }) => (
                           <div>
-                            <label className="form__label required">Apellido:</label>
-                            <input {...input} type="text" placeholder="Apellido" className="form-control" onChange={(e) => {
-                              input.onChange(e);
-                              this.onChange()
-                            }} />
-                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                            <label className="form__label required">
+                              Apellido:
+                            </label>
+                            <input
+                              {...input}
+                              type="text"
+                              placeholder="Apellido"
+                              className="form-control"
+                              onChange={e => {
+                                input.onChange(e);
+                                this.onChange();
+                              }}
+                            />
+                            {meta.error && meta.touched && (
+                              <span className="alert alert-error">
+                                {meta.error}
+                              </span>
+                            )}
                           </div>
                         )}
                       </Field>
@@ -223,12 +286,24 @@ class MyForm extends React.Component {
                       <Field name="puesto">
                         {({ input, meta }) => (
                           <div>
-                            <label className="form__label required">Puesto:</label>
-                            <input {...input} type="text" placeholder="Puesto" className="form-control" onChange={(e) => {
-                              input.onChange(e);
-                              this.onChange()
-                            }} />
-                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                            <label className="form__label required">
+                              Puesto:
+                            </label>
+                            <input
+                              {...input}
+                              type="text"
+                              placeholder="Puesto"
+                              className="form-control"
+                              onChange={e => {
+                                input.onChange(e);
+                                this.onChange();
+                              }}
+                            />
+                            {meta.error && meta.touched && (
+                              <span className="alert alert-error">
+                                {meta.error}
+                              </span>
+                            )}
                           </div>
                         )}
                       </Field>
@@ -238,11 +313,21 @@ class MyForm extends React.Component {
                         {({ input, meta }) => (
                           <div>
                             <label className="form__label">Celular:</label>
-                            <input {...input} type="text" placeholder="Celular" className="form-control" onChange={(e) => {
-                              input.onChange(e);
-                              this.onChange()
-                            }} />
-                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                            <input
+                              {...input}
+                              type="text"
+                              placeholder="Celular"
+                              className="form-control"
+                              onChange={e => {
+                                input.onChange(e);
+                                this.onChange();
+                              }}
+                            />
+                            {meta.error && meta.touched && (
+                              <span className="alert alert-error">
+                                {meta.error}
+                              </span>
+                            )}
                           </div>
                         )}
                       </Field>
@@ -251,12 +336,25 @@ class MyForm extends React.Component {
                       <Field name="telefono">
                         {({ input, meta }) => (
                           <div>
-                            <label className="form__label required">Teléfono:</label>
-                            <input {...input} type="text" placeholder="Telefono" className="form-control" maxLength="10" onChange={(e) => {
-                              input.onChange(e);
-                              this.onChange()
-                            }} />
-                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                            <label className="form__label required">
+                              Teléfono:
+                            </label>
+                            <input
+                              {...input}
+                              type="text"
+                              placeholder="Telefono"
+                              className="form-control"
+                              maxLength="10"
+                              onChange={e => {
+                                input.onChange(e);
+                                this.onChange();
+                              }}
+                            />
+                            {meta.error && meta.touched && (
+                              <span className="alert alert-error">
+                                {meta.error}
+                              </span>
+                            )}
                           </div>
                         )}
                       </Field>
@@ -265,12 +363,24 @@ class MyForm extends React.Component {
                       <Field name="extension">
                         {({ input, meta }) => (
                           <div>
-                            <label className="form__label required">Extensión:</label>
-                            <input {...input} type="text" placeholder="Extensión" className="form-control" onChange={(e) => {
-                              input.onChange(e);
-                              this.onChange()
-                            }} />
-                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                            <label className="form__label required">
+                              Extensión:
+                            </label>
+                            <input
+                              {...input}
+                              type="text"
+                              placeholder="Extensión"
+                              className="form-control"
+                              onChange={e => {
+                                input.onChange(e);
+                                this.onChange();
+                              }}
+                            />
+                            {meta.error && meta.touched && (
+                              <span className="alert alert-error">
+                                {meta.error}
+                              </span>
+                            )}
                           </div>
                         )}
                       </Field>
@@ -279,39 +389,70 @@ class MyForm extends React.Component {
                 </div>
               </div>
               <div className="text-center mt-20">
-                <button className="btn btn-primary mr-20-md" type="submit" disabled={pristine}>Generar</button>
+                <button
+                  className="btn btn-primary mr-20-md"
+                  type="submit"
+                  disabled={pristine}
+                >
+                  Generar
+                </button>
                 <button
                   type="button"
                   className="btn btn-reset"
-                  onClick={(e) => {
-                    form.reset()
-                    this.onChange(e)
+                  onClick={e => {
+                    form.reset();
+                    this.onChange(e);
                   }}
                   disabled={submitting || pristine}
-                >Reset</button>
+                >
+                  Reset
+                </button>
               </div>
             </form>
-            <div className="border--dashed"></div>
+            <div className="border--dashed" />
             <div>
-              <div className={`preview mt-20 mt-30-md ${this.state.showCopy ? '' : 'disabled'}`}>
+              <div
+                className={`preview mt-20 mt-30-md ${
+                  this.state.showCopy ? "" : "disabled"
+                }`}
+              >
                 <span className="preview__title">VISTA PREVIA</span>
                 <div className="preview__inner">
-                  <Preview data={values} setRef={this.setRef} color={isLogin == 'vcm' ? '#175176' : '#756857'} secondaryColor={isLogin == 'vcm' ? '#175176' : '#C4A77E'} cintillo={isLogin == 'vcm' ? false : true} isVCM={isLogin == 'vcm' ? true : false} />
+                  <Preview
+                    data={values}
+                    setRef={this.setRef}
+                    isVCM={isLogin == "vcm" ? true : false}
+                  />
                 </div>
               </div>
               {/* <a href={`data:text/html,  `} download={`nombre.html`}>Descargar</a> */}
-              {this.state.showCopy &&
+              {this.state.showCopy && (
                 <div className="text-center">
-                  <button className="text-center btn btn-primary mt-20 mt-30-md mb-20" onClick={this.copyToClipboard}>Copiar al portapapeles</button>
-                  <button className="text-center btn btn-primary mt-20 mt-30-md mb-20 ml-10" onClick={() => { this.downloadInnerHtml(`${this.state.nombre}.html`, 'contenedor', 'text/html') }}>Descargar</button>
+                  <button
+                    className="text-center btn btn-primary mt-20 mt-30-md mb-20"
+                    onClick={this.copyToClipboard}
+                  >
+                    Copiar al portapapeles
+                  </button>
+                  <button
+                    className="text-center btn btn-primary mt-20 mt-30-md mb-20 ml-10"
+                    onClick={() => {
+                      this.downloadInnerHtml(
+                        `${this.state.nombre}.html`,
+                        "contenedor",
+                        "text/html"
+                      );
+                    }}
+                  >
+                    Descargar
+                  </button>
                 </div>
-              }
+              )}
             </div>
           </React.Fragment>
         )}
       />
-      // :'loading...'
-    )
+    );
   }
 }
-export default MyForm
+export default MyForm;
