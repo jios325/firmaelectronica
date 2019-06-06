@@ -39,6 +39,37 @@ const hoteles = {
       }
     ]
   },
+  ohrmexico: {
+    logo: assetUrl + "oasis.png",
+    color: "#756857",
+    secondaryColor: "#C4A77E",
+    cintillo: true,
+    direccion:
+      "PENNSYLVANIA NO. 127 OFNAS 8-10 COL NAPOLES C.P. 03810 CIUDAD DE MEXICO",
+    icono_cel: "cel.png",
+    icono_phone: "tel.png",
+    icono_pin: "pin.png",
+    web: "www.oasishoteles.com",
+    web_link: "https://www.oasishoteles.com",
+    redes: [
+      {
+        url: "https://www.facebook.com/OasisHoteles",
+        icono: assetUrl + "fb.png"
+      },
+      {
+        url: "https://twitter.com/OasisHotels",
+        icono: assetUrl + "tw.png"
+      },
+      {
+        url: "https://blog.oasishoteles.com",
+        icono: assetUrl + "blog.png"
+      },
+      {
+        url: "https://www.instagram.com/oasishotels/",
+        icono: assetUrl + "inst.png"
+      }
+    ]
+  },
   otlc: {
     logo: assetUrl + "logos/otlc-logo.jpg",
     color: "#283566",

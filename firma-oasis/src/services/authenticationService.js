@@ -7,7 +7,8 @@ export const loginUserService = request => {
       pass: "26837434",
       hoteles: [
         { code: "ohr", hotel: "Corporativo" },
-        { code: "ohrcentral", hotel: "Corporativo" }
+        { code: "ohrcentral", hotel: "Corporativo" },
+        { code: "ohrmexico", hotel: "Corporativo México" }
       ]
     },
     {

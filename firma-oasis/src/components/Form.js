@@ -9,7 +9,8 @@ let complejos = [
     pass: "26837434",
     hoteles: [
       { code: "ohr", hotel: "Corporativo ZH" },
-      { code: "ohrcentral", hotel: "Central" }
+      { code: "ohrcentral", hotel: "Central" },
+      { code: "ohrmexico", hotel: "Corporativo México" }
     ]
   },
   {
