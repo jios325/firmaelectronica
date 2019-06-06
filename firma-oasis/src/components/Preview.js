@@ -75,6 +75,7 @@ const hoteles = {
     color: "#283566",
     secondaryColor: "#283566",
     cintillo: true,
+    tel_800: ["01 800 272 0249", "01 800 439 0355"],
     icono_cel: "iconos-otlc/cel.png",
     icono_phone: "iconos-otlc/tel.png",
     icono_pin: "iconos-otlc/pin.png",
@@ -409,6 +410,22 @@ const Preview = props => {
     celular
   } = props.data;
   let redes = hotel != null ? hoteles[hotel].redes : [];
+  const templateTel = props => {
+    return `
+  <tr style="box-sizing: border-box;">
+    <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${
+      hoteles[hotel].icono_cel
+    }" alt="" style="margin-right:5px"></td>
+    <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${
+      hoteles[hotel].color
+    };font-size: 10px;letter-spacing: 0.48px;">
+        <span style="line-height: 18px;mso-line-height-rule:exactly;">${
+          props.tel
+        }</span>
+    </td>
+  </tr>
+  `;
+  };
   let template = `
   <div>
   <style type="text/css">
@@ -473,7 +490,7 @@ const Preview = props => {
                       <td>
                           <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-bottom:2px solid ${
                             hoteles[hotel].color
-                          };border-collapse: collapse;">
+                          };border-collapse: collapse;table-layout:fixed;">
                               <tr style="box-sizing: border-box;">
                                   <td valign="center" style="vertical-align: center;width: 34%;max-width:180px;height:120px;text-align: center; border-right:2px solid ${
                                     hoteles[hotel].color
@@ -502,24 +519,6 @@ const Preview = props => {
     puesto != null ? puesto : "Puesto"
   }</td>
                                           </tr>
-                                          <tr style="box-sizing: border-box;">
-                                              <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${
-    hoteles[hotel].icono_phone
-  }" alt="" style="margin-right:5px"></td>
-                                              <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${
-                                                hoteles[hotel].color
-                                              };font-size: 10px;letter-spacing: 0.48px;">
-                                                  <span style="line-height: 18px;mso-line-height-rule:exactly;">${
-                                                    telefono != null
-                                                      ? formatPhoneNumber(
-                                                          telefono
-                                                        )
-                                                      : "Teléfono"
-                                                  } ${
-    extension != null ? `EXT. ${extension}` : ""
-  }</span>
-                                              </td>
-                                          </tr>
                                           ${
                                             celular != null
                                               ? `
@@ -536,8 +535,37 @@ const Preview = props => {
                                           `
                                               : ""
                                           }
-                                          <tr style="box-sizing: border-box;text-align: left;">
+                                          <tr style="box-sizing: border-box;">
                                               <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${
+    hoteles[hotel].icono_phone
+  }" alt="" style="margin-right:5px"></td>
+                                              <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${
+                                                hoteles[hotel].color
+                                              };font-size: 10px;letter-spacing: 0.48px;">
+                                                  <span style="line-height: 18px;mso-line-height-rule:exactly;padding-top:2px;">${
+                                                    telefono != null
+                                                      ? formatPhoneNumber(
+                                                          telefono
+                                                        )
+                                                      : "Teléfono"
+                                                  } ${
+    extension != null ? `EXT. ${extension}` : ""
+  }</span>
+                                              </td>
+                                          </tr>
+                                          ${
+                                            hoteles[hotel].tel_800
+                                              ? `
+                                              <tr style="box-sizing: border-box;text-align: left;">
+                                                  <td colspan="2" style="padding-top:2px;padding-left:18px;font-size:10px;color:${
+                                                    hoteles[hotel].color
+                                                  };"><span>MEX: 01 800 272 0249</span> <span style="font-weight:bold;">/</span> <span>USA & CAN: 01 800 439 0355</span></td>  
+                                              </tr>
+                                              `
+                                              : ""
+                                          }
+                                          <tr style="box-sizing: border-box;text-align: left;">
+                                              <td valign="center" style="vertical-align:center;width:18px;padding-top:2px;"><img src="${assetUrl}${
     hoteles[hotel].icono_pin
   }" alt="" style="margin-right:5px"></td>
                                               <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';color: ${
