@@ -39,6 +39,36 @@ const hoteles = {
       }
     ]
   },
+  lavanderia: {
+    logo: assetUrl + "oasis.png",
+    color: "#756857",
+    secondaryColor: "#C4A77E",
+    cintillo: true,
+    direccion: "LBMTO. KABAH LOTE 2B REGIÓN 93 C.P 77517",
+    icono_cel: "cel.png",
+    icono_phone: "tel.png",
+    icono_pin: "pin.png",
+    web: "www.oasishoteles.com",
+    web_link: "https://www.oasishoteles.com",
+    redes: [
+      {
+        url: "https://www.facebook.com/OasisHoteles",
+        icono: assetUrl + "fb.png"
+      },
+      {
+        url: "https://twitter.com/OasisHotels",
+        icono: assetUrl + "tw.png"
+      },
+      {
+        url: "https://blog.oasishoteles.com",
+        icono: assetUrl + "blog.png"
+      },
+      {
+        url: "https://www.instagram.com/oasishotels/",
+        icono: assetUrl + "inst.png"
+      }
+    ]
+  },
   ohrmexico: {
     logo: assetUrl + "oasis.png",
     color: "#756857",
@@ -79,7 +109,7 @@ const hoteles = {
     icono_cel: "iconos-otlc/cel.png",
     icono_phone: "iconos-otlc/tel.png",
     icono_pin: "iconos-otlc/pin.png",
-    direccion: "KM. 6.5, BLVD. KUKULCÁN CANCÚN, MÉXICO  C.P 77500",
+    direccion: "KM 16.5, BLVD. KUKULCÁN CANCÚN, MÉXICO  C.P 77500",
     web: "www.oasis-tlc.com",
     web_link: "https://oasis-tlc.com/",
     redes: [

@@ -10,7 +10,8 @@ let complejos = [
     hoteles: [
       { code: "ohr", hotel: "Corporativo ZH" },
       { code: "ohrcentral", hotel: "Central" },
-      { code: "ohrmexico", hotel: "Corporativo México" }
+      { code: "ohrmexico", hotel: "Corporativo México" },
+      { code: "lavanderia", hotel: "Lavandería y Taller de Costura" }
     ]
   },
   {

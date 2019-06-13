@@ -8,7 +8,8 @@ export const loginUserService = request => {
       hoteles: [
         { code: "ohr", hotel: "Corporativo" },
         { code: "ohrcentral", hotel: "Corporativo" },
-        { code: "ohrmexico", hotel: "Corporativo México" }
+        { code: "ohrmexico", hotel: "Corporativo México" },
+        { code: "lavanderia", hotel: "Lavandería y Taller de Costura" }
       ]
     },
     {
