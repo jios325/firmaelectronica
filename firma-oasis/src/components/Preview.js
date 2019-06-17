@@ -1,5 +1,5 @@
 import React from "react";
-import { assetUrl } from "../config/config";
+import { assetUrl, linkAppAndroid, linkAppIOS } from "../config/config";
 const formatPhoneNumber = phoneNumberString => {
   var cleaned = ("" + phoneNumberString).replace(/\D/g, "");
   var match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
@@ -663,12 +663,12 @@ const Preview = props => {
                       <table cellpadding="0" cellspacing="0" border="0" style="margin:0;box-sizing:border-box;border-collapse: collapse;border-spacing: 0;">
                           <tr style="margin:0;box-sizing:border-box;text-align: right;">
                               <td>
-                                  <a href="http://onelink.to/v2uxnu">
+                                  <a href="${linkAppIOS}">
                                       <img style="display:block;"  src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/appstore.png" alt="">
                                   </a>
                               </td>
                               <td style="padding-left:5px;">
-                                  <a href="http://onelink.to/v2uxnu">
+                                  <a href="${linkAppAndroid}">
                                       <img style="display:block;" src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/googleplay.png" alt="">
                                   </a>
                               </td>
