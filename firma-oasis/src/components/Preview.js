@@ -4,7 +4,7 @@ const formatPhoneNumber = phoneNumberString => {
   var cleaned = ("" + phoneNumberString).replace(/\D/g, "");
   console.log();
   var match = false;
-  if (cleaned.match(/^555/)) {
+  if (cleaned.match(/^55/)) {
     match = cleaned.match(/^(\d{2})(\d{4})(\d{4})$/);
   } else {
     match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
