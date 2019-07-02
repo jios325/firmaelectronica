@@ -138,6 +138,7 @@ const hoteles = {
     ]
   },
   ohrcentral: {
+    central: true,
     logo: assetUrl + "oasis.png",
     color: "#756857",
     secondaryColor: "#C4A77E",
@@ -587,6 +588,12 @@ const Preview = props => {
                                                   } ${
     extension != null ? `EXT. ${extension}` : ""
   }</span>
+  ${
+    hoteles[hotel].central
+      ? `/</span> <span>01 800 01 OASIS (62747)</span>`
+      : ""
+  }
+  
                                               </td>
                                           </tr>
                                           ${
