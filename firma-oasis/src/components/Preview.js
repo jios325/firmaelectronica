@@ -540,7 +540,7 @@ const Preview = props => {
                                           }">
                                       </a>
                                   </td>
-                                  <td valign="top" style="vertical-align: top; padding-top: 10px; padding-bottom: 10px;overflow:hidden;padding-left:35px;">
+                                  <td valign="${telefono!=null ? 'top':'center'}" style="vertical-align: ${telefono!=null ? 'top':'middle'}; padding-top: 10px; padding-bottom: 10px;overflow:hidden;padding-left:35px;">
                                       <table cellpadding="0" cellspacing="0" border="0" width="100%" style=" border-collapse: collapse;">
                                           <tr style="box-sizing: border-box;text-align: left;">
                                               <td colspan="2" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;color: ${
@@ -572,30 +572,30 @@ const Preview = props => {
                                           `
                                               : ""
                                           }
-                                          <tr style="box-sizing: border-box;">
-                                              <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${
-    hoteles[hotel].icono_phone
-  }" alt="" style="margin-right:5px"></td>
-                                              <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${
-                                                hoteles[hotel].color
-                                              };font-size: 10px;letter-spacing: 0.48px;">
-                                                  <span style="line-height: 18px;mso-line-height-rule:exactly;padding-top:2px;">${
-                                                    telefono != null
-                                                      ? formatPhoneNumber(
-                                                          telefono
-                                                        )
-                                                      : "Teléfono"
-                                                  } ${
-    extension != null ? `EXT. ${extension}` : ""
-  }</span>
-  ${
-    hoteles[hotel].central
-      ? `/</span> <span>01 800 01 OASIS (62747)</span>`
-      : ""
-  }
-  
-                                              </td>
-                                          </tr>
+                                          ${telefono !=null ?
+                                            `
+                                            <tr style="box-sizing: border-box;">
+                                            <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${hoteles[hotel].icono_phone}" alt="" style="margin-right:5px"></td>
+                                            <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${
+                                              hoteles[hotel].color
+                                            };font-size: 10px;letter-spacing: 0.48px;">
+                                                <span style="line-height: 18px;mso-line-height-rule:exactly;padding-top:2px;">${
+                                                  telefono != null
+                                                    ? formatPhoneNumber(
+                                                        telefono
+                                                      )
+                                                    : "Teléfono"
+                                                } ${extension != null ? `EXT. ${extension}` : ""}</span>
+                                                  ${
+                                                    hoteles[hotel].central
+                                                      ? `/</span> <span>01 800 01 OASIS (62747)</span>`
+                                                      : ""
+                                                  }
+                                            </td>
+                                        </tr>
+                                            `
+                                            : ""}
+                                          
                                           ${
                                             hoteles[hotel].tel_800
                                               ? `
