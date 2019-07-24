@@ -594,7 +594,18 @@ const Preview = props => {
                                             </td>
                                         </tr>
                                             `
-                                            : ""}
+                                            : `${hoteles[hotel].central
+                                              ? `
+                                                <tr style="box-sizing: border-box;">
+                                            <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${hoteles[hotel].icono_phone}" alt="" style="margin-right:5px"></td>
+                                            <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${
+                                              hoteles[hotel].color
+                                            };font-size: 10px;letter-spacing: 0.48px;">
+                                                </span> <span>01 800 01 OASIS (62747)</span>
+                                            </td>
+                                        </tr>
+                                              `
+                                              : ""}`}
                                           
                                           ${
                                             hoteles[hotel].tel_800
