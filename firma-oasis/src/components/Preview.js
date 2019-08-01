@@ -711,7 +711,7 @@ const Preview = props => {
       `
       <tr style="margin:0;box-sizing:border-box;">
           <td style="padding:0px!important;width:600px;">
-              <a href="https://oasishoteles.com/es">
+              <a href="https://caribemaya.com.mx">
                   <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/cintillo-vcm.jpg" alt="">
               </a>
           </td>
