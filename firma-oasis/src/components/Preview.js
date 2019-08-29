@@ -658,6 +658,12 @@ const Preview = props => {
       })
       .join("")}
                                   </td>
+                                  ${hoteles[hotel].vcm ? `
+                                  <td valign="bottom" style="vertical-align:bottom;color: ${
+      hoteles[hotel].secondaryColor
+      };font-family: Arial, sans-serif, 'Open Sans';font-size: 11px;text-align: left;mso-line-height-rule:exactly;line-height: 15px;font-weight: bold;">ARRIVE AND REVIVE</td>
+                                  ` : ''}
+                                  
                                   <td valign="bottom" style="vertical-align:bottom;text-align:right;"><a style="color: ${
     hoteles[hotel].secondaryColor
     };font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: right;mso-line-height-rule:exactly;line-height: 14px;text-decoration: none;" href="${
@@ -707,7 +713,7 @@ const Preview = props => {
       : ""
     }
     ${
-      hoteles[hotel].vcm ?
+    hoteles[hotel].vcm ?
       `
       <tr style="margin:0;box-sizing:border-box;">
           <td style="padding:0px!important;width:600px;">
