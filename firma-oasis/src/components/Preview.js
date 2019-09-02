@@ -532,12 +532,12 @@ const Preview = props => {
                                   <td valign="center" style="vertical-align: center;width: 34%;max-width:180px;height:120px;text-align: center; border-right:2px solid ${
     hoteles[hotel].color
     };">
-                                      <a href="https://www.oasishoteles.com" style="display:block;">
+                                      <a href="${hoteles[hotel].vcm ? 'https://caribemaya.com.mx' : 'https://www.oasishoteles.com'}" style="display:block;">
                                           <img style="max-width: 100%;display: block;margin:0 auto;" src="${
     hotel != null
       ? hoteles[hotel].logo
       : assetUrl + "oasis.png"
-    }">
+    }" alt="${hoteles[hotel].vcm ? "Viajes Caribe Maya" : ''}"  title="${hoteles[hotel].vcm ? "Viajes Caribe Maya" : ''}">
                                       </a>
                                   </td>
                                   <td valign="${telefono != null ? 'top' : 'center'}" style="vertical-align: ${telefono != null ? 'top' : 'middle'}; padding-top: 10px; padding-bottom: 10px;overflow:hidden;padding-left:35px;">
