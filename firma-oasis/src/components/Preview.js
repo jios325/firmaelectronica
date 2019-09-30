@@ -45,6 +45,37 @@ const hoteles = {
       }
     ]
   },
+  rep: {
+    logo: assetUrl + "oasis.png",
+    color: "#756857",
+    secondaryColor: "#C4A77E",
+    cintillo: true,
+    noAddress: true,
+    direccion: "TEST ;)",
+    icono_cel: "cel.png",
+    icono_phone: "tel.png",
+    icono_pin: "pin.png",
+    web: "www.oasishoteles.com",
+    web_link: "https://www.oasishoteles.com",
+    redes: [
+      {
+        url: "https://www.facebook.com/OasisHoteles",
+        icono: assetUrl + "fb.png"
+      },
+      {
+        url: "https://twitter.com/OasisHotels",
+        icono: assetUrl + "tw.png"
+      },
+      {
+        url: "https://blog.oasishoteles.com",
+        icono: assetUrl + "blog.png"
+      },
+      {
+        url: "https://www.instagram.com/oasishotels/",
+        icono: assetUrl + "inst.png"
+      }
+    ]
+  },
   lavanderia: {
     logo: assetUrl + "oasis.png",
     color: "#756857",
@@ -618,20 +649,22 @@ const Preview = props => {
                                               `
       : ""
     }
-                                          <tr style="box-sizing: border-box;text-align: left;">
-                                              <td valign="center" style="vertical-align:center;width:18px;padding-top:2px;"><img src="${assetUrl}${
-    hoteles[hotel].icono_pin
-    }" alt="" style="margin-right:5px"></td>
-                                              <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';color: ${
-    hoteles[hotel].color
-    };font-size: 10px;letter-spacing: 0.48px;">
-                                                  <span style="mso-line-height-rule:exactly;line-height: 13px;">${
-    hotel != null
-      ? hoteles[hotel].direccion
-      : "Direccion del Hotel"
-    }</span>
-                                              </td>
-                                          </tr>
+                                         ${hoteles[hotel].noAddress ? '' : `
+                                         <tr style="box-sizing: border-box;text-align: left;">
+                                         <td valign="center" style="vertical-align:center;width:18px;padding-top:2px;"><img src="${assetUrl}${
+      hoteles[hotel].icono_pin
+      }" alt="" style="margin-right:5px"></td>
+                                         <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';color: ${
+      hoteles[hotel].color
+      };font-size: 10px;letter-spacing: 0.48px;">
+                                             <span style="mso-line-height-rule:exactly;line-height: 13px;">${
+      hotel != null
+        ? hoteles[hotel].direccion
+        : "Direccion del Hotel"
+      }</span>
+                                         </td>
+                                     </tr>
+                                         `}
                                       </table>
                                   </td>
                               </tr>
