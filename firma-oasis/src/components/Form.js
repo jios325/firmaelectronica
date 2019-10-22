@@ -159,14 +159,6 @@ class MyForm extends React.Component {
           if (!values.puesto) {
             errors.puesto = "Campo Obligatorio";
           }
-          //Ya no es obligatorio el Telefono
-          // if (!values.telefono) {
-          //   errors.telefono = "Campo Obligatorio";
-          // } else if (isNaN(values.telefono)) {
-          //   errors.telefono = "Número Invalido";
-          // } else if (values.telefono.length < 10) {
-          //   errors.telefono = "Telefono a 10 Dígitos";
-          // }
           if (values.celular && values.celular.length < 10) {
             errors.celular = "Telefono a 10 Dígitos";
           }
@@ -348,7 +340,7 @@ class MyForm extends React.Component {
                                 type="text"
                                 placeholder="Telefono"
                                 className="form-control"
-                                maxLength="10"
+                                // maxLength="10"
                                 onChange={e => {
                                   input.onChange(e);
                                   this.onChange();

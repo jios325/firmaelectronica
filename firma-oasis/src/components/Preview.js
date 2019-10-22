@@ -1,12 +1,12 @@
 import React from "react";
 import { assetUrl, linkAppAndroid, linkAppIOS } from "../config/config";
 const formatPhoneNumber = phoneNumberString => {
-  var cleaned = ("" + phoneNumberString).replace(/\D/g, "");
-  console.log();
+  let cleaned = ("" + phoneNumberString).replace(/\s/g, '');
   var match = false;
   if (cleaned.match(/^55/)) {
     match = cleaned.match(/^(\d{2})(\d{4})(\d{4})$/);
-  } else {
+  }
+  else {
     match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
   }
   if (match) {
