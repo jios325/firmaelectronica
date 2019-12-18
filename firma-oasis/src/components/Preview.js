@@ -355,7 +355,7 @@ const hoteles = {
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
     direccion:
-      "Blvd. Kukulkán Km 19.5 Lote 50 Zona Hotelera, Cancún Q. Roo 77500 México",
+      "Blvd. Kukulcan km 4.6, Kukulcan Boulevard, Zona Hotelera, 77500 Cancún, Q. Roo.",
     redes: [
       {
         url: "https://bit.ly/2MqAQsL",
