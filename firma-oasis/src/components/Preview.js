@@ -181,24 +181,24 @@ const hoteles = {
     web_link: "https://www.oasishoteles.com",
     direccion:
       "CARRETERA CANCÚN AEROPUERTO KM 17 BLVD. LUIS DONALDO COLOSIO MZ. 04 LOTE 05 CENTRAL DE ABASTOS SM 301 UNIDAD 510",
-      redes: [
-        {
-          url: "http://ow.ly/5Dqb30kI8lA",
-          icono: assetUrl + "fb.png"
-        },
-        {
-          url: "http://ow.ly/8jXf30kIaSO",
-          icono: assetUrl + "tw.png"
-        },
-        {
-          url: "https://blog.oasishoteles.com",
-          icono: assetUrl + "blog.png"
-        },
-        {
-          url: "http://ow.ly/pWLz30kI9xt",
-          icono: assetUrl + "inst.png"
-        }
-      ]
+    redes: [
+      {
+        url: "http://ow.ly/5Dqb30kI8lA",
+        icono: assetUrl + "fb.png"
+      },
+      {
+        url: "http://ow.ly/8jXf30kIaSO",
+        icono: assetUrl + "tw.png"
+      },
+      {
+        url: "https://blog.oasishoteles.com",
+        icono: assetUrl + "blog.png"
+      },
+      {
+        url: "http://ow.ly/pWLz30kI9xt",
+        icono: assetUrl + "inst.png"
+      }
+    ]
   },
   vcm: {
     vcm: true,
@@ -214,7 +214,7 @@ const hoteles = {
     direccion: "KM. 6.5, BLVD. KUKULCÁN CANCÚN, MÉXICO  C.P 77500",
     redes: [
       {
-        url: "https://bit.ly/2MxKQR4",
+        url: "https://bit.ly/38RKNKc",
         icono: assetUrl + "iconos-vcm/facebook.png"
       },
       {
