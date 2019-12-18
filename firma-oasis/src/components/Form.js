@@ -18,7 +18,7 @@ let complejos = [
   {
     nombre: "gos",
     pass: "sensXPFiOR",
-    hoteles: [{ code: "gos", hotel: "Grand Oasis Sens" }]
+    hoteles: [{ code: "gos", hotel: "Grand Sens Cancun" }]
   },
   {
     nombre: "goc",

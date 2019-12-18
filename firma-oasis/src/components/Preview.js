@@ -28,11 +28,11 @@ const hoteles = {
     web_link: "https://www.oasishoteles.com",
     redes: [
       {
-        url: "https://www.facebook.com/OasisHoteles",
+        url: "http://ow.ly/5Dqb30kI8lA",
         icono: assetUrl + "fb.png"
       },
       {
-        url: "https://twitter.com/OasisHotels",
+        url: "http://ow.ly/8jXf30kIaSO",
         icono: assetUrl + "tw.png"
       },
       {
@@ -40,7 +40,7 @@ const hoteles = {
         icono: assetUrl + "blog.png"
       },
       {
-        url: "https://www.instagram.com/oasishotels/",
+        url: "http://ow.ly/pWLz30kI9xt",
         icono: assetUrl + "inst.png"
       }
     ]
@@ -59,11 +59,11 @@ const hoteles = {
     web_link: "https://www.oasishoteles.com",
     redes: [
       {
-        url: "https://www.facebook.com/OasisHoteles",
+        url: "http://ow.ly/5Dqb30kI8lA",
         icono: assetUrl + "fb.png"
       },
       {
-        url: "https://twitter.com/OasisHotels",
+        url: "http://ow.ly/8jXf30kIaSO",
         icono: assetUrl + "tw.png"
       },
       {
@@ -71,7 +71,7 @@ const hoteles = {
         icono: assetUrl + "blog.png"
       },
       {
-        url: "https://www.instagram.com/oasishotels/",
+        url: "http://ow.ly/pWLz30kI9xt",
         icono: assetUrl + "inst.png"
       }
     ]
@@ -89,11 +89,11 @@ const hoteles = {
     web_link: "https://www.oasishoteles.com",
     redes: [
       {
-        url: "https://www.facebook.com/OasisHoteles",
+        url: "http://ow.ly/5Dqb30kI8lA",
         icono: assetUrl + "fb.png"
       },
       {
-        url: "https://twitter.com/OasisHotels",
+        url: "http://ow.ly/8jXf30kIaSO",
         icono: assetUrl + "tw.png"
       },
       {
@@ -101,7 +101,7 @@ const hoteles = {
         icono: assetUrl + "blog.png"
       },
       {
-        url: "https://www.instagram.com/oasishotels/",
+        url: "http://ow.ly/pWLz30kI9xt",
         icono: assetUrl + "inst.png"
       }
     ]
@@ -120,11 +120,11 @@ const hoteles = {
     web_link: "https://www.oasishoteles.com",
     redes: [
       {
-        url: "https://www.facebook.com/OasisHoteles",
+        url: "http://ow.ly/5Dqb30kI8lA",
         icono: assetUrl + "fb.png"
       },
       {
-        url: "https://twitter.com/OasisHotels",
+        url: "http://ow.ly/8jXf30kIaSO",
         icono: assetUrl + "tw.png"
       },
       {
@@ -132,7 +132,7 @@ const hoteles = {
         icono: assetUrl + "blog.png"
       },
       {
-        url: "https://www.instagram.com/oasishotels/",
+        url: "http://ow.ly/pWLz30kI9xt",
         icono: assetUrl + "inst.png"
       }
     ]
@@ -181,31 +181,31 @@ const hoteles = {
     web_link: "https://www.oasishoteles.com",
     direccion:
       "CARRETERA CANCÚN AEROPUERTO KM 17 BLVD. LUIS DONALDO COLOSIO MZ. 04 LOTE 05 CENTRAL DE ABASTOS SM 301 UNIDAD 510",
-    redes: [
-      {
-        url: "https://www.facebook.com/OasisHoteles",
-        icono: assetUrl + "fb.png"
-      },
-      {
-        url: "https://twitter.com/OasisHotels",
-        icono: assetUrl + "tw.png"
-      },
-      {
-        url: "https://blog.oasishoteles.com",
-        icono: assetUrl + "blog.png"
-      },
-      {
-        url: "https://www.instagram.com/oasishotels/",
-        icono: assetUrl + "inst.png"
-      }
-    ]
+      redes: [
+        {
+          url: "http://ow.ly/5Dqb30kI8lA",
+          icono: assetUrl + "fb.png"
+        },
+        {
+          url: "http://ow.ly/8jXf30kIaSO",
+          icono: assetUrl + "tw.png"
+        },
+        {
+          url: "https://blog.oasishoteles.com",
+          icono: assetUrl + "blog.png"
+        },
+        {
+          url: "http://ow.ly/pWLz30kI9xt",
+          icono: assetUrl + "inst.png"
+        }
+      ]
   },
   vcm: {
     vcm: true,
     color: "#175176",
     secondaryColor: "#175176",
     cintillo: false,
-    logo: assetUrl + "logos/vcm.png",
+    logo: assetUrl + "logos/logo-vcm.png",
     icono_cel: "iconos-vcm/cel.png",
     icono_phone: "iconos-vcm/phone.png",
     icono_pin: "iconos-vcm/pin.png",
@@ -214,15 +214,15 @@ const hoteles = {
     direccion: "KM. 6.5, BLVD. KUKULCÁN CANCÚN, MÉXICO  C.P 77500",
     redes: [
       {
-        url: "https://www.facebook.com/ViajeCaribeMaya",
+        url: "https://bit.ly/2MxKQR4",
         icono: assetUrl + "iconos-vcm/facebook.png"
       },
       {
-        url: "https://twitter.com/ViajeCaribeMaya",
+        url: "https://bit.ly/2IzkNYi",
         icono: assetUrl + "iconos-vcm/twitter.png"
       },
       {
-        url: "https://www.instagram.com/viajecaribemaya/",
+        url: "https://bit.ly/2MuUGmD",
         icono: assetUrl + "iconos-vcm/instagram.png"
       }
     ]
@@ -241,15 +241,15 @@ const hoteles = {
       "Blvd. Kukulkán Km 16.5 Lote 45, 46 y 47 Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
       {
-        url: "https://www.facebook.com/GrandOasisCancun",
+        url: "http://ow.ly/OMMV30m7j7t",
         icono: assetUrl + "fb.png"
       },
       {
-        url: "https://twitter.com/GranOasisCancun",
+        url: "http://ow.ly/H35A30md9lR",
         icono: assetUrl + "tw.png"
       },
       {
-        url: "https://www.instagram.com/grandoasiscancun",
+        url: "http://ow.ly/q1Y230md7Hc",
         icono: assetUrl + "inst.png"
       }
     ]
@@ -268,17 +268,17 @@ const hoteles = {
       "Blvd. Kukulkán Km 16.5 Lote 45, 46 y 47 Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
       {
-        url: "https://www.facebook.com/GrandOasisCancun",
+        url: "http://ow.ly/uYzD30kI8oJ",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
       },
       {
-        url: "https://twitter.com/GranOasisCancun",
+        url: "http://ow.ly/CfDh30mccpK",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
       },
       {
-        url: "https://www.instagram.com/grandoasiscancun",
+        url: "http://ow.ly/yjfs30kI9Dn",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
       }
@@ -298,17 +298,17 @@ const hoteles = {
       "Blvd. Kukulkán Km 4.5 Sección C Lote 1, Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
       {
-        url: "https://www.facebook.com/GrandOasisPalm",
+        url: "http://ow.ly/v5L130mcc7F",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
       },
       {
-        url: "https://twitter.com/GrandOasisPalm",
+        url: "http://ow.ly/XDgy30mccx5",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
       },
       {
-        url: "https://www.instagram.com/grandoasispalm",
+        url: "http://ow.ly/mYqk30mcceZ",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
       }
@@ -328,24 +328,24 @@ const hoteles = {
       "Blvd. Kukulkán Km 4.5 Sección C Lote 1, Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
       {
-        url: "https://www.facebook.com/GrandOasisPalm",
+        url: "http://ow.ly/Hbjk30md9BM",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
       },
       {
-        url: "https://twitter.com/GrandOasisPalm",
+        url: "http://ow.ly/IUCU30md9vQ",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
       },
       {
-        url: "https://www.instagram.com/grandoasispalm",
+        url: "http://ow.ly/dI4Y30md9F5",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
       }
     ]
   },
   gos: {
-    logo: assetUrl + "logos/gos.png",
+    logo: assetUrl + "logos/logo-gsc.png",
     color: "#756857",
     secondaryColor: "#C4A77E",
     cintillo: true,
@@ -358,17 +358,17 @@ const hoteles = {
       "Blvd. Kukulkán Km 19.5 Lote 50 Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
       {
-        url: "https://www.facebook.com/GrandOasisSens",
+        url: "https://bit.ly/2MqAQsL",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
       },
       {
-        url: "https://twitter.com/GrandOasisSens",
+        url: "https://bit.ly/2OxVtWt",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
       },
       {
-        url: "https://www.instagram.com/grandoasissens",
+        url: "https://bit.ly/33bl6Aq",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
       }
@@ -388,17 +388,17 @@ const hoteles = {
       "Av. Tulum, esq. Brisa s/n Col. Centro, Cancún Q. Roo 77500 México",
     redes: [
       {
-        url: "https://www.facebook.com/TheUrbanOasisCancun",
+        url: "http://ow.ly/tW0Z30m7jj5",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
       },
       {
-        url: "https://twitter.com/UrbanOasisCUN",
+        url: "http://ow.ly/bcLE30md9yW",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
       },
       {
-        url: "https://www.instagram.com/TheUrbanOasisCancun",
+        url: "http://ow.ly/sTB630md7Of",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
       }
@@ -418,17 +418,17 @@ const hoteles = {
       "Av. Tulum, esq. Brisa s/n Col. Centro, Cancún Q. Roo 77500 México",
     redes: [
       {
-        url: "https://www.facebook.com/TheUrbanOasisCancun",
+        url: "http://ow.ly/sPAN30m7jlZ",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
       },
       {
-        url: "https://twitter.com/UrbanOasisCUN",
+        url: "http://ow.ly/pkGw30m7kuT",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
       },
       {
-        url: "https://www.instagram.com/TheUrbanOasisCancun",
+        url: "http://ow.ly/VQRZ30m7knX",
         icono:
           "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
       }

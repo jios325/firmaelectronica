@@ -1,6 +1,6 @@
 export const loginUserService = request => {
   let { user } = request;
-  console.log(user);
+  // TO DO: importar el json globalmente
   let complejos = [
     {
       nombre: "ohr",
@@ -15,7 +15,7 @@ export const loginUserService = request => {
     {
       nombre: "gos",
       pass: "sensXPFiOR",
-      hoteles: [{ code: "gos", hotel: "Grand Oasis Sens" }]
+      hoteles: [{ code: "gos", hotel: "Grand Sens Cancun" }]
     },
     {
       nombre: "goc",
@@ -61,7 +61,7 @@ export const loginUserService = request => {
   if (!search) {
     res = { error: "Usuario no Existe" };
   } else {
-    var promise = new Promise(function(resolve, reject) {
+    var promise = new Promise(function (resolve, reject) {
       if (search.pass == user.password) {
         res = { success: search };
         resolve(res);
