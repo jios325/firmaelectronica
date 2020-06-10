@@ -1,12 +1,11 @@
 import React from "react";
-import { assetUrl, linkAppAndroid, linkAppIOS } from "../config/config";
-const formatPhoneNumber = phoneNumberString => {
-  let cleaned = ("" + phoneNumberString).replace(/\s/g, '');
+import { assetUrl, linkAppAndroid, linkAppIOS, cintilloImg } from "../config/config";
+const formatPhoneNumber = (phoneNumberString) => {
+  let cleaned = ("" + phoneNumberString).replace(/\s/g, "");
   var match = false;
   if (cleaned.match(/^55/)) {
     match = cleaned.match(/^(\d{2})(\d{4})(\d{4})$/);
-  }
-  else {
+  } else {
     match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
   }
   if (match) {
@@ -29,21 +28,21 @@ const hoteles = {
     redes: [
       {
         url: "http://ow.ly/5Dqb30kI8lA",
-        icono: assetUrl + "fb.png"
+        icono: assetUrl + "fb.png",
       },
       {
         url: "http://ow.ly/8jXf30kIaSO",
-        icono: assetUrl + "tw.png"
+        icono: assetUrl + "tw.png",
       },
       {
         url: "https://blog.oasishoteles.com",
-        icono: assetUrl + "blog.png"
+        icono: assetUrl + "blog.png",
       },
       {
         url: "http://ow.ly/pWLz30kI9xt",
-        icono: assetUrl + "inst.png"
-      }
-    ]
+        icono: assetUrl + "inst.png",
+      },
+    ],
   },
   rep: {
     logo: assetUrl + "oasis.png",
@@ -60,21 +59,21 @@ const hoteles = {
     redes: [
       {
         url: "http://ow.ly/5Dqb30kI8lA",
-        icono: assetUrl + "fb.png"
+        icono: assetUrl + "fb.png",
       },
       {
         url: "http://ow.ly/8jXf30kIaSO",
-        icono: assetUrl + "tw.png"
+        icono: assetUrl + "tw.png",
       },
       {
         url: "https://blog.oasishoteles.com",
-        icono: assetUrl + "blog.png"
+        icono: assetUrl + "blog.png",
       },
       {
         url: "http://ow.ly/pWLz30kI9xt",
-        icono: assetUrl + "inst.png"
-      }
-    ]
+        icono: assetUrl + "inst.png",
+      },
+    ],
   },
   lavanderia: {
     logo: assetUrl + "oasis.png",
@@ -90,29 +89,28 @@ const hoteles = {
     redes: [
       {
         url: "http://ow.ly/5Dqb30kI8lA",
-        icono: assetUrl + "fb.png"
+        icono: assetUrl + "fb.png",
       },
       {
         url: "http://ow.ly/8jXf30kIaSO",
-        icono: assetUrl + "tw.png"
+        icono: assetUrl + "tw.png",
       },
       {
         url: "https://blog.oasishoteles.com",
-        icono: assetUrl + "blog.png"
+        icono: assetUrl + "blog.png",
       },
       {
         url: "http://ow.ly/pWLz30kI9xt",
-        icono: assetUrl + "inst.png"
-      }
-    ]
+        icono: assetUrl + "inst.png",
+      },
+    ],
   },
   ohrmexico: {
     logo: assetUrl + "oasis.png",
     color: "#756857",
     secondaryColor: "#C4A77E",
     cintillo: true,
-    direccion:
-      "PENNSYLVANIA NO. 127 OFNAS 8-10 COL NAPOLES C.P. 03810 CIUDAD DE MEXICO",
+    direccion: "PENNSYLVANIA NO. 127 OFNAS 8-10 COL NAPOLES C.P. 03810 CIUDAD DE MEXICO",
     icono_cel: "cel.png",
     icono_phone: "tel.png",
     icono_pin: "pin.png",
@@ -121,21 +119,21 @@ const hoteles = {
     redes: [
       {
         url: "http://ow.ly/5Dqb30kI8lA",
-        icono: assetUrl + "fb.png"
+        icono: assetUrl + "fb.png",
       },
       {
         url: "http://ow.ly/8jXf30kIaSO",
-        icono: assetUrl + "tw.png"
+        icono: assetUrl + "tw.png",
       },
       {
         url: "https://blog.oasishoteles.com",
-        icono: assetUrl + "blog.png"
+        icono: assetUrl + "blog.png",
       },
       {
         url: "http://ow.ly/pWLz30kI9xt",
-        icono: assetUrl + "inst.png"
-      }
-    ]
+        icono: assetUrl + "inst.png",
+      },
+    ],
   },
   otlc: {
     logo: assetUrl + "logos/otlc-logo.jpg",
@@ -152,21 +150,21 @@ const hoteles = {
     redes: [
       {
         url: "https://www.facebook.com/OasisHoteles",
-        icono: assetUrl + "iconos-otlc/fb.png"
+        icono: assetUrl + "iconos-otlc/fb.png",
       },
       {
         url: "https://twitter.com/OasisHotels",
-        icono: assetUrl + "iconos-otlc/tw.png"
+        icono: assetUrl + "iconos-otlc/tw.png",
       },
       {
         url: "https://blog.oasishoteles.com",
-        icono: assetUrl + "iconos-otlc/blog.png"
+        icono: assetUrl + "iconos-otlc/blog.png",
       },
       {
         url: "https://www.instagram.com/oasishotels/",
-        icono: assetUrl + "iconos-otlc/insta.png"
-      }
-    ]
+        icono: assetUrl + "iconos-otlc/insta.png",
+      },
+    ],
   },
   ohrcentral: {
     central: true,
@@ -179,26 +177,25 @@ const hoteles = {
     icono_pin: "pin.png",
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
-    direccion:
-      "CARRETERA CANCÚN AEROPUERTO KM 17 BLVD. LUIS DONALDO COLOSIO MZ. 04 LOTE 05 CENTRAL DE ABASTOS SM 301 UNIDAD 510",
+    direccion: "CARRETERA CANCÚN AEROPUERTO KM 17 BLVD. LUIS DONALDO COLOSIO MZ. 04 LOTE 05 CENTRAL DE ABASTOS SM 301 UNIDAD 510",
     redes: [
       {
         url: "http://ow.ly/5Dqb30kI8lA",
-        icono: assetUrl + "fb.png"
+        icono: assetUrl + "fb.png",
       },
       {
         url: "http://ow.ly/8jXf30kIaSO",
-        icono: assetUrl + "tw.png"
+        icono: assetUrl + "tw.png",
       },
       {
         url: "https://blog.oasishoteles.com",
-        icono: assetUrl + "blog.png"
+        icono: assetUrl + "blog.png",
       },
       {
         url: "http://ow.ly/pWLz30kI9xt",
-        icono: assetUrl + "inst.png"
-      }
-    ]
+        icono: assetUrl + "inst.png",
+      },
+    ],
   },
   vcm: {
     vcm: true,
@@ -215,17 +212,17 @@ const hoteles = {
     redes: [
       {
         url: "https://bit.ly/38RKNKc",
-        icono: assetUrl + "iconos-vcm/facebook.png"
+        icono: assetUrl + "iconos-vcm/facebook.png",
       },
       {
         url: "https://bit.ly/2IzkNYi",
-        icono: assetUrl + "iconos-vcm/twitter.png"
+        icono: assetUrl + "iconos-vcm/twitter.png",
       },
       {
         url: "https://bit.ly/2MuUGmD",
-        icono: assetUrl + "iconos-vcm/instagram.png"
-      }
-    ]
+        icono: assetUrl + "iconos-vcm/instagram.png",
+      },
+    ],
   },
   pyr: {
     logo: assetUrl + "logos/pyr.png",
@@ -237,22 +234,21 @@ const hoteles = {
     icono_pin: "pin.png",
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
-    direccion:
-      "Blvd. Kukulkán Km 16.5 Lote 45, 46 y 47 Zona Hotelera, Cancún Q. Roo 77500 México",
+    direccion: "Blvd. Kukulkán Km 16.5 Lote 45, 46 y 47 Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
       {
         url: "http://ow.ly/OMMV30m7j7t",
-        icono: assetUrl + "fb.png"
+        icono: assetUrl + "fb.png",
       },
       {
         url: "http://ow.ly/H35A30md9lR",
-        icono: assetUrl + "tw.png"
+        icono: assetUrl + "tw.png",
       },
       {
         url: "http://ow.ly/q1Y230md7Hc",
-        icono: assetUrl + "inst.png"
-      }
-    ]
+        icono: assetUrl + "inst.png",
+      },
+    ],
   },
   goc: {
     logo: assetUrl + "logos/goc.png",
@@ -264,25 +260,21 @@ const hoteles = {
     icono_pin: "pin.png",
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
-    direccion:
-      "Blvd. Kukulkán Km 16.5 Lote 45, 46 y 47 Zona Hotelera, Cancún Q. Roo 77500 México",
+    direccion: "Blvd. Kukulkán Km 16.5 Lote 45, 46 y 47 Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
       {
         url: "http://ow.ly/uYzD30kI8oJ",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png",
       },
       {
         url: "http://ow.ly/CfDh30mccpK",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png",
       },
       {
         url: "http://ow.ly/yjfs30kI9Dn",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
-      }
-    ]
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png",
+      },
+    ],
   },
   gop: {
     logo: assetUrl + "logos/gop.png",
@@ -294,25 +286,21 @@ const hoteles = {
     icono_pin: "pin.png",
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
-    direccion:
-      "Blvd. Kukulkán Km 4.5 Sección C Lote 1, Zona Hotelera, Cancún Q. Roo 77500 México",
+    direccion: "Blvd. Kukulkán Km 4.5 Sección C Lote 1, Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
       {
         url: "http://ow.ly/v5L130mcc7F",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png",
       },
       {
         url: "http://ow.ly/XDgy30mccx5",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png",
       },
       {
         url: "http://ow.ly/mYqk30mcceZ",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
-      }
-    ]
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png",
+      },
+    ],
   },
   op: {
     logo: assetUrl + "logos/op.png",
@@ -324,25 +312,21 @@ const hoteles = {
     icono_pin: "pin.png",
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
-    direccion:
-      "Blvd. Kukulkán Km 4.5 Sección C Lote 1, Zona Hotelera, Cancún Q. Roo 77500 México",
+    direccion: "Blvd. Kukulkán Km 4.5 Sección C Lote 1, Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
       {
         url: "http://ow.ly/Hbjk30md9BM",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png",
       },
       {
         url: "http://ow.ly/IUCU30md9vQ",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png",
       },
       {
         url: "http://ow.ly/dI4Y30md9F5",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
-      }
-    ]
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png",
+      },
+    ],
   },
   gos: {
     logo: assetUrl + "logos/logo-gsc.png",
@@ -354,25 +338,21 @@ const hoteles = {
     icono_pin: "pin.png",
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
-    direccion:
-      "Blvd. Kukulcan km 4.6, Kukulcan Boulevard, Zona Hotelera, 77500 Cancún, Q. Roo.",
+    direccion: "Blvd. Kukulcan km 4.6, Kukulcan Boulevard, Zona Hotelera, 77500 Cancún, Q. Roo.",
     redes: [
       {
         url: "https://bit.ly/2MqAQsL",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png",
       },
       {
         url: "https://bit.ly/2OxVtWt",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png",
       },
       {
         url: "https://bit.ly/33bl6Aq",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
-      }
-    ]
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png",
+      },
+    ],
   },
   smart: {
     logo: assetUrl + "logos/smart.png",
@@ -384,25 +364,21 @@ const hoteles = {
     icono_pin: "pin.png",
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
-    direccion:
-      "Av. Tulum, esq. Brisa s/n Col. Centro, Cancún Q. Roo 77500 México",
+    direccion: "Av. Tulum, esq. Brisa s/n Col. Centro, Cancún Q. Roo 77500 México",
     redes: [
       {
         url: "http://ow.ly/tW0Z30m7jj5",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png",
       },
       {
         url: "http://ow.ly/bcLE30md9yW",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png",
       },
       {
         url: "http://ow.ly/sTB630md7Of",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
-      }
-    ]
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png",
+      },
+    ],
   },
   oh: {
     logo: assetUrl + "logos/oh.png",
@@ -414,25 +390,21 @@ const hoteles = {
     icono_pin: "pin.png",
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
-    direccion:
-      "Av. Tulum, esq. Brisa s/n Col. Centro, Cancún Q. Roo 77500 México",
+    direccion: "Av. Tulum, esq. Brisa s/n Col. Centro, Cancún Q. Roo 77500 México",
     redes: [
       {
         url: "http://ow.ly/sPAN30m7jlZ",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png",
       },
       {
         url: "http://ow.ly/pkGw30m7kuT",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png",
       },
       {
         url: "http://ow.ly/VQRZ30m7knX",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
-      }
-    ]
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png",
+      },
+    ],
   },
   got: {
     logo: assetUrl + "logos/got.png",
@@ -444,52 +416,34 @@ const hoteles = {
     icono_pin: "pin.png",
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
-    direccion:
-      "Km 252 Carret. Chetumal - Pto Juárez 77780 Akumal, Q. Roo México",
+    direccion: "Km 252 Carret. Chetumal - Pto Juárez 77780 Akumal, Q. Roo México",
     redes: [
       {
         url: "https://www.facebook.com/GrandOasisTulum",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png"
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png",
       },
       {
         url: "https://twitter.com/GrandOasisTulum",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png"
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png",
       },
       {
         url: "https://www.instagram.com/grandoasistulum",
-        icono:
-          "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png"
-      }
-    ]
-  }
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png",
+      },
+    ],
+  },
 };
-const Preview = props => {
+const Preview = (props) => {
   console.log(props);
   // const { color, cintillo, isVCM } = props;
-  let {
-    nombre,
-    apellido,
-    puesto,
-    telefono,
-    extension,
-    hotel,
-    celular
-  } = props.data;
+  let { nombre, apellido, puesto, telefono, extension, hotel, celular } = props.data;
   let redes = hotel != null ? hoteles[hotel].redes : [];
-  const templateTel = props => {
+  const templateTel = (props) => {
     return `
   <tr style="box-sizing: border-box;">
-    <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${
-      hoteles[hotel].icono_cel
-      }" alt="" style="margin-right:5px"></td>
-    <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${
-      hoteles[hotel].color
-      };font-size: 10px;letter-spacing: 0.48px;">
-        <span style="line-height: 18px;mso-line-height-rule:exactly;">${
-      props.tel
-      }</span>
+    <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${hoteles[hotel].icono_cel}" alt="" style="margin-right:5px"></td>
+    <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${hoteles[hotel].color};font-size: 10px;letter-spacing: 0.48px;">
+        <span style="line-height: 18px;mso-line-height-rule:exactly;">${props.tel}</span>
     </td>
   </tr>
   `;
@@ -557,114 +511,104 @@ const Preview = props => {
                   <tr style="box-sizing: border-box;">
                       <td>
                           <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-bottom:2px solid ${
-    hoteles[hotel].color
-    };border-collapse: collapse;table-layout:fixed;">
+                            hoteles[hotel].color
+                          };border-collapse: collapse;table-layout:fixed;">
                               <tr style="box-sizing: border-box;">
                                   <td valign="center" style="vertical-align: center;width: 34%;max-width:180px;height:120px;text-align: center; border-right:2px solid ${
-    hoteles[hotel].color
-    };">
-                                      <a href="${hoteles[hotel].vcm ? 'https://caribemaya.com.mx' : 'https://www.oasishoteles.com'}" style="display:block;">
-                                          <img style="max-width: 100%;display: block;margin:0 auto;" src="${
-    hotel != null
-      ? hoteles[hotel].logo
-      : assetUrl + "oasis.png"
-    }" alt="${hoteles[hotel].vcm ? "Viajes Caribe Maya" : ''}"  title="${hoteles[hotel].vcm ? "Viajes Caribe Maya" : ''}">
+                                    hoteles[hotel].color
+                                  };">
+                                      <a href="${hoteles[hotel].vcm ? "https://caribemaya.com.mx" : "https://www.oasishoteles.com"}" style="display:block;">
+                                          <img style="max-width: 100%;display: block;margin:0 auto;" src="${hotel != null ? hoteles[hotel].logo : assetUrl + "oasis.png"}" alt="${
+    hoteles[hotel].vcm ? "Viajes Caribe Maya" : ""
+  }"  title="${hoteles[hotel].vcm ? "Viajes Caribe Maya" : ""}">
                                       </a>
                                   </td>
-                                  <td valign="${telefono != null ? 'top' : 'center'}" style="vertical-align: ${telefono != null ? 'top' : 'middle'}; padding-top: 10px; padding-bottom: 10px;overflow:hidden;padding-left:35px;">
+                                  <td valign="${telefono != null ? "top" : "center"}" style="vertical-align: ${
+    telefono != null ? "top" : "middle"
+  }; padding-top: 10px; padding-bottom: 10px;overflow:hidden;padding-left:35px;">
                                       <table cellpadding="0" cellspacing="0" border="0" width="100%" style=" border-collapse: collapse;">
                                           <tr style="box-sizing: border-box;text-align: left;">
                                               <td colspan="2" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;color: ${
-    hoteles[hotel].color
-    };font-size: 15px;font-weight: bold;letter-spacing: 0.72px;line-height: 20px;mso-line-height-rule:exactly;text-transform: uppercase;">${
+                                                hoteles[hotel].color
+                                              };font-size: 15px;font-weight: bold;letter-spacing: 0.72px;line-height: 20px;mso-line-height-rule:exactly;text-transform: uppercase;">${
     nombre != null ? nombre : "Nombre"
-    } ${apellido != null ? apellido : "Apellido"}</td>
+  } ${apellido != null ? apellido : "Apellido"}</td>
                                           </tr>
                                           <tr style="box-sizing: border-box;text-align: left;">
                                               <td style="mso-line-height-rule:exactly;line-height: 11px;font-size: 10px;letter-spacing: 0.48px;font-family: Arial, sans-serif, 'Open Sans';color: ${
-    hoteles[hotel].secondaryColor
-    };padding-bottom:20px;text-transform: uppercase;" colspan="2">${
-    puesto != null ? puesto : "Puesto"
-    }</td>
+                                                hoteles[hotel].secondaryColor
+                                              };padding-bottom:20px;text-transform: uppercase;" colspan="2">${puesto != null ? puesto : "Puesto"}</td>
                                           </tr>
                                           ${
-    celular != null
-      ? `
+                                            celular != null
+                                              ? `
                                           <tr style="box-sizing: border-box;">
-                                              <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${
-      hoteles[hotel].icono_cel
-      }" alt="" style="margin-right:5px"></td>
-                                              <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${
-      hoteles[hotel].color
-      };font-size: 10px;letter-spacing: 0.48px;">
+                                              <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${hoteles[hotel].icono_cel}" alt="" style="margin-right:5px"></td>
+                                              <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${hoteles[hotel].color};font-size: 10px;letter-spacing: 0.48px;">
                                                   <span style="line-height: 18px;mso-line-height-rule:exactly;">${celular}</span>
                                               </td>
                                           </tr>
                                           `
-      : ""
-    }
-                                          ${telefono != null ?
-      `
+                                              : ""
+                                          }
+                                          ${
+                                            telefono != null
+                                              ? `
                                             <tr style="box-sizing: border-box;">
-                                            <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${hoteles[hotel].icono_phone}" alt="" style="margin-right:5px"></td>
+                                            <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${
+                                                  hoteles[hotel].icono_phone
+                                                }" alt="" style="margin-right:5px"></td>
                                             <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${
-      hoteles[hotel].color
-      };font-size: 10px;letter-spacing: 0.48px;">
+                                              hoteles[hotel].color
+                                            };font-size: 10px;letter-spacing: 0.48px;">
                                                 <span style="line-height: 18px;mso-line-height-rule:exactly;padding-top:2px;">${
-      telefono != null
-        ? formatPhoneNumber(
-          telefono
-        )
-        : "Teléfono"
-      } ${extension != null ? `EXT. ${extension}` : ""}</span>
-                                                  ${
-      hoteles[hotel].central
-        ? `/</span> <span>01 800 01 OASIS (62747)</span>`
-        : ""
-      }
+                                                  telefono != null ? formatPhoneNumber(telefono) : "Teléfono"
+                                                } ${extension != null ? `EXT. ${extension}` : ""}</span>
+                                                  ${hoteles[hotel].central ? `/</span> <span>01 800 01 OASIS (62747)</span>` : ""}
                                             </td>
                                         </tr>
                                             `
-      : `${hoteles[hotel].central
-        ? `
+                                              : `${
+                                                  hoteles[hotel].central
+                                                    ? `
                                                 <tr style="box-sizing: border-box;">
                                             <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${hoteles[hotel].icono_phone}" alt="" style="margin-right:5px"></td>
-                                            <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${
-        hoteles[hotel].color
-        };font-size: 10px;letter-spacing: 0.48px;">
+                                            <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${hoteles[hotel].color};font-size: 10px;letter-spacing: 0.48px;">
                                                 </span> <span>01 800 01 OASIS (62747)</span>
                                             </td>
                                         </tr>
                                               `
-        : ""}`}
+                                                    : ""
+                                                }`
+                                          }
                                           
                                           ${
-    hoteles[hotel].tel_800
-      ? `
+                                            hoteles[hotel].tel_800
+                                              ? `
                                               <tr style="box-sizing: border-box;text-align: left;">
-                                                  <td colspan="2" style="padding-top:2px;padding-left:18px;font-size:10px;color:${
-      hoteles[hotel].color
-      };"><span>MEX: 01 800 272 0249</span> <span style="font-weight:bold;">/</span> <span>USA & CAN: 01 800 439 0355</span></td>  
+                                                  <td colspan="2" style="padding-top:2px;padding-left:18px;font-size:10px;color:${hoteles[hotel].color};"><span>MEX: 01 800 272 0249</span> <span style="font-weight:bold;">/</span> <span>USA & CAN: 01 800 439 0355</span></td>  
                                               </tr>
                                               `
-      : ""
-    }
-                                         ${hoteles[hotel].noAddress ? '' : `
+                                              : ""
+                                          }
+                                         ${
+                                           hoteles[hotel].noAddress
+                                             ? ""
+                                             : `
                                          <tr style="box-sizing: border-box;text-align: left;">
                                          <td valign="center" style="vertical-align:center;width:18px;padding-top:2px;"><img src="${assetUrl}${
-      hoteles[hotel].icono_pin
-      }" alt="" style="margin-right:5px"></td>
+                                                 hoteles[hotel].icono_pin
+                                               }" alt="" style="margin-right:5px"></td>
                                          <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';color: ${
-      hoteles[hotel].color
-      };font-size: 10px;letter-spacing: 0.48px;">
+                                           hoteles[hotel].color
+                                         };font-size: 10px;letter-spacing: 0.48px;">
                                              <span style="mso-line-height-rule:exactly;line-height: 13px;">${
-      hotel != null
-        ? hoteles[hotel].direccion
-        : "Direccion del Hotel"
-      }</span>
+                                               hotel != null ? hoteles[hotel].direccion : "Direccion del Hotel"
+                                             }</span>
                                          </td>
                                      </tr>
-                                         `}
+                                         `
+                                         }
                                       </table>
                                   </td>
                               </tr>
@@ -676,32 +620,30 @@ const Preview = props => {
                           <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse: collapse;">
                               <tr style="box-sizing: border-box;">
                                   <td valign="bottom" style="vertical-align:bottom;color: ${
-    hoteles[hotel].secondaryColor
-    };font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: left;mso-line-height-rule:exactly;line-height: 14px;">
+                                    hoteles[hotel].secondaryColor
+                                  };font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: left;mso-line-height-rule:exactly;line-height: 14px;">
                                       <span style="margin-right:5px;">¡Síguenos en nuestras redes sociales!</span> 
                                       ${redes
-      .map(el => {
-        var cadena = "";
-        cadena += `<a href=${
-          el.url
-          } style="margin-right:3px;"><img src=${
-          el.icono
-          } alt=""></a>`;
-        return cadena;
-      })
-      .join("")}
+                                        .map((el) => {
+                                          var cadena = "";
+                                          cadena += `<a href=${el.url} style="margin-right:3px;"><img src=${el.icono} alt=""></a>`;
+                                          return cadena;
+                                        })
+                                        .join("")}
                                   </td>
-                                  ${hoteles[hotel].vcm ? `
-                                  <td valign="bottom" style="vertical-align:bottom;color: ${
-      hoteles[hotel].secondaryColor
-      };font-family: Arial, sans-serif, 'Open Sans';font-size: 11px;text-align: left;mso-line-height-rule:exactly;line-height: 15px;font-weight: bold;">ARRIVE AND REVIVE</td>
-                                  ` : ''}
+                                  ${
+                                    hoteles[hotel].vcm
+                                      ? `
+                                  <td valign="bottom" style="vertical-align:bottom;color: ${hoteles[hotel].secondaryColor};font-family: Arial, sans-serif, 'Open Sans';font-size: 11px;text-align: left;mso-line-height-rule:exactly;line-height: 15px;font-weight: bold;">ARRIVE AND REVIVE</td>
+                                  `
+                                      : ""
+                                  }
                                   
                                   <td valign="bottom" style="vertical-align:bottom;text-align:right;"><a style="color: ${
-    hoteles[hotel].secondaryColor
-    };font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: right;mso-line-height-rule:exactly;line-height: 14px;text-decoration: none;" href="${
+                                    hoteles[hotel].secondaryColor
+                                  };font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: right;mso-line-height-rule:exactly;line-height: 14px;text-decoration: none;" href="${
     hoteles[hotel].web_link
-    }">${hoteles[hotel].web}</a></td>
+  }">${hoteles[hotel].web}</a></td>
                               </tr>
                           </table>
                       </td>
@@ -710,8 +652,8 @@ const Preview = props => {
           </td>
       </tr>
       ${
-    !hoteles[hotel].vcm
-      ? `
+        !hoteles[hotel].vcm
+          ? `
       <tr style="margin:0;box-sizing:border-box;">
       <td style="background:black;margin:0;box-sizing:border-box;padding-top:6px;padding-bottom: 6px;padding-left: 10px;padding-right: 10px;">
           <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;border-spacing: 0;table-layout:fixed;width:580px;">
@@ -743,11 +685,11 @@ const Preview = props => {
       </td>
   </tr>
       `
-      : ""
-    }
+          : ""
+      }
     ${
-    hoteles[hotel].vcm ?
-      `
+      hoteles[hotel].vcm
+        ? `
       <tr style="margin:0;box-sizing:border-box;">
           <td style="padding:0px!important;width:600px;">
               <a href="https://caribemaya.com.mx">
@@ -756,13 +698,21 @@ const Preview = props => {
           </td>
       </tr>
       `
-      :
-      `
-      <tr style="margin:0;box-sizing:border-box;">
-          <td style="padding:0px!important;width:600px;">
-              <a href="https://oasishoteles.com/es">
-                  <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/cintillo.jpg" alt="">
-              </a>
+        : `
+      <tr style="margin:0;box-sizing:border-box;background:url('${cintilloImg}');height:100px;">
+          <td>
+          <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;border-spacing: 0;table-layout:fixed;width:600px;">
+              <tr style="margin:0;box-sizing:border-box;">
+                  <td align="right">
+                      <a href="https://oasishoteles.com/es/protocolos-limpieza-salud" style="display:block;height:100px;width:300px;">&nbsp;</a>
+                  </td>
+                  <td style="padding-left:6px;padding-top:0;padding-bottom:0;text-align:right;" align="right">
+                      <a href="https://oasishoteles.com/es/be-free-stay-safe" style="margin-right:10px;display:inline-block;margin-top:0;text-align: right;margin-bottom:10px;">
+                      <img style="margin:0;display:block;" src="${assetUrl + "cintillo/reservar-btn.png"}"/>
+                      </a>
+                  </td>
+              </tr>
+        </table>
           </td>
       </tr>
       `
@@ -773,12 +723,6 @@ const Preview = props => {
   <!--<![endif]-->
 </div>
   `;
-  return (
-    <div
-      id="contenedor"
-      dangerouslySetInnerHTML={{ __html: template }}
-      ref={props.setRef}
-    />
-  );
+  return <div id="contenedor" dangerouslySetInnerHTML={{ __html: template }} ref={props.setRef} />;
 };
 export default Preview;
