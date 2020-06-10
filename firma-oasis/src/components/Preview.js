@@ -699,17 +699,19 @@ const Preview = (props) => {
       </tr>
       `
         : `
-      <tr style="margin:0;box-sizing:border-box;background:url('${cintilloImg}');height:100px;">
-          <td>
-          <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;border-spacing: 0;table-layout:fixed;width:600px;">
+      <tr style=margin:0;box-sizing:border-box;">
+        <td style="padding:0px!important;width:600px;">
+          <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;border-spacing: 0;">
               <tr style="margin:0;box-sizing:border-box;">
-                  <td align="right">
-                      <a href="https://oasishoteles.com/es/protocolos-limpieza-salud" style="display:block;height:100px;width:300px;">&nbsp;</a>
-                  </td>
-                  <td style="padding-left:6px;padding-top:0;padding-bottom:0;text-align:right;" align="right">
-                      <a href="https://oasishoteles.com/es/be-free-stay-safe" style="margin-right:10px;display:inline-block;margin-top:0;text-align: right;margin-bottom:10px;">
-                      <img style="margin:0;display:block;" src="${assetUrl + "cintillo/reservar-btn.png"}"/>
+                  <td style="padding:0px!important;width:300px;">
+                      <a href="https://oasishoteles.com/es/protocolos-limpieza-salud">
+                        <img width="300" height="100" style="display:block;" src="${assetUrl + "cintillo/cintillo-left.jpg"}"/>
                       </a>
+                  </td>
+                  <td style="padding:0px!important;width:300px;">
+                    <a href="https://oasishoteles.com/es/be-free-stay-safe">
+                      <img width="300" height="100"  style="display:block" src="${assetUrl + "cintillo/cintillo-right.jpg"}"/>
+                    </a>
                   </td>
               </tr>
         </table>
