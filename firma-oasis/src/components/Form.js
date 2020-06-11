@@ -12,13 +12,13 @@ let complejos = [
       { code: "ohrcentral", hotel: "Central" },
       { code: "ohrmexico", hotel: "Corporativo México" },
       { code: "lavanderia", hotel: "Lavandería y Taller de Costura" },
-      { code: "rep", hotel: "Representantes" }
-    ]
+      { code: "rep", hotel: "Representantes" },
+    ],
   },
   {
     nombre: "gos",
     pass: "sensXPFiOR",
-    hoteles: [{ code: "gos", hotel: "Grand Sens Cancun" }]
+    hoteles: [{ code: "gos", hotel: "Grand Sens Cancun" }],
   },
   {
     nombre: "goc",
@@ -26,34 +26,34 @@ let complejos = [
     hoteles: [
       { code: "goc", hotel: "Grand Oasis Cancun" },
       { code: "pyr", hotel: "The Pyramid" },
-      { code: "otlc", hotel: "OTLC" }
-    ]
+      { code: "otlc", hotel: "OTLC" },
+    ],
   },
   {
     nombre: "gop",
     pass: "gopKtEkRe",
     hoteles: [
       { code: "gop", hotel: "Grand Oasis Palm" },
-      { code: "op", hotel: "Oasis Palm" }
-    ]
+      { code: "op", hotel: "Oasis Palm" },
+    ],
   },
   {
     nombre: "urban",
     pass: "urbanKth7wj",
     hoteles: [
       { code: "smart", hotel: "Smart Cancun by Oasis" },
-      { code: "oh", hotel: "Oh! The Urban Oasis" }
-    ]
+      { code: "oh", hotel: "Oh! The Urban Oasis" },
+    ],
   },
   {
     nombre: "got",
     pass: "tulum7RUloeu",
-    hoteles: [{ code: "got", hotel: "Grand Oasis Tulum" }]
+    hoteles: [{ code: "got", hotel: "Grand Oasis Tulum" }],
   },
   {
     nombre: "vcm",
-    hoteles: [{ code: "vcm", hotel: "Caribe Maya" }]
-  }
+    hoteles: [{ code: "vcm", hotel: "Caribe Maya" }],
+  },
 ];
 class MyForm extends React.Component {
   constructor(props) {
@@ -63,7 +63,7 @@ class MyForm extends React.Component {
       loader: false,
       hotel: "",
       showCopy: false,
-      name: ""
+      name: "",
     };
     this.onSubmit = this.onSubmit.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
@@ -73,7 +73,7 @@ class MyForm extends React.Component {
   handleSelect(event) {
     console.log(event.target.value);
     this.setState({
-      hotel: event.target.value
+      hotel: event.target.value,
     });
   }
   setRef(input) {
@@ -84,11 +84,11 @@ class MyForm extends React.Component {
     this.setState({
       loader: true,
       showCopy: true,
-      nombre: `${values.nombre}-${values.apellido}`
+      nombre: `${values.nombre}-${values.apellido}`,
     });
     setTimeout(() => {
       this.setState({
-        loader: false
+        loader: false,
       });
     }, 1000);
   }
@@ -99,7 +99,7 @@ class MyForm extends React.Component {
       document.selection.empty();
     }
   }
-  copyToClipboard = e => {
+  copyToClipboard = (e) => {
     try {
       const range = document.createRange();
       const selection = window.getSelection();
@@ -115,7 +115,7 @@ class MyForm extends React.Component {
   };
   onChange() {
     this.setState({
-      showCopy: false
+      showCopy: false,
     });
   }
   downloadInnerHtml(filename, elId, mimeType) {
@@ -124,10 +124,7 @@ class MyForm extends React.Component {
     mimeType = mimeType || "text/plain";
     link.setAttribute("type", "hidden"); // make it hidden if needed
     link.setAttribute("download", filename);
-    link.setAttribute(
-      "href",
-      "data:" + mimeType + ";charset=utf-8," + encodeURIComponent(elHtml)
-    );
+    link.setAttribute("href", "data:" + mimeType + ";charset=utf-8," + encodeURIComponent(elHtml));
     document.body.appendChild(link);
     link.click();
     link.remove();
@@ -137,7 +134,7 @@ class MyForm extends React.Component {
     let isLogin = checkCookie();
     console.log(isLogin);
     if (isLogin != undefined) {
-      filterHotels = complejos.find(ele => {
+      filterHotels = complejos.find((ele) => {
         return ele.nombre == isLogin;
       });
     } else {
@@ -148,7 +145,7 @@ class MyForm extends React.Component {
       <Form
         onSubmit={this.onSubmit}
         initialValues={{ hotel: filterHotels.hoteles[0].code }}
-        validate={values => {
+        validate={(values) => {
           const errors = {};
           if (!values.nombre) {
             errors.nombre = "Campo Obligatorio";
@@ -170,283 +167,212 @@ class MyForm extends React.Component {
           }
           return errors;
         }}
-        render={({
-          handleSubmit,
-          pristine,
-          invalid,
-          submitting,
-          reset,
-          form,
-          values
-        }) => (
-            <React.Fragment>
-              <form onSubmit={handleSubmit} className="container-fluid container">
-                <div className="row">
-                  <div className="col-xs-12">
-                    <div className="row">
-                      <div className="form-group col-xs-12 col-sm-4">
-                        {/* {currHotel != undefined && currHotel == 'ohr' ? */}
-                        <Field name="hotel">
-                          {({ input, meta }) => {
-                            const { onChange } = input;
-                            const mergedOnChange = e => {
-                              this.onChange(e);
-                              onChange(e);
-                            };
-                            const newInput = {
-                              ...input,
-                              onChange: mergedOnChange
-                            };
-                            return (
-                              <div>
-                                <label className="form__label required">
-                                  Hotel:
-                              </label>
-                                <div className="select">
-                                  <select {...newInput} className="form-control">
-                                    <option value="" disabled selected>
-                                      Selecciona un Hotel
+        render={({ handleSubmit, pristine, invalid, submitting, reset, form, values }) => (
+          <React.Fragment>
+            <form onSubmit={handleSubmit} className="container-fluid container">
+              <div className="row">
+                <div className="col-xs-12">
+                  <div className="row">
+                    <div className="form-group col-xs-12 col-sm-4">
+                      {/* {currHotel != undefined && currHotel == 'ohr' ? */}
+                      <Field name="hotel">
+                        {({ input, meta }) => {
+                          const { onChange } = input;
+                          const mergedOnChange = (e) => {
+                            this.onChange(e);
+                            onChange(e);
+                          };
+                          const newInput = {
+                            ...input,
+                            onChange: mergedOnChange,
+                          };
+                          return (
+                            <div>
+                              <label className="form__label required">Hotel:</label>
+                              <div className="select">
+                                <select {...newInput} className="form-control">
+                                  <option value="" disabled selected>
+                                    Selecciona un Hotel
                                   </option>
-                                    {filterHotels.hoteles.map(ele => {
-                                      return (
-                                        <option value={ele.code}>
-                                          {ele.hotel}
-                                        </option>
-                                      );
-                                    })}
-                                  </select>
-                                </div>
-                                {meta.error && meta.touched && (
-                                  <span className="alert alert-error">
-                                    {meta.error}
-                                  </span>
-                                )}
+                                  {filterHotels.hoteles.map((ele) => {
+                                    return <option value={ele.code}>{ele.hotel}</option>;
+                                  })}
+                                </select>
                               </div>
-                            );
-                          }}
-                        </Field>
-                      </div>
-                      <div className="form-group col-xs-12 col-sm-4">
-                        <Field name="nombre">
-                          {({ input, meta }) => (
-                            <div>
-                              <label className="form__label required">
-                                Nombre:
-                            </label>
-                              <input
-                                {...input}
-                                type="text"
-                                placeholder="Nombre"
-                                className="form-control"
-                                onChange={e => {
-                                  input.onChange(e);
-                                  this.onChange();
-                                }}
-                              />
-                              {meta.error && meta.touched && (
-                                <span className="alert alert-error">
-                                  {meta.error}
-                                </span>
-                              )}
+                              {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
                             </div>
-                          )}
-                        </Field>
-                      </div>
-                      <div className="form-group col-xs-12 col-sm-4">
-                        <Field name="apellido">
-                          {({ input, meta }) => (
-                            <div>
-                              <label className="form__label required">
-                                Apellido:
-                            </label>
-                              <input
-                                {...input}
-                                type="text"
-                                placeholder="Apellido"
-                                className="form-control"
-                                onChange={e => {
-                                  input.onChange(e);
-                                  this.onChange();
-                                }}
-                              />
-                              {meta.error && meta.touched && (
-                                <span className="alert alert-error">
-                                  {meta.error}
-                                </span>
-                              )}
-                            </div>
-                          )}
-                        </Field>
-                      </div>
-                      <div className="form-group col-xs-12 col-sm-4">
-                        <Field name="puesto">
-                          {({ input, meta }) => (
-                            <div>
-                              <label className="form__label required">
-                                Puesto:
-                            </label>
-                              <input
-                                {...input}
-                                type="text"
-                                placeholder="Puesto"
-                                className="form-control"
-                                onChange={e => {
-                                  input.onChange(e);
-                                  this.onChange();
-                                }}
-                              />
-                              {meta.error && meta.touched && (
-                                <span className="alert alert-error">
-                                  {meta.error}
-                                </span>
-                              )}
-                            </div>
-                          )}
-                        </Field>
-                      </div>
-                      <div className="form-group col-xs-12 col-sm-3">
-                        <Field name="celular">
-                          {({ input, meta }) => (
-                            <div>
-                              <label className="form__label">Celular:</label>
-                              <input
-                                {...input}
-                                type="text"
-                                placeholder="Celular"
-                                className="form-control"
-                                onChange={e => {
-                                  input.onChange(e);
-                                  this.onChange();
-                                }}
-                              />
-                              {meta.error && meta.touched && (
-                                <span className="alert alert-error">
-                                  {meta.error}
-                                </span>
-                              )}
-                            </div>
-                          )}
-                        </Field>
-                      </div>
-                      <div className="form-group col-xs-12 col-sm-3">
-                        <Field name="telefono">
-                          {({ input, meta }) => (
-                            <div>
-                              <label className="form__label required">
-                                Teléfono:
-                            </label>
-                              <input
-                                {...input}
-                                type="text"
-                                placeholder="Telefono"
-                                className="form-control"
-                                // maxLength="10"
-                                onChange={e => {
-                                  input.onChange(e);
-                                  this.onChange();
-                                }}
-                              />
-                              {meta.error && meta.touched && (
-                                <span className="alert alert-error">
-                                  {meta.error}
-                                </span>
-                              )}
-                            </div>
-                          )}
-                        </Field>
-                      </div>
-                      <div className="form-group col-xs-12 col-sm-2">
-                        <Field name="extension">
-                          {({ input, meta }) => (
-                            <div>
-                              <label className="form__label required">
-                                Extensión:
-                            </label>
-                              <input
-                                {...input}
-                                type="text"
-                                placeholder="Extensión"
-                                className="form-control"
-                                onChange={e => {
-                                  input.onChange(e);
-                                  this.onChange();
-                                }}
-                              />
-                              {meta.error && meta.touched && (
-                                <span className="alert alert-error">
-                                  {meta.error}
-                                </span>
-                              )}
-                            </div>
-                          )}
-                        </Field>
-                      </div>
+                          );
+                        }}
+                      </Field>
+                    </div>
+                    <div className="form-group col-xs-12 col-sm-4">
+                      <Field name="nombre">
+                        {({ input, meta }) => (
+                          <div>
+                            <label className="form__label required">Nombre:</label>
+                            <input
+                              {...input}
+                              type="text"
+                              placeholder="Nombre"
+                              className="form-control"
+                              onChange={(e) => {
+                                input.onChange(e);
+                                this.onChange();
+                              }}
+                            />
+                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                          </div>
+                        )}
+                      </Field>
+                    </div>
+                    <div className="form-group col-xs-12 col-sm-4">
+                      <Field name="apellido">
+                        {({ input, meta }) => (
+                          <div>
+                            <label className="form__label required">Apellido:</label>
+                            <input
+                              {...input}
+                              type="text"
+                              placeholder="Apellido"
+                              className="form-control"
+                              onChange={(e) => {
+                                input.onChange(e);
+                                this.onChange();
+                              }}
+                            />
+                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                          </div>
+                        )}
+                      </Field>
+                    </div>
+                    <div className="form-group col-xs-12 col-sm-4">
+                      <Field name="puesto">
+                        {({ input, meta }) => (
+                          <div>
+                            <label className="form__label required">Puesto:</label>
+                            <input
+                              {...input}
+                              type="text"
+                              placeholder="Puesto"
+                              className="form-control"
+                              onChange={(e) => {
+                                input.onChange(e);
+                                this.onChange();
+                              }}
+                            />
+                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                          </div>
+                        )}
+                      </Field>
+                    </div>
+                    <div className="form-group col-xs-12 col-sm-3">
+                      <Field name="celular">
+                        {({ input, meta }) => (
+                          <div>
+                            <label className="form__label">Celular:</label>
+                            <input
+                              {...input}
+                              type="text"
+                              placeholder="Celular"
+                              className="form-control"
+                              onChange={(e) => {
+                                input.onChange(e);
+                                this.onChange();
+                              }}
+                            />
+                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                          </div>
+                        )}
+                      </Field>
+                    </div>
+                    <div className="form-group col-xs-12 col-sm-3">
+                      <Field name="telefono">
+                        {({ input, meta }) => (
+                          <div>
+                            <label className="form__label required">Teléfono:</label>
+                            <input
+                              {...input}
+                              type="text"
+                              placeholder="Teléfono"
+                              className="form-control"
+                              // maxLength="10"
+                              onChange={(e) => {
+                                input.onChange(e);
+                                this.onChange();
+                              }}
+                            />
+                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                          </div>
+                        )}
+                      </Field>
+                    </div>
+                    <div className="form-group col-xs-12 col-sm-2">
+                      <Field name="extension">
+                        {({ input, meta }) => (
+                          <div>
+                            <label className="form__label">Extensión:</label>
+                            <input
+                              {...input}
+                              type="text"
+                              placeholder="Extensión"
+                              className="form-control"
+                              onChange={(e) => {
+                                input.onChange(e);
+                                this.onChange();
+                              }}
+                            />
+                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                          </div>
+                        )}
+                      </Field>
                     </div>
                   </div>
                 </div>
-                <div className="text-center mt-20">
-                  <button
-                    className="btn btn-primary mr-20-md"
-                    type="submit"
-                    disabled={pristine}
-                  >
-                    Generar
-                </button>
-                  <button
-                    type="button"
-                    className="btn btn-reset"
-                    onClick={e => {
-                      form.reset();
-                      this.onChange(e);
-                    }}
-                    disabled={submitting || pristine}
-                  >
-                    Reset
-                </button>
-                </div>
-              </form>
-              <div className="border--dashed" />
-              <div>
-                <div
-                  className={`preview mt-20 mt-30-md ${
-                    this.state.showCopy ? "" : "disabled"
-                    }`}
-                >
-                  <span className="preview__title">VISTA PREVIA</span>
-                  <div className="preview__inner">
-                    <Preview
-                      data={values}
-                      setRef={this.setRef}
-                      isVCM={isLogin == "vcm" ? true : false}
-                    />
-                  </div>
-                </div>
-                {/* <a href={`data:text/html,  `} download={`nombre.html`}>Descargar</a> */}
-                {this.state.showCopy && (
-                  <div className="text-center">
-                    <button
-                      className="text-center btn btn-primary mt-20 mt-30-md mb-20"
-                      onClick={this.copyToClipboard}
-                    >
-                      Copiar al portapapeles
-                  </button>
-                    <button
-                      className="text-center btn btn-primary mt-20 mt-30-md mb-20 ml-10"
-                      onClick={() => {
-                        this.downloadInnerHtml(
-                          `${this.state.nombre}.html`,
-                          "contenedor",
-                          "text/html"
-                        );
-                      }}
-                    >
-                      Descargar
-                  </button>
-                  </div>
-                )}
               </div>
-            </React.Fragment>
-          )}
+              <div className="text-center mt-20">
+                <button className="btn btn-primary mr-20-md" type="submit" disabled={pristine}>
+                  Generar
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-reset"
+                  onClick={(e) => {
+                    form.reset();
+                    this.onChange(e);
+                  }}
+                  disabled={submitting || pristine}
+                >
+                  Reset
+                </button>
+              </div>
+            </form>
+            <div className="border--dashed" />
+            <div>
+              <div className={`preview mt-20 mt-30-md ${this.state.showCopy ? "" : "disabled"}`}>
+                <span className="preview__title">VISTA PREVIA</span>
+                <div className="preview__inner">
+                  <Preview data={values} setRef={this.setRef} isVCM={isLogin == "vcm" ? true : false} />
+                </div>
+              </div>
+              {/* <a href={`data:text/html,  `} download={`nombre.html`}>Descargar</a> */}
+              {this.state.showCopy && (
+                <div className="text-center">
+                  <button className="text-center btn btn-primary mt-20 mt-30-md mb-20" onClick={this.copyToClipboard}>
+                    Copiar al portapapeles
+                  </button>
+                  <button
+                    className="text-center btn btn-primary mt-20 mt-30-md mb-20 ml-10"
+                    onClick={() => {
+                      this.downloadInnerHtml(`${this.state.nombre}.html`, "contenedor", "text/html");
+                    }}
+                  >
+                    Descargar
+                  </button>
+                </div>
+              )}
+            </div>
+          </React.Fragment>
+        )}
       />
     );
   }
