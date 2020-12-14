@@ -27,6 +27,7 @@ let complejos = [
       { code: "goc", hotel: "Grand Oasis Cancun" },
       { code: "pyr", hotel: "The Pyramid" },
       { code: "otlc", hotel: "OTLC" },
+      { code: "ocob", hotel: "Oh! Cancun On The Beach" },
     ],
   },
   {
@@ -169,13 +170,13 @@ class MyForm extends React.Component {
         }}
         render={({ handleSubmit, pristine, invalid, submitting, reset, form, values }) => (
           <React.Fragment>
-            <form onSubmit={handleSubmit} className="container-fluid container">
-              <div className="row">
-                <div className="col-xs-12">
-                  <div className="row">
-                    <div className="form-group col-xs-12 col-sm-4">
+            <form onSubmit={handleSubmit} className='container-fluid container'>
+              <div className='row'>
+                <div className='col-xs-12'>
+                  <div className='row'>
+                    <div className='form-group col-xs-12 col-sm-4'>
                       {/* {currHotel != undefined && currHotel == 'ohr' ? */}
-                      <Field name="hotel">
+                      <Field name='hotel'>
                         {({ input, meta }) => {
                           const { onChange } = input;
                           const mergedOnChange = (e) => {
@@ -188,10 +189,10 @@ class MyForm extends React.Component {
                           };
                           return (
                             <div>
-                              <label className="form__label required">Hotel:</label>
-                              <div className="select">
-                                <select {...newInput} className="form-control">
-                                  <option value="" disabled selected>
+                              <label className='form__label required'>Hotel:</label>
+                              <div className='select'>
+                                <select {...newInput} className='form-control'>
+                                  <option value='' disabled selected>
                                     Selecciona un Hotel
                                   </option>
                                   {filterHotels.hoteles.map((ele) => {
@@ -199,129 +200,129 @@ class MyForm extends React.Component {
                                   })}
                                 </select>
                               </div>
-                              {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                              {meta.error && meta.touched && <span className='alert alert-error'>{meta.error}</span>}
                             </div>
                           );
                         }}
                       </Field>
                     </div>
-                    <div className="form-group col-xs-12 col-sm-4">
-                      <Field name="nombre">
+                    <div className='form-group col-xs-12 col-sm-4'>
+                      <Field name='nombre'>
                         {({ input, meta }) => (
                           <div>
-                            <label className="form__label required">Nombre:</label>
+                            <label className='form__label required'>Nombre:</label>
                             <input
                               {...input}
-                              type="text"
-                              placeholder="Nombre"
-                              className="form-control"
+                              type='text'
+                              placeholder='Nombre'
+                              className='form-control'
                               onChange={(e) => {
                                 input.onChange(e);
                                 this.onChange();
                               }}
                             />
-                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                            {meta.error && meta.touched && <span className='alert alert-error'>{meta.error}</span>}
                           </div>
                         )}
                       </Field>
                     </div>
-                    <div className="form-group col-xs-12 col-sm-4">
-                      <Field name="apellido">
+                    <div className='form-group col-xs-12 col-sm-4'>
+                      <Field name='apellido'>
                         {({ input, meta }) => (
                           <div>
-                            <label className="form__label required">Apellido:</label>
+                            <label className='form__label required'>Apellido:</label>
                             <input
                               {...input}
-                              type="text"
-                              placeholder="Apellido"
-                              className="form-control"
+                              type='text'
+                              placeholder='Apellido'
+                              className='form-control'
                               onChange={(e) => {
                                 input.onChange(e);
                                 this.onChange();
                               }}
                             />
-                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                            {meta.error && meta.touched && <span className='alert alert-error'>{meta.error}</span>}
                           </div>
                         )}
                       </Field>
                     </div>
-                    <div className="form-group col-xs-12 col-sm-4">
-                      <Field name="puesto">
+                    <div className='form-group col-xs-12 col-sm-4'>
+                      <Field name='puesto'>
                         {({ input, meta }) => (
                           <div>
-                            <label className="form__label required">Puesto:</label>
+                            <label className='form__label required'>Puesto:</label>
                             <input
                               {...input}
-                              type="text"
-                              placeholder="Puesto"
-                              className="form-control"
+                              type='text'
+                              placeholder='Puesto'
+                              className='form-control'
                               onChange={(e) => {
                                 input.onChange(e);
                                 this.onChange();
                               }}
                             />
-                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                            {meta.error && meta.touched && <span className='alert alert-error'>{meta.error}</span>}
                           </div>
                         )}
                       </Field>
                     </div>
-                    <div className="form-group col-xs-12 col-sm-3">
-                      <Field name="celular">
+                    <div className='form-group col-xs-12 col-sm-3'>
+                      <Field name='celular'>
                         {({ input, meta }) => (
                           <div>
-                            <label className="form__label">Celular:</label>
+                            <label className='form__label'>Celular:</label>
                             <input
                               {...input}
-                              type="text"
-                              placeholder="Celular"
-                              className="form-control"
+                              type='text'
+                              placeholder='Celular'
+                              className='form-control'
                               onChange={(e) => {
                                 input.onChange(e);
                                 this.onChange();
                               }}
                             />
-                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                            {meta.error && meta.touched && <span className='alert alert-error'>{meta.error}</span>}
                           </div>
                         )}
                       </Field>
                     </div>
-                    <div className="form-group col-xs-12 col-sm-3">
-                      <Field name="telefono">
+                    <div className='form-group col-xs-12 col-sm-3'>
+                      <Field name='telefono'>
                         {({ input, meta }) => (
                           <div>
-                            <label className="form__label required">Teléfono:</label>
+                            <label className='form__label required'>Teléfono:</label>
                             <input
                               {...input}
-                              type="text"
-                              placeholder="Teléfono"
-                              className="form-control"
+                              type='text'
+                              placeholder='Teléfono'
+                              className='form-control'
                               // maxLength="10"
                               onChange={(e) => {
                                 input.onChange(e);
                                 this.onChange();
                               }}
                             />
-                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                            {meta.error && meta.touched && <span className='alert alert-error'>{meta.error}</span>}
                           </div>
                         )}
                       </Field>
                     </div>
-                    <div className="form-group col-xs-12 col-sm-2">
-                      <Field name="extension">
+                    <div className='form-group col-xs-12 col-sm-2'>
+                      <Field name='extension'>
                         {({ input, meta }) => (
                           <div>
-                            <label className="form__label">Extensión:</label>
+                            <label className='form__label'>Extensión:</label>
                             <input
                               {...input}
-                              type="text"
-                              placeholder="Extensión"
-                              className="form-control"
+                              type='text'
+                              placeholder='Extensión'
+                              className='form-control'
                               onChange={(e) => {
                                 input.onChange(e);
                                 this.onChange();
                               }}
                             />
-                            {meta.error && meta.touched && <span className="alert alert-error">{meta.error}</span>}
+                            {meta.error && meta.touched && <span className='alert alert-error'>{meta.error}</span>}
                           </div>
                         )}
                       </Field>
@@ -329,13 +330,13 @@ class MyForm extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className="text-center mt-20">
-                <button className="btn btn-primary mr-20-md" type="submit" disabled={pristine}>
+              <div className='text-center mt-20'>
+                <button className='btn btn-primary mr-20-md' type='submit' disabled={pristine}>
                   Generar
                 </button>
                 <button
-                  type="button"
-                  className="btn btn-reset"
+                  type='button'
+                  className='btn btn-reset'
                   onClick={(e) => {
                     form.reset();
                     this.onChange(e);
@@ -346,22 +347,22 @@ class MyForm extends React.Component {
                 </button>
               </div>
             </form>
-            <div className="border--dashed" />
+            <div className='border--dashed' />
             <div>
               <div className={`preview mt-20 mt-30-md ${this.state.showCopy ? "" : "disabled"}`}>
-                <span className="preview__title">VISTA PREVIA</span>
-                <div className="preview__inner">
+                <span className='preview__title'>VISTA PREVIA</span>
+                <div className='preview__inner'>
                   <Preview data={values} setRef={this.setRef} isVCM={isLogin == "vcm" ? true : false} />
                 </div>
               </div>
               {/* <a href={`data:text/html,  `} download={`nombre.html`}>Descargar</a> */}
               {this.state.showCopy && (
-                <div className="text-center">
-                  <button className="text-center btn btn-primary mt-20 mt-30-md mb-20" onClick={this.copyToClipboard}>
+                <div className='text-center'>
+                  <button className='text-center btn btn-primary mt-20 mt-30-md mb-20' onClick={this.copyToClipboard}>
                     Copiar al portapapeles
                   </button>
                   <button
-                    className="text-center btn btn-primary mt-20 mt-30-md mb-20 ml-10"
+                    className='text-center btn btn-primary mt-20 mt-30-md mb-20 ml-10'
                     onClick={() => {
                       this.downloadInnerHtml(`${this.state.nombre}.html`, "contenedor", "text/html");
                     }}

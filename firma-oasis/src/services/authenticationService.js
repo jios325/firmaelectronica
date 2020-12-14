@@ -1,4 +1,4 @@
-export const loginUserService = request => {
+export const loginUserService = (request) => {
   let { user } = request;
   // TO DO: importar el json globalmente
   let complejos = [
@@ -9,13 +9,13 @@ export const loginUserService = request => {
         { code: "ohr", hotel: "Corporativo" },
         { code: "ohrcentral", hotel: "Corporativo" },
         { code: "ohrmexico", hotel: "Corporativo México" },
-        { code: "lavanderia", hotel: "Lavandería y Taller de Costura" }
-      ]
+        { code: "lavanderia", hotel: "Lavandería y Taller de Costura" },
+      ],
     },
     {
       nombre: "gos",
       pass: "sensXPFiOR",
-      hoteles: [{ code: "gos", hotel: "Grand Sens Cancun" }]
+      hoteles: [{ code: "gos", hotel: "Grand Sens Cancun" }],
     },
     {
       nombre: "goc",
@@ -23,37 +23,38 @@ export const loginUserService = request => {
       hoteles: [
         { code: "goc", hotel: "Grand Oasis Cancun" },
         { code: "pyr", hotel: "The Pyramid" },
-        { code: "otlc", hotel: "OTLC" }
-      ]
+        { code: "otlc", hotel: "OTLC" },
+        { code: "ocob", hotel: "Oh! Cancun On The Beach" },
+      ],
     },
     {
       nombre: "gop",
       pass: "gopKtEkRe",
       hoteles: [
         { code: "gop", hotel: "Grand Oasis Palm" },
-        { code: "op", hotel: "Oasis Palm" }
-      ]
+        { code: "op", hotel: "Oasis Palm" },
+      ],
     },
     {
       nombre: "urban",
       pass: "urbanKth7wj",
       hoteles: [
         { code: "smart", hotel: "Smart Cancun by Oasis" },
-        { code: "oh", hotel: "Oh! The Urban Oasis" }
-      ]
+        { code: "oh", hotel: "Oh! The Urban Oasis" },
+      ],
     },
     {
       nombre: "got",
       pass: "tulum7RUloeu",
-      hoteles: [{ code: "got", hotel: "Grand Oasis Tulum" }]
+      hoteles: [{ code: "got", hotel: "Grand Oasis Tulum" }],
     },
     {
       nombre: "vcm",
       pass: "vcm7RUloeu",
-      hoteles: [{ code: "vcm", hotel: "Caribe Maya" }]
-    }
+      hoteles: [{ code: "vcm", hotel: "Caribe Maya" }],
+    },
   ];
-  let search = complejos.find(ele => {
+  let search = complejos.find((ele) => {
     return ele.nombre == user.usuario;
   });
   console.log(search);

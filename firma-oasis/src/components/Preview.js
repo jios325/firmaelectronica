@@ -1,5 +1,6 @@
 import React from "react";
 import { assetUrl, linkAppAndroid, linkAppIOS, cintilloImg } from "../config/config";
+
 const formatPhoneNumber = (phoneNumberString) => {
   let cleaned = ("" + phoneNumberString).replace(/\s/g, "");
   var match = false;
@@ -252,6 +253,32 @@ const hoteles = {
   },
   goc: {
     logo: assetUrl + "logos/goc.png",
+    color: "#756857",
+    secondaryColor: "#C4A77E",
+    cintillo: true,
+    icono_cel: "cel.png",
+    icono_phone: "tel.png",
+    icono_pin: "pin.png",
+    web: "www.oasishoteles.com",
+    web_link: "https://www.oasishoteles.com",
+    direccion: "Blvd. Kukulkán Km 16.5 Lote 45, 46 y 47 Zona Hotelera, Cancún Q. Roo 77500 México",
+    redes: [
+      {
+        url: "http://ow.ly/uYzD30kI8oJ",
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png",
+      },
+      {
+        url: "http://ow.ly/CfDh30mccpK",
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png",
+      },
+      {
+        url: "http://ow.ly/yjfs30kI9Dn",
+        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png",
+      },
+    ],
+  },
+  ocob: {
+    logo: assetUrl + "logos/firma-obeach.png",
     color: "#756857",
     secondaryColor: "#C4A77E",
     cintillo: true,
@@ -725,6 +752,6 @@ const Preview = (props) => {
   <!--<![endif]-->
 </div>
   `;
-  return <div id="contenedor" dangerouslySetInnerHTML={{ __html: template }} ref={props.setRef} />;
+  return <div id='contenedor' dangerouslySetInnerHTML={{ __html: template }} ref={props.setRef} />;
 };
 export default Preview;
