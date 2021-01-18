@@ -17,31 +17,32 @@ const formatPhoneNumber = (phoneNumberString) => {
 const hoteles = {
   ohr: {
     logo: assetUrl + "oasis.png",
-    color: "#756857",
-    secondaryColor: "#C4A77E",
+    color: "#002D72",
+    secondaryColor: "#73D3EC",
     cintillo: true,
     direccion: "KM. 6.5, BLVD. KUKULCÁN CANCÚN, MÉXICO  C.P 77500",
-    icono_cel: "cel.png",
-    icono_phone: "tel.png",
-    icono_pin: "pin.png",
+    icono_cel: "iconos-ohr/mobile.png",
+    icono_phone: "iconos-ohr/phone.png",
+    icono_pin: "iconos-ohr/pin.png",
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
     redes: [
       {
         url: "http://ow.ly/5Dqb30kI8lA",
-        icono: assetUrl + "fb.png",
+        // https://oasishoteles.sfo2.digitaloceanspaces.com/assets/img/signature/iconos-ohr/iconos-ohr/redes/insta.png
+        icono: assetUrl + "/iconos-ohr/redes/fb.png",
       },
       {
         url: "http://ow.ly/8jXf30kIaSO",
-        icono: assetUrl + "tw.png",
+        icono: assetUrl + "iconos-ohr/redes/tw.png",
       },
       {
         url: "https://blog.oasishoteles.com",
-        icono: assetUrl + "blog.png",
+        icono: assetUrl + "iconos-ohr/redes/blog.png",
       },
       {
         url: "http://ow.ly/pWLz30kI9xt",
-        icono: assetUrl + "inst.png",
+        icono: assetUrl + "iconos-ohr/redes/insta.png",
       },
     ],
   },
