@@ -16,7 +16,7 @@ const formatPhoneNumber = (phoneNumberString) => {
 };
 const hoteles = {
   ohr: {
-    logo: assetUrl + "oasis.png",
+    logo: assetUrl + "logos/oasis.png",
     color: "#002D72",
     secondaryColor: "#73D3EC",
     cintillo: true,
@@ -46,7 +46,7 @@ const hoteles = {
     ],
   },
   rep: {
-    logo: assetUrl + "oasis.png",
+    logo: assetUrl + "logos/oasis.png",
     color: "#002D72",
     secondaryColor: "#73D3EC",
     cintillo: true,
@@ -77,7 +77,7 @@ const hoteles = {
     ],
   },
   lavanderia: {
-    logo: assetUrl + "oasis.png",
+    logo: assetUrl + "logos/oasis.png",
     color: "#002D72",
     secondaryColor: "#73D3EC",
     cintillo: true,
@@ -107,7 +107,7 @@ const hoteles = {
     ],
   },
   ohrmexico: {
-    logo: assetUrl + "oasis.png",
+    logo: assetUrl + "logos/oasis.png",
     color: "#002D72",
     secondaryColor: "#73D3EC",
     cintillo: true,
@@ -169,7 +169,7 @@ const hoteles = {
   },
   ohrcentral: {
     central: true,
-    logo: assetUrl + "oasis.png",
+    logo: assetUrl + "logos/oasis.png",
     color: "#002D72",
     secondaryColor: "#73D3EC",
     cintillo: true,
