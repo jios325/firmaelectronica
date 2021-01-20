@@ -19,7 +19,7 @@ const hoteles = {
     logo: assetUrl + "logos/oasis.png",
     color: "#002D72",
     secondaryColor: "#73D3EC",
-    cintillo: true,
+    cintillo: false,
     direccion: "KM. 6.5, BLVD. KUKULCÁN CANCÚN, MÉXICO  C.P 77500",
     icono_cel: "iconos-ohr/mobile.png",
     icono_phone: "iconos-ohr/phone.png",
@@ -49,7 +49,7 @@ const hoteles = {
     logo: assetUrl + "logos/oasis.png",
     color: "#002D72",
     secondaryColor: "#73D3EC",
-    cintillo: true,
+    cintillo: false,
     noAddress: true,
     direccion: "TEST ;)",
     icono_cel: "iconos-ohr/mobile.png",
@@ -80,7 +80,7 @@ const hoteles = {
     logo: assetUrl + "logos/oasis.png",
     color: "#002D72",
     secondaryColor: "#73D3EC",
-    cintillo: true,
+    cintillo: false,
     direccion: "LBMTO. KABAH LOTE 2B REGIÓN 93 C.P 77517",
     icono_cel: "iconos-ohr/mobile.png",
     icono_phone: "iconos-ohr/phone.png",
@@ -110,7 +110,7 @@ const hoteles = {
     logo: assetUrl + "logos/oasis.png",
     color: "#002D72",
     secondaryColor: "#73D3EC",
-    cintillo: true,
+    cintillo: false,
     direccion: "PENNSYLVANIA NO. 127 OFNAS 8-10 COL NAPOLES C.P. 03810 CIUDAD DE MEXICO",
     icono_cel: "iconos-ohr/mobile.png",
     icono_phone: "iconos-ohr/phone.png",
@@ -172,7 +172,7 @@ const hoteles = {
     logo: assetUrl + "logos/oasis.png",
     color: "#002D72",
     secondaryColor: "#73D3EC",
-    cintillo: true,
+    cintillo: false,
     icono_cel: "iconos-ohr/mobile.png",
     icono_phone: "iconos-ohr/phone.png",
     icono_pin: "iconos-ohr/pin.png",
@@ -714,38 +714,7 @@ const Preview = (props) => {
       `
           : ""
       }
-    ${
-      hoteles[hotel].vcm
-        ? `
-      <tr style="margin:0;box-sizing:border-box;">
-          <td style="padding:0px!important;width:600px;">
-              <a href="https://caribemaya.com.mx">
-                  <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/cintillo-vcm.jpg" alt="">
-              </a>
-          </td>
-      </tr>
-      `
-        : `
-      <tr style=margin:0;box-sizing:border-box;">
-        <td style="padding:0px!important;width:600px;">
-          <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;border-spacing: 0;">
-              <tr style="margin:0;box-sizing:border-box;">
-                  <td style="padding:0px!important;width:300px;">
-                      <a href="https://oasishoteles.com/es/protocolos-limpieza-salud">
-                        <img width="300" height="100" style="display:block;" src="${assetUrl + "cintillo/cintillo-left.jpg"}"/>
-                      </a>
-                  </td>
-                  <td style="padding:0px!important;width:300px;">
-                    <a href="https://oasishoteles.com/es/be-free-stay-safe">
-                      <img width="300" height="100"  style="display:block" src="${assetUrl + "cintillo/cintillo-right.jpg"}"/>
-                    </a>
-                  </td>
-              </tr>
-        </table>
-          </td>
-      </tr>
-      `
-    }
+    ${cintillo(hoteles[hotel].vcm, false)}
   </table>
   <!--[if !mso]><!-->
   <div style="white-space: nowrap;font-size:0px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
@@ -755,3 +724,37 @@ const Preview = (props) => {
   return <div id='contenedor' dangerouslySetInnerHTML={{ __html: template }} ref={props.setRef} />;
 };
 export default Preview;
+
+const cintillo = (isVCM, show = true) => {
+  const test = isVCM
+    ? `
+<tr style="margin:0;box-sizing:border-box;">
+    <td style="padding:0px!important;width:600px;">
+        <a href="https://caribemaya.com.mx">
+            <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/cintillo-vcm.jpg" alt="">
+        </a>
+    </td>
+</tr>
+`
+    : `
+<tr style=margin:0;box-sizing:border-box;">
+  <td style="padding:0px!important;width:600px;">
+    <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;border-spacing: 0;">
+        <tr style="margin:0;box-sizing:border-box;">
+            <td style="padding:0px!important;width:300px;">
+                <a href="https://oasishoteles.com/es/protocolos-limpieza-salud">
+                  <img width="300" height="100" style="display:block;" src="${assetUrl + "cintillo/cintillo-left.jpg"}"/>
+                </a>
+            </td>
+            <td style="padding:0px!important;width:300px;">
+              <a href="https://oasishoteles.com/es/be-free-stay-safe">
+                <img width="300" height="100"  style="display:block" src="${assetUrl + "cintillo/cintillo-right.jpg"}"/>
+              </a>
+            </td>
+        </tr>
+  </table>
+    </td>
+</tr>
+`;
+  return show ? test : "";
+};
