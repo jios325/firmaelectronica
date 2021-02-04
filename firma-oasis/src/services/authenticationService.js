@@ -10,6 +10,7 @@ export const loginUserService = (request) => {
         { code: "ohrcentral", hotel: "Corporativo" },
         { code: "ohrmexico", hotel: "Corporativo México" },
         { code: "lavanderia", hotel: "Lavandería y Taller de Costura" },
+        { code: "foa", hotel: "Fundación Oasis" },
       ],
     },
     {

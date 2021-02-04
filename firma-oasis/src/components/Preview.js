@@ -136,6 +136,36 @@ const hoteles = {
       },
     ],
   },
+  foa: {
+    logo: assetUrl + "logos/foa.png",
+    color: "#002D72",
+    secondaryColor: "#73D3EC",
+    cintillo: false,
+    direccion: "KM. 6.5, BLVD. KUKULCÁN CANCÚN, MÉXICO  C.P 77500",
+    icono_cel: "iconos-ohr/mobile.png",
+    icono_phone: "iconos-ohr/phone.png",
+    icono_pin: "iconos-ohr/pin.png",
+    web: "www.oasishoteles.com",
+    web_link: "https://www.oasishoteles.com",
+    redes: [
+      {
+        url: "http://ow.ly/5Dqb30kI8lA",
+        icono: assetUrl + "/iconos-ohr/redes/fb.png",
+      },
+      {
+        url: "http://ow.ly/8jXf30kIaSO",
+        icono: assetUrl + "iconos-ohr/redes/tw.png",
+      },
+      {
+        url: "https://blog.oasishoteles.com",
+        icono: assetUrl + "iconos-ohr/redes/blog.png",
+      },
+      {
+        url: "http://ow.ly/pWLz30kI9xt",
+        icono: assetUrl + "iconos-ohr/redes/insta.png",
+      },
+    ],
+  },
   otlc: {
     logo: assetUrl + "logos/otlc-logo.jpg",
     color: "#283566",

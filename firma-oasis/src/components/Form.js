@@ -13,6 +13,7 @@ let complejos = [
       { code: "ohrmexico", hotel: "Corporativo México" },
       { code: "lavanderia", hotel: "Lavandería y Taller de Costura" },
       { code: "rep", hotel: "Representantes" },
+      { code: "foa", hotel: "Fundación Oasis" },
     ],
   },
   {
