@@ -36,7 +36,7 @@ const hoteles = {
         icono: assetUrl + "iconos-ohr/redes/tw.png",
       },
       {
-        url: "https://blog.oasishoteles.com",
+        url: "https://oasishoteles.com/blog/",
         icono: assetUrl + "iconos-ohr/redes/blog.png",
       },
       {
@@ -67,7 +67,7 @@ const hoteles = {
         icono: assetUrl + "iconos-ohr/redes/tw.png",
       },
       {
-        url: "https://blog.oasishoteles.com",
+        url: "https://oasishoteles.com/blog/",
         icono: assetUrl + "iconos-ohr/redes/blog.png",
       },
       {
@@ -97,7 +97,7 @@ const hoteles = {
         icono: assetUrl + "iconos-ohr/redes/tw.png",
       },
       {
-        url: "https://blog.oasishoteles.com",
+        url: "https://oasishoteles.com/blog/",
         icono: assetUrl + "iconos-ohr/redes/blog.png",
       },
       {
@@ -127,7 +127,7 @@ const hoteles = {
         icono: assetUrl + "iconos-ohr/redes/tw.png",
       },
       {
-        url: "https://blog.oasishoteles.com",
+        url: "https://oasishoteles.com/blog/",
         icono: assetUrl + "iconos-ohr/redes/blog.png",
       },
       {
@@ -157,7 +157,7 @@ const hoteles = {
         icono: assetUrl + "iconos-ohr/redes/tw.png",
       },
       {
-        url: "https://blog.oasishoteles.com",
+        url: "https://oasishoteles.com/blog/",
         icono: assetUrl + "iconos-ohr/redes/blog.png",
       },
       {
@@ -188,7 +188,7 @@ const hoteles = {
         icono: assetUrl + "iconos-otlc/tw.png",
       },
       {
-        url: "https://blog.oasishoteles.com",
+        url: "https://oasishoteles.com/blog/",
         icono: assetUrl + "iconos-otlc/blog.png",
       },
       {
@@ -219,7 +219,7 @@ const hoteles = {
         icono: assetUrl + "iconos-ohr/redes/tw.png",
       },
       {
-        url: "https://blog.oasishoteles.com",
+        url: "https://oasishoteles.com/blog/",
         icono: assetUrl + "iconos-ohr/redes/blog.png",
       },
       {
