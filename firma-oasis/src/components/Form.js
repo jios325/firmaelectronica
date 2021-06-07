@@ -14,6 +14,7 @@ let complejos = [
       { code: "lavanderia", hotel: "Lavandería y Taller de Costura" },
       { code: "rep", hotel: "Representantes" },
       { code: "foa", hotel: "Fundación Oasis" },
+      { code: "oweddings", hotel: "O weddings" },
     ],
   },
   {

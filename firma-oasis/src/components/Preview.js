@@ -136,6 +136,33 @@ const hoteles = {
       },
     ],
   },
+  oweddings: {
+    logo: assetUrl + "logos/weddings.png",
+    color: "#000000",
+    secondaryColor: "#000000",
+    cintillo: true,
+    icono_cel: "iconos-weddings/cel.png",
+    icono_phone: "iconos-weddings/tel.png",
+    icono_pin: "iconos-weddings/pin.png",
+    web: "www.oasishoteles.com",
+    web_link: "https://oasishoteles.com/es/bodas",
+    direccion: "Blvd. Kukulkán Km 16.5 Lote 45, 46 y 47 Zona Hotelera, Cancún Q. Roo 77500 México",
+    weddings: true,
+    redes: [
+      {
+        url: "https://www.facebook.com/OWeddingsOasis",
+        icono: assetUrl + "/iconos-weddings/fb.png",
+      },
+      {
+        url: "https://twitter.com/OWeddingsOasis",
+        icono: assetUrl + "/iconos-weddings/tw.png",
+      },
+      {
+        url: "https://www.instagram.com/oweddingsoasis/",
+        icono: assetUrl + "iconos-weddings/insta.png",
+      },
+    ],
+  },
   foa: {
     logo: assetUrl + "logos/foa.png",
     color: "#002D72",
@@ -744,7 +771,7 @@ const Preview = (props) => {
       `
           : ""
       }
-    ${cintillo(hoteles[hotel].vcm, false)}
+    ${cintillo(hoteles[hotel].vcm || hoteles[hotel].weddings, hoteles[hotel].cintillo, hotel)}
   </table>
   <!--[if !mso]><!-->
   <div style="white-space: nowrap;font-size:0px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
@@ -755,13 +782,16 @@ const Preview = (props) => {
 };
 export default Preview;
 
-const cintillo = (isVCM, show = true) => {
+const cintillo = (isVCM, show = true, hotel) => {
+  console.log(hotel);
   const test = isVCM
     ? `
 <tr style="margin:0;box-sizing:border-box;">
     <td style="padding:0px!important;width:600px;">
-        <a href="https://caribemaya.com.mx">
-            <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/cintillo-vcm.jpg" alt="">
+        <a href="${hotel == "oweddings" ? "https://oasishoteles.com/es/bodas" : "https://caribemaya.com.mx"}">
+            <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/${
+              hotel == "oweddings" ? "cintillo-weddings.png" : "cintillo-vcm.jpg"
+            }" alt="">
         </a>
     </td>
 </tr>
