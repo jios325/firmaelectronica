@@ -19,7 +19,7 @@ const hoteles = {
     logo: assetUrl + "logos/oasis.png",
     color: "#002D72",
     secondaryColor: "#73D3EC",
-    cintillo: false,
+    cintillo: true,
     direccion: "KM. 6.5, BLVD. KUKULCÁN CANCÚN, MÉXICO  C.P 77500",
     icono_cel: "iconos-ohr/mobile.png",
     icono_phone: "iconos-ohr/phone.png",
@@ -49,7 +49,7 @@ const hoteles = {
     logo: assetUrl + "logos/oasis.png",
     color: "#002D72",
     secondaryColor: "#73D3EC",
-    cintillo: false,
+    cintillo: true,
     noAddress: true,
     direccion: "TEST ;)",
     icono_cel: "iconos-ohr/mobile.png",
@@ -80,7 +80,7 @@ const hoteles = {
     logo: assetUrl + "logos/oasis.png",
     color: "#002D72",
     secondaryColor: "#73D3EC",
-    cintillo: false,
+    cintillo: true,
     direccion: "LBMTO. KABAH LOTE 2B REGIÓN 93 C.P 77517",
     icono_cel: "iconos-ohr/mobile.png",
     icono_phone: "iconos-ohr/phone.png",
@@ -110,7 +110,7 @@ const hoteles = {
     logo: assetUrl + "logos/oasis.png",
     color: "#002D72",
     secondaryColor: "#73D3EC",
-    cintillo: false,
+    cintillo: true,
     direccion: "PENNSYLVANIA NO. 127 OFNAS 8-10 COL NAPOLES C.P. 03810 CIUDAD DE MEXICO",
     icono_cel: "iconos-ohr/mobile.png",
     icono_phone: "iconos-ohr/phone.png",
@@ -167,7 +167,7 @@ const hoteles = {
     logo: assetUrl + "logos/foa.png",
     color: "#002D72",
     secondaryColor: "#73D3EC",
-    cintillo: false,
+    cintillo: true,
     direccion: "KM. 6.5, BLVD. KUKULCÁN CANCÚN, MÉXICO  C.P 77500",
     icono_cel: "iconos-ohr/mobile.png",
     icono_phone: "iconos-ohr/phone.png",
@@ -229,7 +229,7 @@ const hoteles = {
     logo: assetUrl + "logos/oasis.png",
     color: "#002D72",
     secondaryColor: "#73D3EC",
-    cintillo: false,
+    cintillo: true,
     icono_cel: "iconos-ohr/mobile.png",
     icono_phone: "iconos-ohr/phone.png",
     icono_pin: "iconos-ohr/pin.png",
@@ -284,131 +284,131 @@ const hoteles = {
   },
   pyr: {
     logo: assetUrl + "logos/pyr.png",
-    color: "#756857",
-    secondaryColor: "#C4A77E",
+    color: "#000000",
+    secondaryColor: "#8B8D88",
     cintillo: true,
-    icono_cel: "cel.png",
-    icono_phone: "tel.png",
-    icono_pin: "pin.png",
+    icono_cel: "iconos/8B8D88/cel.png",
+    icono_phone: "iconos/8B8D88/tel.png",
+    icono_pin: "iconos/8B8D88/pin.png",
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
     direccion: "Blvd. Kukulkán Km 16.5 Lote 45, 46 y 47 Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
       {
         url: "http://ow.ly/OMMV30m7j7t",
-        icono: assetUrl + "fb.png",
+        icono: assetUrl + "iconos/8B8D88/fb.png",
       },
       {
         url: "http://ow.ly/H35A30md9lR",
-        icono: assetUrl + "tw.png",
+        icono: assetUrl + "iconos/8B8D88/tw.png",
       },
       {
         url: "http://ow.ly/q1Y230md7Hc",
-        icono: assetUrl + "inst.png",
+        icono: assetUrl + "iconos/8B8D88/insta.png",
       },
     ],
   },
   goc: {
     logo: assetUrl + "logos/goc.png",
-    color: "#756857",
-    secondaryColor: "#C4A77E",
+    color: "#1D3C77",
+    secondaryColor: "#006CB3",
     cintillo: true,
-    icono_cel: "cel.png",
-    icono_phone: "tel.png",
-    icono_pin: "pin.png",
+    icono_cel: "iconos/006CB3/cel.png",
+    icono_phone: "iconos/006CB3/tel.png",
+    icono_pin: "iconos/006CB3/pin.png",
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
     direccion: "Blvd. Kukulkán Km 16.5 Lote 45, 46 y 47 Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
       {
         url: "http://ow.ly/uYzD30kI8oJ",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png",
+        icono: assetUrl + "iconos/1D3C77/fb.png",
       },
       {
         url: "http://ow.ly/CfDh30mccpK",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png",
+        icono: assetUrl + "iconos/1D3C77/tw.png",
       },
       {
         url: "http://ow.ly/yjfs30kI9Dn",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png",
+        icono: assetUrl + "iconos/1D3C77/insta.png",
       },
     ],
   },
   ocob: {
     logo: assetUrl + "logos/firma-obeach.png",
-    color: "#756857",
-    secondaryColor: "#C4A77E",
+    color: "#1D3C77",
+    secondaryColor: "#7ECBE8",
     cintillo: true,
-    icono_cel: "cel.png",
-    icono_phone: "tel.png",
-    icono_pin: "pin.png",
+    icono_cel: "iconos/7ECBE8/cel.png",
+    icono_phone: "iconos/7ECBE8/tel.png",
+    icono_pin: "iconos/7ECBE8/pin.png",
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
     direccion: "Blvd. Kukulkán Km 16.5 Lote 45, 46 y 47 Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
       {
         url: "http://ow.ly/uYzD30kI8oJ",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png",
+        icono: assetUrl + "iconos/1D3C77/fb.png",
       },
       {
         url: "http://ow.ly/CfDh30mccpK",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png",
+        icono: assetUrl + "iconos/1D3C77/tw.png",
       },
       {
         url: "http://ow.ly/yjfs30kI9Dn",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png",
+        icono: assetUrl + "iconos/1D3C77/insta.png",
       },
     ],
   },
   gop: {
     logo: assetUrl + "logos/gop.png",
-    color: "#756857",
-    secondaryColor: "#C4A77E",
+    color: "#1D3C77",
+    secondaryColor: "#006CB3",
     cintillo: true,
-    icono_cel: "cel.png",
-    icono_phone: "tel.png",
-    icono_pin: "pin.png",
+    icono_cel: "iconos/006CB3/cel.png",
+    icono_phone: "iconos/006CB3/tel.png",
+    icono_pin: "iconos/006CB3/pin.png",
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
     direccion: "Blvd. Kukulkán Km 4.5 Sección C Lote 1, Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
       {
         url: "http://ow.ly/v5L130mcc7F",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png",
+        icono: assetUrl + "iconos/1D3C77/fb.png",
       },
       {
         url: "http://ow.ly/XDgy30mccx5",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png",
+        icono: assetUrl + "iconos/1D3C77/tw.png",
       },
       {
         url: "http://ow.ly/mYqk30mcceZ",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png",
+        icono: assetUrl + "iconos/1D3C77/insta.png",
       },
     ],
   },
   op: {
     logo: assetUrl + "logos/op.png",
-    color: "#756857",
-    secondaryColor: "#C4A77E",
+    color: "#1D3C77",
+    secondaryColor: "#7ECBE8",
     cintillo: true,
-    icono_cel: "cel.png",
-    icono_phone: "tel.png",
-    icono_pin: "pin.png",
+    icono_cel: "iconos/7ECBE8/cel.png",
+    icono_phone: "iconos/7ECBE8/tel.png",
+    icono_pin: "iconos/7ECBE8/pin.png",
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
     direccion: "Blvd. Kukulkán Km 4.5 Sección C Lote 1, Zona Hotelera, Cancún Q. Roo 77500 México",
     redes: [
       {
         url: "http://ow.ly/Hbjk30md9BM",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png",
+        icono: assetUrl + "iconos/1D3C77/fb.png",
       },
       {
         url: "http://ow.ly/IUCU30md9vQ",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png",
+        icono: assetUrl + "iconos/1D3C77/tw.png",
       },
       {
         url: "http://ow.ly/dI4Y30md9F5",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png",
+        icono: assetUrl + "iconos/1D3C77/insta.png",
       },
     ],
   },
@@ -440,53 +440,53 @@ const hoteles = {
   },
   smart: {
     logo: assetUrl + "logos/smart.png",
-    color: "#756857",
-    secondaryColor: "#C4A77E",
+    color: "#1D3C77",
+    secondaryColor: "#52A542",
     cintillo: true,
-    icono_cel: "cel.png",
-    icono_phone: "tel.png",
-    icono_pin: "pin.png",
+    icono_cel: "iconos/smart/cel.png",
+    icono_phone: "iconos/smart/tel.png",
+    icono_pin: "iconos/smart/pin.png",
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
     direccion: "Av. Tulum, esq. Brisa s/n Col. Centro, Cancún Q. Roo 77500 México",
     redes: [
       {
         url: "http://ow.ly/tW0Z30m7jj5",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png",
+        icono: assetUrl + "iconos/1D3C77/fb.png",
       },
       {
         url: "http://ow.ly/bcLE30md9yW",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png",
+        icono: assetUrl + "iconos/1D3C77/tw.png",
       },
       {
         url: "http://ow.ly/sTB630md7Of",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png",
+        icono: assetUrl + "iconos/1D3C77/insta.png",
       },
     ],
   },
   oh: {
     logo: assetUrl + "logos/oh.png",
-    color: "#756857",
-    secondaryColor: "#C4A77E",
+    color: "#000000",
+    secondaryColor: "#8B8D88",
     cintillo: true,
-    icono_cel: "cel.png",
-    icono_phone: "tel.png",
-    icono_pin: "pin.png",
+    icono_cel: "iconos/8B8D88/cel.png",
+    icono_phone: "iconos/8B8D88/tel.png",
+    icono_pin: "iconos/8B8D88/pin.png",
     web: "www.oasishoteles.com",
     web_link: "https://www.oasishoteles.com",
     direccion: "Av. Tulum, esq. Brisa s/n Col. Centro, Cancún Q. Roo 77500 México",
     redes: [
       {
         url: "http://ow.ly/sPAN30m7jlZ",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/fb.png",
+        icono: assetUrl + "iconos/8B8D88/fb.png",
       },
       {
         url: "http://ow.ly/pkGw30m7kuT",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/tw.png",
+        icono: assetUrl + "iconos/8B8D88/tw.png",
       },
       {
         url: "http://ow.ly/VQRZ30m7knX",
-        icono: "https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/inst.png",
+        icono: assetUrl + "iconos/8B8D88/insta.png",
       },
     ],
   },
@@ -797,24 +797,50 @@ const cintillo = (isVCM, show = true, hotel) => {
 </tr>
 `
     : `
-<tr style=margin:0;box-sizing:border-box;">
-  <td style="padding:0px!important;width:600px;">
-    <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;border-spacing: 0;">
-        <tr style="margin:0;box-sizing:border-box;">
-            <td style="padding:0px!important;width:300px;">
-                <a href="https://oasishoteles.com/es/protocolos-limpieza-salud">
-                  <img width="300" height="100" style="display:block;" src="${assetUrl + "cintillo/cintillo-left.jpg"}"/>
-                </a>
-            </td>
-            <td style="padding:0px!important;width:300px;">
-              <a href="https://oasishoteles.com/es/be-free-stay-safe">
-                <img width="300" height="100"  style="display:block" src="${assetUrl + "cintillo/cintillo-right.jpg"}"/>
-              </a>
-            </td>
-        </tr>
-  </table>
+  <tr style="margin:0;box-sizing:border-box;">
+    <td style="padding:0px!important;width:600px;">
+        <a href="https://oasishoteles.com/es/ofertas-hoteles-verano-oasis">
+        <img width="600" height="100" style="display:block;" src="${assetUrl + "cintillo/cintillo-verano-oasis.jpg"}"/>
+        </a>
     </td>
 </tr>
 `;
   return show ? test : "";
 };
+
+// const cintillo = (isVCM, show = true, hotel) => {
+//   console.log(hotel);
+//   const test = isVCM
+//     ? `
+// <tr style="margin:0;box-sizing:border-box;">
+//     <td style="padding:0px!important;width:600px;">
+//         <a href="${hotel == "oweddings" ? "https://oasishoteles.com/es/bodas" : "https://caribemaya.com.mx"}">
+//             <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/${
+//               hotel == "oweddings" ? "cintillo-weddings.png" : "cintillo-vcm.jpg"
+//             }" alt="">
+//         </a>
+//     </td>
+// </tr>
+// `
+//     : `
+// <tr style=margin:0;box-sizing:border-box;">
+//   <td style="padding:0px!important;width:600px;">
+//     <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;border-spacing: 0;">
+//         <tr style="margin:0;box-sizing:border-box;">
+//             <td style="padding:0px!important;width:300px;">
+//                 <a href="https://oasishoteles.com/es/protocolos-limpieza-salud">
+//                   <img width="300" height="100" style="display:block;" src="${assetUrl + "cintillo/cintillo-left.jpg"}"/>
+//                 </a>
+//             </td>
+//             <td style="padding:0px!important;width:300px;">
+//               <a href="https://oasishoteles.com/es/be-free-stay-safe">
+//                 <img width="300" height="100"  style="display:block" src="${assetUrl + "cintillo/cintillo-right.jpg"}"/>
+//               </a>
+//             </td>
+//         </tr>
+//   </table>
+//     </td>
+// </tr>
+// `;
+//   return show ? test : "";
+// };
