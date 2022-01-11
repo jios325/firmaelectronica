@@ -805,7 +805,8 @@ const cintillo = (isVCM, show = true, hotel) => {
     </td>
 </tr>
 `;
-  return show ? test : "";
+  // Temporalmente no mostramos cintillo en todo OHR
+  return show && isVCM ? test : "";
 };
 
 // const cintillo = (isVCM, show = true, hotel) => {
