@@ -606,12 +606,12 @@ const Preview = (props) => {
     }; padding-top: 10px; padding-bottom: 10px;overflow:hidden;padding-left:15px; padding-right: 15px;">
                                       <table cellpadding="0" cellspacing="0" border="0" width="100%" style=" border-collapse: collapse;">
                                           <tr style="box-sizing: border-box;text-align: left;">
-                                              <td colspan="2" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;color: ${hoteles[hotel].color
+                                              <td colspan="2" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;color: ${hoteles[hotel].secondaryColor
     };font-size: 12px;font-weight: bold;letter-spacing: 0px;line-height: 14px;mso-line-height-rule:exactly;text-transform: uppercase; padding-bottom:2px;">${nombre != null ? nombre : "Nombre"
     } ${apellido != null ? apellido : "Apellido"}</td>
                                           </tr>
                                           <tr style="box-sizing: border-box;text-align: left;">
-                                              <td style="mso-line-height-rule:exactly;line-height: 11px;font-size: 10px;letter-spacing: 0.48px;font-family: Arial, sans-serif, 'Open Sans';color: ${hoteles[hotel].secondaryColor
+                                              <td style="mso-line-height-rule:exactly;line-height: 11px;font-size: 10px;letter-spacing: 0.48px;font-family: Arial, sans-serif, 'Open Sans';color: ${hoteles[hotel].color
     };padding-bottom:15px;text-transform: uppercase;" colspan="2">${puesto != null ? puesto : "Puesto"}</td>
                                           </tr>
                                           ${celular != null
