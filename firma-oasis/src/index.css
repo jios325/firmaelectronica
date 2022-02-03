@@ -1377,7 +1377,7 @@ body.noscroll {
 }
 .preview {
   background: #fff;
-  max-width: 600px;
+  max-width: 400px;
   margin: 0 auto;
 }
 .preview.disabled {
@@ -1389,6 +1389,7 @@ body.noscroll {
 }
 .preview__inner {
   position: relative;
+  margin-bottom: 100px;
 }
 .preview__inner:after,
 .preview__inner:before {
