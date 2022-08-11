@@ -224,6 +224,37 @@ const hoteles = {
       },
     ],
   },
+  otlcPalm: {
+    logo: assetUrl + "logos/otlc-logo.png",
+    color: "#1D3C77",
+    secondaryColor: "#005CB8",
+    cintillo: true,
+    tel_800: ["01 800 272 0249", "01 800 439 0355"],
+    icono_cel: "iconos-otlc/cel-new.png",
+    icono_phone: "iconos-otlc/tel-new.png",
+    icono_pin: "iconos-otlc/pin-new.png",
+    direccion: "Blvd. Kukulkán Km 4.5 Sección C Lote 1, Zona Hotelera, Cancún Q. Roo 77500 México",
+    web: "www.oasis-tlc.com",
+    web_link: "https://oasis-tlc.com/",
+    redes: [
+      {
+        url: "https://www.facebook.com/OasisHoteles",
+        icono: assetUrl + "iconos-otlc/fb-new.png",
+      },
+      {
+        url: "https://twitter.com/OasisHotels",
+        icono: assetUrl + "iconos-otlc/tw-new.png",
+      },
+      {
+        url: "https://oasishoteles.com/blog/",
+        icono: assetUrl + "iconos-otlc/blog-new.png",
+      },
+      {
+        url: "https://www.instagram.com/oasishotels/",
+        icono: assetUrl + "iconos-otlc/insta-new.png",
+      },
+    ],
+  },
   ohrcentral: {
     central: true,
     logo: assetUrl + "logos/oasis.png",
@@ -598,24 +629,30 @@ const Preview = (props) => {
                               <tr style="box-sizing: border-box;">
                                   <td valign="center" style="vertical-align: center;width: 120px;max-width:180px;height:120px;text-align: center; border-right:0.5px solid #D9D2D2;">
                                       <a href="${hoteles[hotel].vcm ? "https://caribemaya.com.mx" : "https://www.oasishoteles.com"}" style="display:block;">
-                                          <img style="max-width: 80px;display: block;margin:0 auto;" src="${hotel != null ? hoteles[hotel].logo : assetUrl + "oasis.png"}" alt="${hoteles[hotel].vcm ? "Viajes Caribe Maya" : ""
-    }"  title="${hoteles[hotel].vcm ? "Viajes Caribe Maya" : ""}">
+                                          <img style="max-width: 80px;display: block;margin:0 auto;" src="${hotel != null ? hoteles[hotel].logo : assetUrl + "oasis.png"}" alt="${
+    hoteles[hotel].vcm ? "Viajes Caribe Maya" : ""
+  }"  title="${hoteles[hotel].vcm ? "Viajes Caribe Maya" : ""}">
                                       </a>
                                   </td>
-                                  <td valign="${telefono != null ? "top" : "center"}" style="vertical-align: ${telefono != null ? "top" : "middle"
-    }; padding-top: 10px; padding-bottom: 10px;overflow:hidden;padding-left:15px; padding-right: 15px;">
+                                  <td valign="${telefono != null ? "top" : "center"}" style="vertical-align: ${
+    telefono != null ? "top" : "middle"
+  }; padding-top: 10px; padding-bottom: 10px;overflow:hidden;padding-left:15px; padding-right: 15px;">
                                       <table cellpadding="0" cellspacing="0" border="0" width="100%" style=" border-collapse: collapse;">
                                           <tr style="box-sizing: border-box;text-align: left;">
-                                              <td colspan="2" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;color: ${hoteles[hotel].secondaryColor
-    };font-size: 12px;font-weight: bold;letter-spacing: 0px;line-height: 14px;mso-line-height-rule:exactly;text-transform: uppercase; padding-bottom:2px;">${nombre != null ? nombre : "Nombre"
-    } ${apellido != null ? apellido : "Apellido"}</td>
+                                              <td colspan="2" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;color: ${
+                                                hoteles[hotel].secondaryColor
+                                              };font-size: 12px;font-weight: bold;letter-spacing: 0px;line-height: 14px;mso-line-height-rule:exactly;text-transform: uppercase; padding-bottom:2px;">${
+    nombre != null ? nombre : "Nombre"
+  } ${apellido != null ? apellido : "Apellido"}</td>
                                           </tr>
                                           <tr style="box-sizing: border-box;text-align: left;">
-                                              <td style="mso-line-height-rule:exactly;line-height: 11px;font-size: 10px;letter-spacing: 0.48px;font-family: Arial, sans-serif, 'Open Sans';color: ${hoteles[hotel].color
-    };padding-bottom:15px;text-transform: uppercase;" colspan="2">${puesto != null ? puesto : "Puesto"}</td>
+                                              <td style="mso-line-height-rule:exactly;line-height: 11px;font-size: 10px;letter-spacing: 0.48px;font-family: Arial, sans-serif, 'Open Sans';color: ${
+                                                hoteles[hotel].color
+                                              };padding-bottom:15px;text-transform: uppercase;" colspan="2">${puesto != null ? puesto : "Puesto"}</td>
                                           </tr>
-                                          ${celular != null
-      ? `
+                                          ${
+                                            celular != null
+                                              ? `
                                           <tr style="box-sizing: border-box;">
                                               <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${hoteles[hotel].icono_cel}" alt="" style="margin-right:5px"></td>
                                               <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${hoteles[hotel].color};font-size: 10px;letter-spacing: 0.48px;">
@@ -623,23 +660,28 @@ const Preview = (props) => {
                                               </td>
                                           </tr>
                                           `
-      : ""
-    }
-                                          ${telefono != null
-      ? `
+                                              : ""
+                                          }
+                                          ${
+                                            telefono != null
+                                              ? `
                                             <tr style="box-sizing: border-box;">
-                                            <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${hoteles[hotel].icono_phone
-      }" alt="" style="margin-right:5px"></td>
-                                            <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${hoteles[hotel].color
-      };font-size: 10px;letter-spacing: 0.48px;">
-                                                <span style="line-height: 18px;mso-line-height-rule:exactly;padding-top:2px;">${telefono != null ? formatPhoneNumber(telefono) : "Teléfono"
-      } ${extension != null ? `EXT. ${extension}` : ""}</span>
+                                            <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${
+                                                  hoteles[hotel].icono_phone
+                                                }" alt="" style="margin-right:5px"></td>
+                                            <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${
+                                              hoteles[hotel].color
+                                            };font-size: 10px;letter-spacing: 0.48px;">
+                                                <span style="line-height: 18px;mso-line-height-rule:exactly;padding-top:2px;">${
+                                                  telefono != null ? formatPhoneNumber(telefono) : "Teléfono"
+                                                } ${extension != null ? `EXT. ${extension}` : ""}</span>
                                                   ${hoteles[hotel].central ? `/</span> <span>01 800 01 OASIS (62747)</span>` : ""}
                                             </td>
                                         </tr>
                                             `
-      : `${hoteles[hotel].central
-        ? `
+                                              : `${
+                                                  hoteles[hotel].central
+                                                    ? `
                                                 <tr style="box-sizing: border-box;">
                                             <td valign="center" style="vertical-align:center;width:18px;"><img src="${assetUrl}${hoteles[hotel].icono_phone}" alt="" style="margin-right:5px"></td>
                                             <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';text-align: left;vertical-align:center;color: ${hoteles[hotel].color};font-size: 10px;letter-spacing: 0.48px;">
@@ -647,32 +689,37 @@ const Preview = (props) => {
                                             </td>
                                         </tr>
                                               `
-        : ""
-      }`
-    }
+                                                    : ""
+                                                }`
+                                          }
                                           
-                                          ${hoteles[hotel].tel_800
-      ? `
+                                          ${
+                                            hoteles[hotel].tel_800
+                                              ? `
                                               <tr style="box-sizing: border-box;text-align: left;">
                                                   <td colspan="2" style="padding-top:2px;padding-left:18px;font-size:10px;color:${hoteles[hotel].color};"><span>MEX: 01 800 272 0249</span> <span style="font-weight:bold;">/</span> <span>USA & CAN: 01 800 439 0355</span></td>  
                                               </tr>
                                               `
-      : ""
-    }
-                                         ${hoteles[hotel].noAddress
-      ? ""
-      : `
+                                              : ""
+                                          }
+                                         ${
+                                           hoteles[hotel].noAddress
+                                             ? ""
+                                             : `
                                          <tr style="box-sizing: border-box;text-align: left;">
-                                         <td valign="center" style="vertical-align:center;width:18px;padding-top:2px;"><img src="${assetUrl}${hoteles[hotel].icono_pin
-      }" alt="" style="margin-right:5px"></td>
-                                         <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';color: ${hoteles[hotel].color
-      };font-size: 10px;letter-spacing: 0px;">
-                                             <span style="mso-line-height-rule:exactly;line-height: 11px;">${hotel != null ? hoteles[hotel].direccion : "Direccion del Hotel"
-      }</span>
+                                         <td valign="center" style="vertical-align:center;width:18px;padding-top:2px;"><img src="${assetUrl}${
+                                                 hoteles[hotel].icono_pin
+                                               }" alt="" style="margin-right:5px"></td>
+                                         <td valign="center" style="font-family: Arial, sans-serif, 'Open Sans';color: ${
+                                           hoteles[hotel].color
+                                         };font-size: 10px;letter-spacing: 0px;">
+                                             <span style="mso-line-height-rule:exactly;line-height: 11px;">${
+                                               hotel != null ? hoteles[hotel].direccion : "Direccion del Hotel"
+                                             }</span>
                                          </td>
                                      </tr>
                                          `
-    }
+                                         }
                                       </table>
                                   </td>
                               </tr>
@@ -683,27 +730,31 @@ const Preview = (props) => {
                       <td style="padding-top:4px; padding-bottom:4px">
                           <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse: collapse;">
                               <tr style="box-sizing: border-box;">
-                                  <td valign="bottom" style="vertical-align:bottom;color: ${hoteles[hotel].secondaryColor
-    };font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: left;mso-line-height-rule:exactly;line-height: 14px;">
+                                  <td valign="bottom" style="vertical-align:bottom;color: ${
+                                    hoteles[hotel].secondaryColor
+                                  };font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: left;mso-line-height-rule:exactly;line-height: 14px;">
                                       <span style="margin-right:5px;">¡Síguenos!</span> 
                                       ${redes
-      .map((el) => {
-        var cadena = "";
-        cadena += `<a href=${el.url} style="margin-right:3px;"><img src=${el.icono} alt=""></a>`;
-        return cadena;
-      })
-      .join("")}
+                                        .map((el) => {
+                                          var cadena = "";
+                                          cadena += `<a href=${el.url} style="margin-right:3px;"><img src=${el.icono} alt=""></a>`;
+                                          return cadena;
+                                        })
+                                        .join("")}
                                   </td>
-                                  ${hoteles[hotel].vcm
-      ? `
+                                  ${
+                                    hoteles[hotel].vcm
+                                      ? `
                                   <td valign="bottom" style="vertical-align:bottom;color: ${hoteles[hotel].secondaryColor};font-family: Arial, sans-serif, 'Open Sans';font-size: 11px;text-align: left;mso-line-height-rule:exactly;line-height: 15px;font-weight: bold;">ARRIVE AND REVIVE</td>
                                   `
-      : ""
-    }
+                                      : ""
+                                  }
                                   
-                                  <td valign="bottom" style="vertical-align:bottom;text-align:right;"><a style="color: ${hoteles[hotel].secondaryColor
-    };font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: right;mso-line-height-rule:exactly;line-height: 14px;text-decoration: none;" href="${hoteles[hotel].web_link
-    }">${hoteles[hotel].web}</a></td>
+                                  <td valign="bottom" style="vertical-align:bottom;text-align:right;"><a style="color: ${
+                                    hoteles[hotel].secondaryColor
+                                  };font-family: Arial, sans-serif, 'Open Sans';font-size: 12px;text-align: right;mso-line-height-rule:exactly;line-height: 14px;text-decoration: none;" href="${
+    hoteles[hotel].web_link
+  }">${hoteles[hotel].web}</a></td>
                               </tr>
                           </table>
                       </td>
@@ -711,12 +762,13 @@ const Preview = (props) => {
               </table>
           </td>
       </tr>
-      ${!hoteles[hotel].vcm
-      ? `
+      ${
+        !hoteles[hotel].vcm
+          ? `
       
       `
-      : ""
-    }
+          : ""
+      }
     ${cintillo(hoteles[hotel].vcm || hoteles[hotel].weddings, hoteles[hotel].cintillo, hotel)}
   </table>
   <!--[if !mso]><!-->
@@ -735,8 +787,9 @@ const cintillo = (isVCM, show = true, hotel) => {
 <tr style="margin:0;box-sizing:border-box;">
     <td style="padding:0px!important;width:400px;">
         <a href="${hotel == "oweddings" ? "https://oasishoteles.com/es/bodas" : "https://caribemaya.com.mx"}">
-            <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/${hotel == "oweddings" ? "cintillo-weddings.png" : "cintillo-vcm.jpg"
-    }" alt="">
+            <img src="https://oasishoteles.sfo2.cdn.digitaloceanspaces.com/assets/img/signature/cintillo/${
+              hotel == "oweddings" ? "cintillo-weddings.png" : "cintillo-vcm.jpg"
+            }" alt="">
         </a>
     </td>
 </tr>

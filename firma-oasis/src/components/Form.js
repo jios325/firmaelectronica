@@ -29,6 +29,7 @@ let complejos = [
       { code: "goc", hotel: "Grand Oasis Cancun" },
       { code: "pyr", hotel: "The Pyramid" },
       { code: "otlc", hotel: "OTLC" },
+      { code: "otlcPalm", hotel: "OTLC Palm" },
       { code: "ocob", hotel: "Oh! Cancun On The Beach" },
     ],
   },
